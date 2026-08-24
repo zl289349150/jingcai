@@ -1,0 +1,30 @@
+name: 每日足球预测
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  predict:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: 安装依赖
+        run: pip install -q -r requirements.txt
+      - name: 训练并生成预测
+        run: python predict_all.py
+      - name: 提交更新到 main（Pages 托管于 main）
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add predictions.json frontend/predictions.html
+          git commit -m "每日预测更新 $(date -u +%F_%H%M)" || echo "无变化"
+          git push
