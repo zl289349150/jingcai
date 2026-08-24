@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>足球预测日报</title>
+<style>
+body{font-family:-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;background:#f6f7f9;margin:0;color:#111827}
+.wrap{max-width:1280px;margin:0 auto;padding:18px 14px 50px}
+header{background:linear-gradient(135deg,#1e3a8a,#1a56db);color:#fff;padding:24px 20px;border-radius:14px;margin-bottom:16px}
+h1{margin:0 0 6px;font-size:23px}header p{margin:2px 0;opacity:.93;font-size:13px}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:14px 16px;margin-bottom:14px}
+h2{font-size:16px;margin:0 0 8px;color:#1e3a8a;border-left:4px solid #1a56db;padding-left:10px}
+table{width:100%;border-collapse:collapse;font-size:11.5px}
+th,td{border:1px solid #e5e7eb;padding:5px 6px;text-align:left}th{background:#eef2ff;color:#1e3a8a}
+.tag{display:inline-block;padding:1px 6px;border-radius:999px;font-size:10.5px;font-weight:600}
+.g{background:#dcfce7;color:#15803d}.y{background:#fef9c3;color:#a16207}.r{background:#fee2e2;color:#b91c1c}
+.btn{display:inline-block;margin-top:8px;padding:8px 20px;background:#1a56db;color:#fff;border:none;border-radius:8px;cursor:pointer}
+footer{text-align:center;color:#9ca3af;font-size:11.5px;margin-top:20px}
+</style></head><body><div class="wrap">
+<header><h1>⚽ 足球预测日报（多联赛）</h1><p id="meta">加载中…</p><p>仅为概率与风险分析，不构成投注建议</p></header>
+<div id="content"><div class="card">加载中…</div></div>
+<footer>predict_all.py 生成 · 每日自动更新</footer>
+</div>
+<script>
+fetch("predictions.json").then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();}).then(function(list){
+  document.getElementById("meta").textContent = "共 " + list.length + " 场 · 数据：Football-data + Sofascore xG + 官方赔率";
+  var by={}; list.forEach(function(m){ (by[m.league]=by[m.league]||[]).push(m); });
+  var html="";
+  Object.keys(by).forEach(function(lg){
+    html+='<div class="card"><h2>'+lg+'（'+by[lg].length+' 场）</h2><table><tr><th>日期</th><th>对阵</th><th>模型 主/平/客</th><th>市场</th><th>方向</th><th>Edge</th><th>动作</th><th>仓位</th><th>冷门</th><th>环境</th><th>盘口</th><th>实际</th></tr>';
+    by[lg].forEach(function(m){
+      var mp=m.model_prob.map(function(x){return (x*100).toFixed(0)+"%";}).join("/");
+      var mk=m.market_prob.map(function(x){return (x*100).toFixed(0)+"%";}).join("/");
+      var ac=m.action==="可介入"?"g":(m.action.indexOf("轻仓")>=0||m.action.indexOf("观察")>=0?"y":"r");
+      var ck=m.cold_risk==="高"?"r":(m.cold_risk==="中"?"y":"g");
+      var act=m.actual?(""+m.score+" "+m.actual):"—";
+      html+='<tr><td>'+m.date+'</td><td><b>'+m.home+'</b> vs <b>'+m.away+'</b></td><td>'+mp+'</td><td>'+mk+'</td><td><b>'+m.direction+'</b></td><td>'+(m.edge*100).toFixed(1)+'%</td><td><span class="tag '+ac+'">'+m.action+'</span></td><td>'+m.stake+'</td><td><span class="tag '+ck+'">'+m.cold_risk+'</span></td><td>'+m.env_score+'</td><td style="font-size:10.5px">'+m.odds_move+'</td><td>'+act+'</td></tr>';
+    });
+    html+='</table></div>';
+  });
+  document.getElementById("content").innerHTML=html;
+}).catch(function(e){
+  document.getElementById("content").innerHTML='<div class="card"><h2 style="color:#b91c1c">加载失败</h2><p>'+e+'</p><button class="btn" onclick="location.reload()">重试</button></div>';
+});
+</script>
+</body></html>
