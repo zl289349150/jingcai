@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>今日竞彩 · 实时</title>
+<style>
+  body{font-family:-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;background:#f6f7f9;color:#111827;margin:0}
+  .wrap{max-width:1200px;margin:0 auto;padding:20px 14px 50px}
+  header{background:linear-gradient(135deg,#b91c1c,#dc2626);color:#fff;padding:26px 20px;border-radius:14px;margin-bottom:16px}
+  h1{margin:0 0 6px;font-size:23px}
+  header p{margin:2px 0;opacity:.94;font-size:13px}
+  .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;margin-bottom:16px}
+  h2{font-size:16px;margin:0 0 10px;color:#b91c1c;border-left:4px solid #dc2626;padding-left:10px}
+  .tbl{width:100%;border-collapse:collapse;font-size:12.5px}
+  .tbl th,.tbl td{border:1px solid #e5e7eb;padding:6px 7px;text-align:left}
+  .tbl th{background:#fef2f2;color:#b91c1c}
+  .tbl tr:nth-child(even) td{background:#fafbfc}
+  .vs{color:#9ca3af;font-size:11px}
+  .tag{display:inline-block;padding:1px 8px;border-radius:999px;font-size:11.5px;font-weight:600;white-space:nowrap}
+  .tag.g{background:#dcfce7;color:#15803d}.tag.r{background:#fee2e2;color:#b91c1c}
+  .btn{display:inline-block;margin-top:8px;padding:9px 22px;background:#dc2626;color:#fff;border:none;border-radius:8px;font-size:14px;cursor:pointer}
+  footer{text-align:center;color:#9ca3af;font-size:12px;margin-top:20px}
+  @media (max-width:760px){.tbl{font-size:11.5px}.tbl th,.tbl td{padding:5px 4px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🎯 今日竞彩（实时）</h1>
+    <p id="status">正在从竞彩官网拉取最新数据…</p>
+    <p>每次打开自动获取最新 · 手机/电脑通用 · 仅为官方赔率解读与概率分析，不构成投注建议</p>
+  </header>
+  <div id="content"><div class="card">加载中…</div></div>
+  <footer>数据源：中国竞彩网官方接口（webapi.sporttery.cn）· 打开即自动更新</footer>
+</div>
+<script>
+var API = "https://webapi.sporttery.cn/gateway/jc/football/getMatchCalculatorV1.qry?poolCode=hhad,had,crs,ttg,hafu&channel=c";
+var LABELS = ["主胜","平局","客胜"];
+var WEEK = ["周日","周一","周二","周三","周四","周五","周六"];
+
+function esc(s){var d=document.createElement("div");d.textContent=(s==null?"":String(s));return d.innerHTML;}
+function impProbs(h,d,a){var inv=[1/h,1/d,1/a],s=inv[0]+inv[1]+inv[2];return [inv[0]/s,inv[1]/s,inv[2]/s];}
+function mt5(t){t=(t||"").trim();return t.length>=5?t.slice(0,5):t;}
+function koDate(it){return it.md+"T"+mt5(it.mt)+":00+08:00";}
+
+function parse(payload){
+  var value=payload.value||{}, groups=value.matchInfoList||[], out=[], seen={};
+  for(var gi=0;gi<groups.length;gi++){
+    var subs=(groups[gi].subMatchList)||[];
+    for(var si=0;si<subs.length;si++){
+      var it=subs[si]; if(!it) continue;
+      var num=it.matchNumStr||it.matchNum;
+      var home=it.homeTeamAllName||it.homeTeamAbbName||it.homeTeamName;
+      var away=it.awayTeamAllName||it.awayTeamAbbName||it.awayTeamName;
+      var league=it.leagueAbbName||it.leagueName||"未知联赛";
+      var status=String(it.matchStatus||it.sellStatus||"Selling").toLowerCase();
+      if(["selling","1","true"].indexOf(status)<0) continue;
+      if(!num||!home||!away||seen[num]) continue;
+      seen[num]=1;
+      var had=it.had||{}, hhad=it.hhad||{};
+      var o1=(had.h&&had.d&&had.a)?[+had.h,+had.d,+had.a]:null;
+      var oh=(hhad.h&&hhad.d&&hhad.a)?[+hhad.h,+hhad.d,+hhad.a]:null;
+      var gl=null;
+      if(hhad.goalLine!==undefined&&hhad.goalLine!==null&&hhad.goalLine!=="") gl=+hhad.goalLine;
+      out.push({num:num,league:league,home:home,away:away,md:it.matchDate,mt:it.matchTime,o1:o1,oh:oh,gl:gl});
+    }
+  }
+  return out;
+}
+
+function opinion(it){
+  if(!it.o1) return "暂无官方赔率，无法解读";
+  var p=impProbs(it.o1[0],it.o1[1],it.o1[2]);
+  var k=0; if(p[1]>p[k])k=1; if(p[2]>p[k])k=2;
+  var pick=LABELS[k];
+  var parts=["官方胜平负 "+it.o1[0].toFixed(2)+"/"+it.o1[1].toFixed(2)+"/"+it.o1[2].toFixed(2)+" → 主胜"+(p[0]*100).toFixed(0)+"%、平"+(p[1]*100).toFixed(0)+"%、客胜"+(p[2]*100).toFixed(0)+"%。"];
+  var conf=p[k]>=0.5?"信心较高":(p[k]>=0.4?"信心一般":"偏谨慎");
+  parts.push("市场更看好"+pick+"（"+(p[k]*100).toFixed(0)+"%），"+conf+"。");
+  if(p[1]>=0.30) parts.push("平局概率"+(p[1]*100).toFixed(0)+"%不低，有防平价值。");
+  if(it.oh&&it.gl!==null){
+    var hv=it.gl, hh=it.oh[0], hd=it.oh[1], ha=it.oh[2];
+    var who=hv<0?"主队让":(hv>0?"客队让":"平手");
+    parts.push("官方让球："+who+Math.abs(hv)+"球（"+hh.toFixed(2)+"/"+hd.toFixed(2)+"/"+ha.toFixed(2)+"）。");
+    var arr=hv<0?[{v:hh,t:"让球方大胜"},{v:hd,t:"刚好卡盘"},{v:ha,t:"让球方难覆盖"}]:[{v:hh,t:"让球方难覆盖"},{v:hd,t:"刚好卡盘"},{v:ha,t:"让球方大胜"}];
+    arr.sort(function(a,b){return a.v-b.v;});
+    parts.push("盘口最低赔率在「"+arr[0].t+"」档，市场倾向"+arr[0].t+"。");
+  }
+  parts.push("注：仅基于官方赔率解读，未接入球队攻防/伤停数据，仅供参考。");
+  return parts.join(" ");
+}
+
+function render(items){
+  var now=new Date(), groups={}, keys=[];
+  for(var i=0;i<items.length;i++){
+    var d=items[i].md;
+    if(!groups[d]){groups[d]=[];keys.push(d);}
+    groups[d].push(items[i]);
+  }
+  keys.sort();
+  var html="";
+  for(var gi=0;gi<keys.length;gi++){
+    var d=keys[gi], its=groups[d], rows="", nUp=0;
+    var wd=WEEK[new Date(d+"T00:00:00+08:00").getDay()];
+    for(var i=0;i<its.length;i++){
+      var it=its[i];
+      var passed=new Date(koDate(it))<now;
+      if(!passed) nUp++;
+      var odds=it.o1?it.o1[0].toFixed(2)+" / "+it.o1[1].toFixed(2)+" / "+it.o1[2].toFixed(2):"—";
+      var hd=(it.oh&&it.gl!==null)?it.gl+"球　"+it.oh[0].toFixed(2)+"/"+it.oh[1].toFixed(2)+"/"+it.oh[2].toFixed(2):"—";
+      var badge=passed?'<span class="tag r">已开赛</span>':'<span class="tag g">未开赛</span>';
+      rows+='<tr><td><b>'+esc(it.num)+'</b></td><td>'+esc(it.league)+'</td><td>'+esc(it.home)+' <span class="vs">vs</span> '+esc(it.away)+'</td><td>'+d.slice(5)+' '+mt5(it.mt)+'</td><td>'+odds+'</td><td>'+hd+'</td><td>'+badge+'</td><td style="font-size:12.5px;color:#374151;max-width:340px">'+esc(opinion(it))+'</td></tr>';
+    }
+    html+='<div class="card"><h2>'+wd+'（'+d+'）· '+its.length+' 场 · 未开赛 '+nUp+'</h2><table class="tbl"><thead><tr><th>场次</th><th>联赛</th><th>对阵</th><th>开赛(北京)</th><th>官方胜平负</th><th>官方让球</th><th>状态</th><th>大白话解读</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+  return html;
+}
+
+function load(){
+  var status=document.getElementById("status"), content=document.getElementById("content");
+  status.textContent="正在从竞彩官网拉取最新数据…";
+  fetch(API).then(function(r){
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    return r.json();
+  }).then(function(payload){
+    var items=parse(payload), now=new Date(), nUp=0;
+    for(var i=0;i<items.length;i++){ if(new Date(koDate(items[i]))>=now) nUp++; }
+    status.textContent="更新于 "+new Date().toLocaleString("zh-CN",{timeZone:"Asia/Shanghai"})+"（北京时间）· 共 "+items.length+" 场（未开赛 "+nUp+"）";
+    content.innerHTML=items.length?render(items):'<div class="card">今天暂无可售赛事（休赛日或接口无数据）</div>';
+  }).catch(function(e){
+    status.textContent="拉取失败（可能网络问题，点下方重试）";
+    content.innerHTML='<div class="card" style="border-color:#fca5a5"><h2 style="color:#b91c1c">加载失败</h2><p>'+esc(e)+'</p><button class="btn" onclick="load()">重试</button></div>';
+  });
+}
+load();
+</script>
+</body>
+</html>
