@@ -1,333 +1,13 @@
 [
  {
-  "league": "英超",
-  "date": "2026-05-24",
-  "home": "Brighton",
-  "away": "Man United",
-  "model_prob": [
-   0.237,
-   0.323,
-   0.44
-  ],
-  "market_prob": [
-   0.512,
-   0.225,
-   0.263
-  ],
-  "direction": "客胜",
-  "edge": 0.1771,
-  "action": "可介入",
-  "stake": "5.6%",
-  "big_fav": false,
-  "exp_goals": [
-   1.03,
-   1.47
-  ],
-  "over25": 0.457,
-  "home_rank": 7,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜0场",
-  "env_score": 5.0,
-  "actual": "客胜",
-  "score": "0-3"
- },
- {
-  "league": "英超",
-  "date": "2026-05-24",
-  "home": "Nott'm Forest",
-  "away": "Bournemouth",
-  "model_prob": [
-   0.282,
-   0.229,
-   0.488
-  ],
-  "market_prob": [
-   0.287,
-   0.252,
-   0.461
-  ],
-  "direction": "客胜",
-  "edge": 0.0271,
-  "action": "轻仓观察",
-  "stake": "0.0%",
-  "big_fav": false,
-  "exp_goals": [
-   1.24,
-   1.92
-  ],
-  "over25": 0.611,
-  "home_rank": 13,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜2场",
-  "env_score": 5.0,
-  "actual": "平局",
-  "score": "1-1"
- },
- {
-  "league": "英超",
-  "date": "2026-05-24",
-  "home": "Man City",
-  "away": "Aston Villa",
-  "model_prob": [
-   0.791,
-   0.049,
-   0.161
-  ],
-  "market_prob": [
-   0.736,
-   0.158,
-   0.106
-  ],
-  "direction": "主胜",
-  "edge": 0.0545,
-  "action": "大热场次，建议关注让球盘或跳过",
-  "stake": "1.7%",
-  "big_fav": true,
-  "exp_goals": [
-   2.29,
-   0.98
-  ],
-  "over25": 0.634,
-  "home_rank": 2,
-  "injury": "未取得",
-  "odds_move": "热门方(主胜/客胜)概率下降8% → 市场信心增强",
-  "market_conf": "强",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（争冠/欧战）",
-  "intl_break": "无",
-  "streak": "近5场净胜3场（状态好）",
-  "env_score": 7.0,
-  "actual": "客胜",
-  "score": "1-2"
- },
- {
-  "league": "英超",
-  "date": "2026-05-24",
-  "home": "Crystal Palace",
-  "away": "Arsenal",
-  "model_prob": [
-   0.356,
-   0.152,
-   0.492
-  ],
-  "market_prob": [
-   0.225,
-   0.236,
-   0.539
-  ],
-  "direction": "客胜",
-  "edge": -0.047,
-  "action": "观望",
-  "stake": "0.0%",
-  "big_fav": false,
-  "exp_goals": [
-   0.75,
-   1.89
-  ],
-  "over25": 0.493,
-  "home_rank": 15,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜-2场",
-  "env_score": 5.0,
-  "actual": "客胜",
-  "score": "1-2"
- },
- {
-  "league": "英超",
-  "date": "2026-05-24",
-  "home": "Tottenham",
-  "away": "Everton",
-  "model_prob": [
-   0.595,
-   0.098,
-   0.307
-  ],
-  "market_prob": [
-   0.497,
-   0.253,
-   0.25
-  ],
-  "direction": "主胜",
-  "edge": 0.0981,
-  "action": "观望（冷门风险高）",
-  "stake": "3.8%",
-  "big_fav": false,
-  "exp_goals": [
-   1.67,
-   1.57
-  ],
-  "over25": 0.628,
-  "home_rank": 14,
-  "injury": "未取得",
-  "odds_move": "热门方概率上升8% → 市场信心减弱，冷门警报",
-  "market_conf": "弱",
-  "cold_risk": "高",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜-1场",
-  "env_score": 3.0,
-  "actual": "主胜",
-  "score": "1-0"
- },
- {
-  "league": "英超",
-  "date": "2026-05-24",
-  "home": "West Ham",
-  "away": "Leeds",
-  "model_prob": [
-   0.181,
-   0.261,
-   0.558
-  ],
-  "market_prob": [
-   0.511,
-   0.236,
-   0.252
-  ],
-  "direction": "客胜",
-  "edge": 0.3058,
-  "action": "可介入",
-  "stake": "9.9%",
-  "big_fav": false,
-  "exp_goals": [
-   1.09,
-   1.53
-  ],
-  "over25": 0.486,
-  "home_rank": 16,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜-2场",
-  "env_score": 5.0,
-  "actual": "主胜",
-  "score": "3-0"
- },
- {
-  "league": "英超",
-  "date": "2026-05-24",
-  "home": "Sunderland",
-  "away": "Chelsea",
-  "model_prob": [
-   0.373,
-   0.15,
-   0.477
-  ],
-  "market_prob": [
-   0.263,
-   0.263,
-   0.474
-  ],
-  "direction": "客胜",
-  "edge": 0.0032,
-  "action": "观望",
-  "stake": "0.0%",
-  "big_fav": false,
-  "exp_goals": [
-   1.39,
-   1.59
-  ],
-  "over25": 0.572,
-  "home_rank": 8,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜0场",
-  "env_score": 5.0,
-  "actual": "主胜",
-  "score": "2-1"
- },
- {
-  "league": "英超",
-  "date": "2026-05-24",
-  "home": "Fulham",
-  "away": "Newcastle",
-  "model_prob": [
-   0.292,
-   0.424,
-   0.284
-  ],
-  "market_prob": [
-   0.329,
-   0.249,
-   0.421
-  ],
-  "direction": "平局",
-  "edge": 0.1748,
-  "action": "可介入",
-  "stake": "5.5%",
-  "big_fav": false,
-  "exp_goals": [
-   1.46,
-   1.36
-  ],
-  "over25": 0.537,
-  "home_rank": 6,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中高（欧战资格）",
-  "intl_break": "无",
-  "streak": "近5场净胜0场",
-  "env_score": 5.0,
-  "actual": "主胜",
-  "score": "2-0"
- },
- {
   "league": "西甲",
   "date": "2026-05-24",
   "home": "Villarreal",
   "away": "Ath Madrid",
   "model_prob": [
-   0.414,
-   0.348,
-   0.237
+   0.598,
+   0.23,
+   0.173
   ],
   "market_prob": [
    0.389,
@@ -335,15 +15,15 @@
    0.346
   ],
   "direction": "主胜",
-  "edge": 0.0256,
+  "edge": 0.2086,
   "action": "观望（冷门风险高）",
-  "stake": "0.3%",
+  "stake": "8.0%",
   "big_fav": false,
   "exp_goals": [
-   1.91,
-   1.1
+   1.75,
+   1.12
   ],
-  "over25": 0.58,
+  "over25": 0.546,
   "home_rank": 3,
   "injury": "未取得",
   "odds_move": "热门方概率上升6% → 市场信心减弱，冷门警报",
@@ -365,9 +45,9 @@
   "home": "Cremonese",
   "away": "Como",
   "model_prob": [
-   0.041,
-   0.136,
-   0.823
+   0.024,
+   0.063,
+   0.913
   ],
   "market_prob": [
    0.18,
@@ -375,15 +55,15 @@
    0.602
   ],
   "direction": "客胜",
-  "edge": 0.2209,
+  "edge": 0.3115,
   "action": "可介入",
-  "stake": "12.8%",
+  "stake": "19.0%",
   "big_fav": false,
   "exp_goals": [
-   0.55,
-   2.53
+   0.52,
+   2.25
   ],
-  "over25": 0.595,
+  "over25": 0.523,
   "home_rank": 18,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -405,9 +85,9 @@
   "home": "Parma",
   "away": "Sassuolo",
   "model_prob": [
-   0.186,
-   0.645,
-   0.169
+   0.269,
+   0.513,
+   0.219
   ],
   "market_prob": [
    0.355,
@@ -415,15 +95,15 @@
    0.364
   ],
   "direction": "平局",
-  "edge": 0.3634,
+  "edge": 0.2311,
   "action": "可介入",
-  "stake": "12.4%",
+  "stake": "7.7%",
   "big_fav": false,
   "exp_goals": [
-   0.84,
-   1.09
+   1.42,
+   1.36
   ],
-  "over25": 0.305,
+  "over25": 0.525,
   "home_rank": 12,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -445,9 +125,9 @@
   "home": "Milan",
   "away": "Cagliari",
   "model_prob": [
-   0.794,
-   0.144,
-   0.061
+   0.776,
+   0.109,
+   0.116
   ],
   "market_prob": [
    0.74,
@@ -455,15 +135,15 @@
    0.087
   ],
   "direction": "主胜",
-  "edge": 0.0547,
+  "edge": 0.036,
   "action": "大热场次，建议关注让球盘或跳过",
-  "stake": "2.1%",
+  "stake": "0.1%",
   "big_fav": true,
   "exp_goals": [
-   1.82,
-   0.38
+   1.05,
+   0.8
   ],
-  "over25": 0.379,
+  "over25": 0.282,
   "home_rank": 5,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -485,9 +165,9 @@
   "home": "Torino",
   "away": "Juventus",
   "model_prob": [
-   0.027,
-   0.059,
-   0.914
+   0.015,
+   0.023,
+   0.962
   ],
   "market_prob": [
    0.126,
@@ -495,15 +175,15 @@
    0.665
   ],
   "direction": "客胜",
-  "edge": 0.2492,
+  "edge": 0.2975,
   "action": "可介入",
-  "stake": "17.7%",
+  "stake": "21.8%",
   "big_fav": false,
   "exp_goals": [
-   0.47,
-   3.59
+   0.43,
+   2.89
   ],
-  "over25": 0.768,
+  "over25": 0.645,
   "home_rank": 13,
   "injury": "未取得",
   "odds_move": "热门方(主胜/客胜)概率下降7% → 市场信心增强",
@@ -525,9 +205,9 @@
   "home": "Verona",
   "away": "Roma",
   "model_prob": [
-   0.008,
-   0.036,
-   0.955
+   0.014,
+   0.018,
+   0.969
   ],
   "market_prob": [
    0.095,
@@ -535,15 +215,15 @@
    0.732
   ],
   "direction": "客胜",
-  "edge": 0.2236,
+  "edge": 0.237,
   "action": "大热场次，建议关注让球盘或跳过",
-  "stake": "20.2%",
+  "stake": "21.6%",
   "big_fav": true,
   "exp_goals": [
-   0.75,
-   2.37
+   0.89,
+   2.43
   ],
-  "over25": 0.603,
+  "over25": 0.644,
   "home_rank": 19,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -565,9 +245,9 @@
   "home": "Lecce",
   "away": "Genoa",
   "model_prob": [
-   0.698,
-   0.141,
-   0.162
+   0.881,
+   0.055,
+   0.064
   ],
   "market_prob": [
    0.541,
@@ -575,15 +255,15 @@
    0.189
   ],
   "direction": "主胜",
-  "edge": 0.157,
+  "edge": 0.3404,
   "action": "可介入",
-  "stake": "7.4%",
+  "stake": "18.1%",
   "big_fav": false,
   "exp_goals": [
-   1.45,
-   0.75
+   1.87,
+   0.89
   ],
-  "over25": 0.379,
+  "over25": 0.521,
   "home_rank": 17,
   "injury": "未取得",
   "odds_move": "热门方(主胜/客胜)概率下降5% → 市场信心增强",
@@ -605,9 +285,9 @@
   "home": "Napoli",
   "away": "Udinese",
   "model_prob": [
-   0.86,
-   0.121,
-   0.018
+   0.718,
+   0.143,
+   0.139
   ],
   "market_prob": [
    0.643,
@@ -615,15 +295,15 @@
    0.119
   ],
   "direction": "主胜",
-  "edge": 0.217,
+  "edge": 0.0748,
   "action": "可介入",
-  "stake": "14.2%",
+  "stake": "3.3%",
   "big_fav": false,
   "exp_goals": [
-   1.84,
-   0.49
+   1.65,
+   0.6
   ],
-  "over25": 0.413,
+  "over25": 0.39,
   "home_rank": 2,
   "injury": "未取得",
   "odds_move": "热门方(主胜/客胜)概率下降14% → 市场信心增强",
@@ -645,9 +325,9 @@
   "home": "Heidenheim",
   "away": "Mainz",
   "model_prob": [
-   0.207,
-   0.076,
-   0.716
+   0.313,
+   0.113,
+   0.574
   ],
   "market_prob": [
    0.499,
@@ -655,15 +335,15 @@
    0.28
   ],
   "direction": "客胜",
-  "edge": 0.4357,
+  "edge": 0.2934,
   "action": "可介入",
-  "stake": "14.9%",
+  "stake": "9.9%",
   "big_fav": false,
   "exp_goals": [
-   1.54,
-   1.51
+   2.18,
+   1.86
   ],
-  "over25": 0.588,
+  "over25": 0.767,
   "home_rank": 17,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -685,9 +365,9 @@
   "home": "Leverkusen",
   "away": "Hamburg",
   "model_prob": [
-   0.836,
-   0.124,
-   0.04
+   0.764,
+   0.195,
+   0.041
   ],
   "market_prob": [
    0.759,
@@ -695,15 +375,15 @@
    0.1
   ],
   "direction": "主胜",
-  "edge": 0.0765,
+  "edge": 0.005,
   "action": "大热场次，建议关注让球盘或跳过",
-  "stake": "4.5%",
+  "stake": "0.0%",
   "big_fav": true,
   "exp_goals": [
-   2.15,
-   1.36
+   1.49,
+   0.9
   ],
-  "over25": 0.681,
+  "over25": 0.427,
   "home_rank": 6,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -725,25 +405,25 @@
   "home": "Freiburg",
   "away": "RB Leipzig",
   "model_prob": [
-   0.152,
-   0.55,
-   0.298
+   0.112,
+   0.421,
+   0.467
   ],
   "market_prob": [
    0.351,
    0.237,
    0.412
   ],
-  "direction": "平局",
-  "edge": 0.3129,
+  "direction": "客胜",
+  "edge": 0.0548,
   "action": "可介入",
-  "stake": "10.0%",
+  "stake": "1.4%",
   "big_fav": false,
   "exp_goals": [
-   1.93,
-   1.75
+   1.86,
+   2.45
   ],
-  "over25": 0.71,
+  "over25": 0.804,
   "home_rank": 7,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -765,25 +445,25 @@
   "home": "M'gladbach",
   "away": "Hoffenheim",
   "model_prob": [
-   0.148,
-   0.568,
-   0.284
+   0.121,
+   0.141,
+   0.737
   ],
   "market_prob": [
    0.22,
    0.211,
    0.569
   ],
-  "direction": "平局",
-  "edge": 0.357,
+  "direction": "客胜",
+  "edge": 0.1681,
   "action": "可介入",
-  "stake": "11.1%",
+  "stake": "8.6%",
   "big_fav": false,
   "exp_goals": [
-   1.47,
-   2.52
+   1.46,
+   3.34
   ],
-  "over25": 0.761,
+  "over25": 0.857,
   "home_rank": 12,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -805,9 +485,9 @@
   "home": "Bayern Munich",
   "away": "FC Koln",
   "model_prob": [
-   0.822,
-   0.028,
-   0.15
+   0.915,
+   0.021,
+   0.064
   ],
   "market_prob": [
    0.832,
@@ -815,15 +495,15 @@
    0.068
   ],
   "direction": "主胜",
-  "edge": -0.0103,
+  "edge": 0.0822,
   "action": "大热场次，建议关注让球盘或跳过",
-  "stake": "0.0%",
+  "stake": "7.6%",
   "big_fav": true,
   "exp_goals": [
-   3.68,
-   0.88
+   3.55,
+   1.92
   ],
-  "over25": 0.832,
+  "over25": 0.909,
   "home_rank": 1,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -845,25 +525,25 @@
   "home": "Werder Bremen",
   "away": "Dortmund",
   "model_prob": [
-   0.145,
-   0.417,
-   0.439
+   0.265,
+   0.482,
+   0.254
   ],
   "market_prob": [
    0.272,
    0.238,
    0.489
   ],
-  "direction": "客胜",
-  "edge": -0.0502,
-  "action": "放弃该方向",
-  "stake": "0.0%",
+  "direction": "平局",
+  "edge": 0.2432,
+  "action": "可介入",
+  "stake": "7.7%",
   "big_fav": false,
   "exp_goals": [
-   1.94,
-   2.13
+   1.4,
+   1.96
   ],
-  "over25": 0.772,
+  "over25": 0.651,
   "home_rank": 14,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -885,25 +565,25 @@
   "home": "Union Berlin",
   "away": "Augsburg",
   "model_prob": [
-   0.609,
-   0.055,
-   0.336
+   0.216,
+   0.214,
+   0.57
   ],
   "market_prob": [
    0.364,
    0.242,
    0.394
   ],
-  "direction": "主胜",
-  "edge": 0.2454,
+  "direction": "客胜",
+  "edge": 0.1757,
   "action": "可介入",
-  "stake": "9.1%",
+  "stake": "6.6%",
   "big_fav": false,
   "exp_goals": [
-   2.49,
-   1.29
+   1.41,
+   2.18
   ],
-  "over25": 0.728,
+  "over25": 0.696,
   "home_rank": 11,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -925,9 +605,9 @@
   "home": "Ein Frankfurt",
   "away": "Stuttgart",
   "model_prob": [
-   0.063,
-   0.294,
-   0.643
+   0.101,
+   0.318,
+   0.581
   ],
   "market_prob": [
    0.276,
@@ -935,15 +615,15 @@
    0.507
   ],
   "direction": "客胜",
-  "edge": 0.1357,
+  "edge": 0.0737,
   "action": "可介入",
-  "stake": "5.6%",
+  "stake": "2.2%",
   "big_fav": false,
   "exp_goals": [
-   1.42,
-   2.22
+   1.79,
+   3.13
   ],
-  "over25": 0.703,
+  "over25": 0.868,
   "home_rank": 8,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -965,25 +645,25 @@
   "home": "St Pauli",
   "away": "Wolfsburg",
   "model_prob": [
-   0.265,
-   0.463,
-   0.271
+   0.158,
+   0.217,
+   0.625
   ],
   "market_prob": [
    0.34,
    0.254,
    0.406
   ],
-  "direction": "平局",
-  "edge": 0.2092,
+  "direction": "客胜",
+  "edge": 0.2194,
   "action": "可介入",
-  "stake": "6.7%",
+  "stake": "8.7%",
   "big_fav": false,
   "exp_goals": [
-   1.63,
-   1.61
+   0.89,
+   2.26
   ],
-  "over25": 0.628,
+  "over25": 0.61,
   "home_rank": 18,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1005,25 +685,25 @@
   "home": "Brest",
   "away": "Angers",
   "model_prob": [
-   0.225,
-   0.28,
-   0.495
+   0.329,
+   0.462,
+   0.209
   ],
   "market_prob": [
    0.513,
    0.256,
    0.231
   ],
-  "direction": "客胜",
-  "edge": 0.2644,
+  "direction": "平局",
+  "edge": 0.2053,
   "action": "可介入",
-  "stake": "8.2%",
+  "stake": "6.4%",
   "big_fav": false,
   "exp_goals": [
-   0.62,
-   1.27
+   1.23,
+   1.14
   ],
-  "over25": 0.294,
+  "over25": 0.423,
   "home_rank": 12,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1045,9 +725,9 @@
   "home": "Paris FC",
   "away": "Paris SG",
   "model_prob": [
-   0.055,
-   0.194,
-   0.751
+   0.063,
+   0.315,
+   0.622
   ],
   "market_prob": [
    0.168,
@@ -1055,15 +735,15 @@
    0.606
   ],
   "direction": "客胜",
-  "edge": 0.1455,
-  "action": "可介入",
-  "stake": "7.0%",
+  "edge": 0.016,
+  "action": "观望",
+  "stake": "0.0%",
   "big_fav": false,
   "exp_goals": [
-   1.12,
-   2.67
+   0.99,
+   2.08
   ],
-  "over25": 0.729,
+  "over25": 0.592,
   "home_rank": 11,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1085,9 +765,9 @@
   "home": "Lille",
   "away": "Auxerre",
   "model_prob": [
-   0.88,
-   0.104,
-   0.016
+   0.587,
+   0.348,
+   0.065
   ],
   "market_prob": [
    0.674,
@@ -1095,15 +775,15 @@
    0.122
   ],
   "direction": "主胜",
-  "edge": 0.2064,
-  "action": "可介入",
-  "stake": "13.7%",
+  "edge": -0.0871,
+  "action": "放弃该方向",
+  "stake": "0.0%",
   "big_fav": false,
   "exp_goals": [
-   2.39,
-   0.59
+   1.3,
+   0.57
   ],
-  "over25": 0.572,
+  "over25": 0.288,
   "home_rank": 3,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1125,9 +805,9 @@
   "home": "Lorient",
   "away": "Le Havre",
   "model_prob": [
-   0.46,
-   0.195,
-   0.345
+   0.547,
+   0.248,
+   0.205
   ],
   "market_prob": [
    0.358,
@@ -1135,15 +815,15 @@
    0.365
   ],
   "direction": "主胜",
-  "edge": 0.1017,
+  "edge": 0.1893,
   "action": "可介入",
-  "stake": "2.8%",
+  "stake": "6.4%",
   "big_fav": false,
   "exp_goals": [
-   0.99,
-   1.19
+   1.12,
+   1.0
   ],
-  "over25": 0.371,
+  "over25": 0.356,
   "home_rank": 10,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1165,9 +845,9 @@
   "home": "Lyon",
   "away": "Lens",
   "model_prob": [
-   0.845,
-   0.07,
-   0.085
+   0.852,
+   0.05,
+   0.098
   ],
   "market_prob": [
    0.539,
@@ -1175,15 +855,15 @@
    0.228
   ],
   "direction": "主胜",
-  "edge": 0.3058,
+  "edge": 0.3129,
   "action": "观望（冷门风险高）",
-  "stake": "15.8%",
+  "stake": "16.2%",
   "big_fav": false,
   "exp_goals": [
-   2.38,
-   0.72
+   1.85,
+   0.9
   ],
-  "over25": 0.599,
+  "over25": 0.52,
   "home_rank": 4,
   "injury": "未取得",
   "odds_move": "热门方概率上升10% → 市场信心减弱，冷门警报",
@@ -1205,9 +885,9 @@
   "home": "Nantes",
   "away": "Toulouse",
   "model_prob": [
-   0.39,
-   0.221,
-   0.388
+   0.592,
+   0.194,
+   0.214
   ],
   "market_prob": [
    0.368,
@@ -1215,15 +895,15 @@
    0.368
   ],
   "direction": "主胜",
-  "edge": 0.0217,
-  "action": "轻仓观察",
-  "stake": "0.0%",
+  "edge": 0.2235,
+  "action": "可介入",
+  "stake": "8.0%",
   "big_fav": false,
   "exp_goals": [
-   1.41,
-   1.3
+   1.61,
+   0.86
   ],
-  "over25": 0.51,
+  "over25": 0.45,
   "home_rank": 17,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1245,9 +925,9 @@
   "home": "Marseille",
   "away": "Rennes",
   "model_prob": [
-   0.809,
-   0.025,
-   0.166
+   0.899,
+   0.033,
+   0.069
   ],
   "market_prob": [
    0.47,
@@ -1255,15 +935,15 @@
    0.282
   ],
   "direction": "主胜",
-  "edge": 0.3387,
+  "edge": 0.4286,
   "action": "可介入",
-  "stake": "15.2%",
+  "stake": "19.8%",
   "big_fav": false,
   "exp_goals": [
-   2.17,
-   0.94
+   2.33,
+   0.52
   ],
-  "over25": 0.602,
+  "over25": 0.543,
   "home_rank": 6,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1285,9 +965,9 @@
   "home": "Strasbourg",
   "away": "Monaco",
   "model_prob": [
-   0.751,
-   0.073,
-   0.177
+   0.667,
+   0.134,
+   0.199
   ],
   "market_prob": [
    0.32,
@@ -1295,15 +975,15 @@
    0.438
   ],
   "direction": "主胜",
-  "edge": 0.431,
+  "edge": 0.3478,
   "action": "可介入",
-  "stake": "15.4%",
+  "stake": "12.3%",
   "big_fav": false,
   "exp_goals": [
-   1.71,
-   1.2
+   1.7,
+   0.88
   ],
-  "over25": 0.557,
+  "over25": 0.476,
   "home_rank": 8,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1325,9 +1005,9 @@
   "home": "Nice",
   "away": "Metz",
   "model_prob": [
-   0.823,
-   0.086,
-   0.092
+   0.939,
+   0.034,
+   0.027
   ],
   "market_prob": [
    0.682,
@@ -1335,15 +1015,15 @@
    0.133
   ],
   "direction": "主胜",
-  "edge": 0.1408,
+  "edge": 0.257,
   "action": "观望（冷门风险高）",
-  "stake": "8.3%",
+  "stake": "19.2%",
   "big_fav": false,
   "exp_goals": [
-   3.07,
-   1.28
+   3.18,
+   0.53
   ],
-  "over25": 0.809,
+  "over25": 0.716,
   "home_rank": 16,
   "injury": "未取得",
   "odds_move": "热门方概率上升9% → 市场信心减弱，冷门警报",
@@ -1365,9 +1045,9 @@
   "home": "AZ Alkmaar",
   "away": "NAC Breda",
   "model_prob": [
-   0.905,
-   0.067,
-   0.028
+   0.809,
+   0.159,
+   0.033
   ],
   "market_prob": [
    0.678,
@@ -1375,15 +1055,15 @@
    0.125
   ],
   "direction": "主胜",
-  "edge": 0.2268,
+  "edge": 0.1307,
   "action": "可介入",
-  "stake": "16.4%",
+  "stake": "7.6%",
   "big_fav": false,
   "exp_goals": [
-   1.93,
-   0.83
+   1.29,
+   0.65
   ],
-  "over25": 0.521,
+  "over25": 0.306,
   "home_rank": 7,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1405,25 +1085,25 @@
   "home": "Volendam",
   "away": "Telstar",
   "model_prob": [
-   0.29,
-   0.2,
-   0.51
+   0.527,
+   0.183,
+   0.29
   ],
   "market_prob": [
    0.347,
    0.26,
    0.393
   ],
-  "direction": "客胜",
-  "edge": 0.1163,
+  "direction": "主胜",
+  "edge": 0.1805,
   "action": "可介入",
-  "stake": "3.9%",
+  "stake": "6.2%",
   "big_fav": false,
   "exp_goals": [
-   1.16,
-   1.4
+   1.25,
+   1.07
   ],
-  "over25": 0.471,
+  "over25": 0.409,
   "home_rank": 16,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1445,25 +1125,25 @@
   "home": "Heerenveen",
   "away": "Ajax",
   "model_prob": [
-   0.248,
-   0.372,
-   0.38
+   0.347,
+   0.342,
+   0.31
   ],
   "market_prob": [
    0.317,
    0.235,
    0.448
   ],
-  "direction": "客胜",
-  "edge": -0.0681,
-  "action": "放弃该方向",
-  "stake": "0.0%",
+  "direction": "主胜",
+  "edge": 0.0307,
+  "action": "轻仓观察",
+  "stake": "0.1%",
   "big_fav": false,
   "exp_goals": [
-   1.67,
-   1.98
+   1.96,
+   2.06
   ],
-  "over25": 0.707,
+  "over25": 0.765,
   "home_rank": 8,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1485,9 +1165,9 @@
   "home": "Heracles",
   "away": "Groningen",
   "model_prob": [
-   0.197,
-   0.093,
-   0.71
+   0.105,
+   0.285,
+   0.609
   ],
   "market_prob": [
    0.196,
@@ -1495,15 +1175,15 @@
    0.582
   ],
   "direction": "客胜",
-  "edge": 0.1276,
-  "action": "可介入",
-  "stake": "5.7%",
+  "edge": 0.0273,
+  "action": "轻仓观察",
+  "stake": "0.0%",
   "big_fav": false,
   "exp_goals": [
-   1.46,
-   1.99
+   1.75,
+   2.59
   ],
-  "over25": 0.67,
+  "over25": 0.807,
   "home_rank": 18,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1525,9 +1205,9 @@
   "home": "Nijmegen",
   "away": "Go Ahead Eagles",
   "model_prob": [
-   0.787,
-   0.188,
-   0.024
+   0.912,
+   0.044,
+   0.044
   ],
   "market_prob": [
    0.672,
@@ -1535,15 +1215,15 @@
    0.133
   ],
   "direction": "主胜",
-  "edge": 0.1151,
+  "edge": 0.2398,
   "action": "可介入",
-  "stake": "5.7%",
+  "stake": "17.0%",
   "big_fav": false,
   "exp_goals": [
-   2.72,
-   1.3
+   3.43,
+   1.1
   ],
-  "over25": 0.765,
+  "over25": 0.829,
   "home_rank": 3,
   "injury": "未取得",
   "odds_move": "热门方(主胜/客胜)概率下降6% → 市场信心增强",
@@ -1565,9 +1245,9 @@
   "home": "Sparta Rotterdam",
   "away": "Excelsior",
   "model_prob": [
-   0.436,
-   0.202,
-   0.362
+   0.437,
+   0.295,
+   0.268
   ],
   "market_prob": [
    0.456,
@@ -1575,15 +1255,15 @@
    0.292
   ],
   "direction": "主胜",
-  "edge": -0.0199,
+  "edge": -0.0191,
   "action": "观望",
   "stake": "0.0%",
   "big_fav": false,
   "exp_goals": [
-   1.5,
-   1.27
+   0.99,
+   1.65
   ],
-  "over25": 0.523,
+  "over25": 0.492,
   "home_rank": 10,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1605,25 +1285,25 @@
   "home": "PSV Eindhoven",
   "away": "Twente",
   "model_prob": [
-   0.457,
-   0.247,
-   0.296
+   0.266,
+   0.339,
+   0.394
   ],
   "market_prob": [
    0.45,
    0.23,
    0.32
   ],
-  "direction": "主胜",
-  "edge": 0.0078,
-  "action": "观望",
-  "stake": "0.0%",
+  "direction": "客胜",
+  "edge": 0.0745,
+  "action": "可介入",
+  "stake": "1.8%",
   "big_fav": false,
   "exp_goals": [
-   2.11,
-   1.15
+   1.75,
+   1.79
   ],
-  "over25": 0.633,
+  "over25": 0.686,
   "home_rank": 1,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1645,25 +1325,25 @@
   "home": "Zwolle",
   "away": "Feyenoord",
   "model_prob": [
-   0.211,
-   0.446,
-   0.343
+   0.292,
+   0.332,
+   0.375
   ],
   "market_prob": [
    0.214,
    0.226,
    0.561
   ],
-  "direction": "平局",
-  "edge": 0.2204,
+  "direction": "客胜",
+  "edge": -0.1854,
   "action": "观望（冷门风险高）",
-  "stake": "6.7%",
+  "stake": "0.0%",
   "big_fav": false,
   "exp_goals": [
-   1.53,
-   2.16
+   1.4,
+   2.12
   ],
-  "over25": 0.713,
+  "over25": 0.684,
   "home_rank": 15,
   "injury": "未取得",
   "odds_move": "热门方概率上升9% → 市场信心减弱，冷门警报",
@@ -1685,25 +1365,25 @@
   "home": "Utrecht",
   "away": "For Sittard",
   "model_prob": [
-   0.63,
-   0.303,
-   0.067
+   0.383,
+   0.552,
+   0.065
   ],
   "market_prob": [
    0.633,
    0.197,
    0.17
   ],
-  "direction": "主胜",
-  "edge": -0.0031,
-  "action": "观望",
-  "stake": "0.0%",
+  "direction": "平局",
+  "edge": 0.3544,
+  "action": "可介入",
+  "stake": "10.8%",
   "big_fav": false,
   "exp_goals": [
    2.31,
-   1.54
+   1.76
   ],
-  "over25": 0.739,
+  "over25": 0.772,
   "home_rank": 5,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1725,9 +1405,9 @@
   "home": "Arouca",
   "away": "Tondela",
   "model_prob": [
-   0.349,
-   0.16,
-   0.491
+   0.155,
+   0.23,
+   0.615
   ],
   "market_prob": [
    0.301,
@@ -1735,15 +1415,15 @@
    0.424
   ],
   "direction": "客胜",
-  "edge": 0.0672,
+  "edge": 0.1905,
   "action": "可介入",
-  "stake": "1.7%",
+  "stake": "7.3%",
   "big_fav": false,
   "exp_goals": [
-   1.67,
-   2.16
+   1.39,
+   1.97
   ],
-  "over25": 0.736,
+  "over25": 0.651,
   "home_rank": 7,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1765,9 +1445,9 @@
   "home": "Nacional",
   "away": "Guimaraes",
   "model_prob": [
-   0.603,
-   0.062,
-   0.335
+   0.643,
+   0.221,
+   0.136
   ],
   "market_prob": [
    0.472,
@@ -1775,15 +1455,15 @@
    0.264
   ],
   "direction": "主胜",
-  "edge": 0.1317,
+  "edge": 0.1714,
   "action": "可介入",
-  "stake": "4.8%",
+  "stake": "6.8%",
   "big_fav": false,
   "exp_goals": [
-   1.97,
-   1.42
+   2.24,
+   1.6
   ],
-  "over25": 0.66,
+  "over25": 0.736,
   "home_rank": 14,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1805,9 +1485,9 @@
   "home": "Sp Braga",
   "away": "Estrela",
   "model_prob": [
-   0.903,
-   0.057,
-   0.04
+   0.693,
+   0.241,
+   0.066
   ],
   "market_prob": [
    0.586,
@@ -1815,15 +1495,15 @@
    0.184
   ],
   "direction": "主胜",
-  "edge": 0.3167,
+  "edge": 0.1067,
   "action": "可介入",
-  "stake": "18.3%",
+  "stake": "3.8%",
   "big_fav": false,
   "exp_goals": [
-   2.34,
-   0.95
+   2.56,
+   1.17
   ],
-  "over25": 0.64,
+  "over25": 0.719,
   "home_rank": 5,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1845,25 +1525,25 @@
   "home": "Casa Pia",
   "away": "Rio Ave",
   "model_prob": [
-   0.237,
-   0.251,
-   0.512
+   0.568,
+   0.168,
+   0.264
   ],
   "market_prob": [
    0.569,
    0.246,
    0.185
   ],
-  "direction": "客胜",
-  "edge": 0.3271,
-  "action": "可介入",
-  "stake": "9.7%",
+  "direction": "主胜",
+  "edge": -0.0016,
+  "action": "观望",
+  "stake": "0.0%",
   "big_fav": false,
   "exp_goals": [
-   1.48,
-   2.21
+   1.98,
+   1.47
   ],
-  "over25": 0.712,
+  "over25": 0.67,
   "home_rank": 15,
   "injury": "未取得",
   "odds_move": "热门方(主胜/客胜)概率下降10% → 市场信心增强",
@@ -1885,9 +1565,9 @@
   "home": "Sp Lisbon",
   "away": "Gil Vicente",
   "model_prob": [
-   0.806,
-   0.143,
-   0.051
+   0.91,
+   0.082,
+   0.008
   ],
   "market_prob": [
    0.755,
@@ -1895,15 +1575,15 @@
    0.092
   ],
   "direction": "主胜",
-  "edge": 0.0518,
+  "edge": 0.1555,
   "action": "大热场次，建议关注让球盘或跳过",
-  "stake": "0.0%",
+  "stake": "12.5%",
   "big_fav": true,
   "exp_goals": [
-   2.47,
-   0.94
+   2.57,
+   0.73
   ],
-  "over25": 0.662,
+  "over25": 0.639,
   "home_rank": 2,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
@@ -1925,9 +1605,9 @@
   "home": "Porto",
   "away": "Santa Clara",
   "model_prob": [
-   0.93,
-   0.056,
-   0.014
+   0.885,
+   0.095,
+   0.019
   ],
   "market_prob": [
    0.709,
@@ -1935,15 +1615,15 @@
    0.115
   ],
   "direction": "主胜",
-  "edge": 0.2211,
+  "edge": 0.1763,
   "action": "大热场次，建议关注让球盘或跳过",
-  "stake": "17.4%",
+  "stake": "12.6%",
   "big_fav": true,
   "exp_goals": [
-   2.04,
-   0.57
+   2.66,
+   0.76
   ],
-  "over25": 0.484,
+  "over25": 0.665,
   "home_rank": 1,
   "injury": "未取得",
   "odds_move": "热门方概率上升8% → 市场信心减弱，冷门警报；平局概率下降9% → 市场防平，平局概率上调",
@@ -1965,9 +1645,9 @@
   "home": "Moreirense",
   "away": "AVS",
   "model_prob": [
-   0.509,
-   0.202,
-   0.289
+   0.804,
+   0.118,
+   0.078
   ],
   "market_prob": [
    0.539,
@@ -1975,15 +1655,15 @@
    0.225
   ],
   "direction": "主胜",
-  "edge": -0.0301,
-  "action": "观望",
-  "stake": "0.0%",
+  "edge": 0.265,
+  "action": "可介入",
+  "stake": "13.2%",
   "big_fav": false,
   "exp_goals": [
-   1.81,
-   1.48
+   1.79,
+   0.52
   ],
-  "over25": 0.638,
+  "over25": 0.408,
   "home_rank": 9,
   "injury": "未取得",
   "odds_move": "热门方(主胜/客胜)概率下降12% → 市场信心增强",
@@ -2005,9 +1685,9 @@
   "home": "Famalicao",
   "away": "Alverca",
   "model_prob": [
-   0.601,
-   0.309,
-   0.091
+   0.924,
+   0.035,
+   0.042
   ],
   "market_prob": [
    0.586,
@@ -2015,15 +1695,15 @@
    0.184
   ],
   "direction": "主胜",
-  "edge": 0.0146,
+  "edge": 0.3377,
   "action": "观望（冷门风险高）",
-  "stake": "0.0%",
+  "stake": "19.7%",
   "big_fav": false,
   "exp_goals": [
-   1.63,
-   0.87
+   2.05,
+   0.64
   ],
-  "over25": 0.455,
+  "over25": 0.504,
   "home_rank": 4,
   "injury": "未取得",
   "odds_move": "热门方概率上升6% → 市场信心减弱，冷门警报",
@@ -2045,9 +1725,9 @@
   "home": "Estoril",
   "away": "Benfica",
   "model_prob": [
-   0.041,
-   0.126,
-   0.833
+   0.026,
+   0.035,
+   0.94
   ],
   "market_prob": [
    0.103,
@@ -2055,15 +1735,15 @@
    0.712
   ],
   "direction": "客胜",
-  "edge": 0.1209,
+  "edge": 0.2275,
   "action": "大热场次，建议关注让球盘或跳过",
-  "stake": "6.9%",
+  "stake": "18.5%",
   "big_fav": true,
   "exp_goals": [
-   0.44,
-   1.68
+   0.81,
+   2.13
   ],
-  "over25": 0.354,
+  "over25": 0.564,
   "home_rank": 10,
   "injury": "未取得",
   "odds_move": "盘口变化幅度小，无明显信号",
