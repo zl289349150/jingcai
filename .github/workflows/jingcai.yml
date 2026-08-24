@@ -1,0 +1,32 @@
+name: 每日竞彩更新
+
+on:
+  schedule:
+    # 每天北京时间 09:30（=01:30 UTC）自动更新一次；想改时间改这里
+    - cron: "30 1 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 抓取竞彩官方数据并生成网页
+        run: python scripts/jingcai_fetch.py
+
+      - name: 发布到 GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          publish_branch: gh-pages
+          force_orphan: true
