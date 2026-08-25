@@ -1,1762 +1,196 @@
 [
  {
-  "league": "西甲",
-  "date": "2026-05-24",
-  "home": "Villarreal",
-  "away": "Ath Madrid",
+  "lottery_id": "周二005",
+  "league": "欧冠",
+  "date": "2026-08-26",
+  "kickoff_bjt": "2026-08-26T03:00+08:00",
+  "home": "LASK林茨",
+  "away": "凯尔特人",
+  "model_status": "欧冠混合模型（欧冠历史+本土联赛）",
   "model_prob": [
-   0.598,
-   0.23,
-   0.173
+   0.4016,
+   0.2523,
+   0.3462
   ],
   "market_prob": [
-   0.389,
-   0.265,
-   0.346
+   0.4921,
+   0.2394,
+   0.2684
+  ],
+  "edge": -0.0906,
+  "edge_by_outcome": [
+   -0.0906,
+   0.0129,
+   0.0777
   ],
   "direction": "主胜",
-  "edge": 0.2086,
-  "action": "观望（冷门风险高）",
-  "stake": "8.0%",
-  "big_fav": false,
-  "exp_goals": [
-   1.75,
-   1.12
-  ],
-  "over25": 0.546,
-  "home_rank": 3,
-  "injury": "未取得",
-  "odds_move": "热门方概率上升6% → 市场信心减弱，冷门警报",
-  "market_conf": "弱",
-  "cold_risk": "高",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（争冠/欧战）",
-  "intl_break": "无",
-  "streak": "近5场净胜0场",
-  "env_score": 4.0,
-  "actual": "主胜",
-  "score": "5-1"
- },
- {
-  "league": "意甲",
-  "date": "2026-05-24",
-  "home": "Cremonese",
-  "away": "Como",
-  "model_prob": [
-   0.024,
-   0.063,
-   0.913
-  ],
-  "market_prob": [
-   0.18,
-   0.218,
-   0.602
-  ],
-  "direction": "客胜",
-  "edge": 0.3115,
-  "action": "可介入",
-  "stake": "19.0%",
-  "big_fav": false,
-  "exp_goals": [
-   0.52,
-   2.25
-  ],
-  "over25": 0.523,
-  "home_rank": 18,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（保级）",
-  "intl_break": "无",
-  "streak": "近5场净胜0场",
-  "env_score": 6.0,
-  "actual": "客胜",
-  "score": "1-4"
- },
- {
-  "league": "意甲",
-  "date": "2026-05-24",
-  "home": "Parma",
-  "away": "Sassuolo",
-  "model_prob": [
-   0.269,
-   0.513,
-   0.219
-  ],
-  "market_prob": [
-   0.355,
-   0.282,
-   0.364
-  ],
-  "direction": "平局",
-  "edge": 0.2311,
-  "action": "可介入",
-  "stake": "7.7%",
-  "big_fav": false,
-  "exp_goals": [
-   1.42,
-   1.36
-  ],
-  "over25": 0.525,
-  "home_rank": 12,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜-1场",
-  "env_score": 5.0,
-  "actual": "主胜",
-  "score": "1-0"
- },
- {
-  "league": "意甲",
-  "date": "2026-05-24",
-  "home": "Milan",
-  "away": "Cagliari",
-  "model_prob": [
-   0.776,
-   0.109,
-   0.116
-  ],
-  "market_prob": [
-   0.74,
-   0.174,
-   0.087
-  ],
-  "direction": "主胜",
-  "edge": 0.036,
-  "action": "大热场次，建议关注让球盘或跳过",
-  "stake": "0.1%",
-  "big_fav": true,
-  "exp_goals": [
-   1.05,
-   0.8
-  ],
-  "over25": 0.282,
-  "home_rank": 5,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中高（欧战资格）",
-  "intl_break": "无",
-  "streak": "近5场净胜0场",
-  "env_score": 5.0,
-  "actual": "客胜",
-  "score": "1-2"
- },
- {
-  "league": "意甲",
-  "date": "2026-05-24",
-  "home": "Torino",
-  "away": "Juventus",
-  "model_prob": [
-   0.015,
-   0.023,
-   0.962
-  ],
-  "market_prob": [
-   0.126,
-   0.21,
-   0.665
-  ],
-  "direction": "客胜",
-  "edge": 0.2975,
-  "action": "可介入",
-  "stake": "21.8%",
-  "big_fav": false,
-  "exp_goals": [
-   0.43,
-   2.89
-  ],
-  "over25": 0.645,
-  "home_rank": 13,
-  "injury": "未取得",
-  "odds_move": "热门方(主胜/客胜)概率下降7% → 市场信心增强",
-  "market_conf": "强",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜-1场",
-  "env_score": 5.0,
-  "actual": "平局",
-  "score": "2-2"
- },
- {
-  "league": "意甲",
-  "date": "2026-05-24",
-  "home": "Verona",
-  "away": "Roma",
-  "model_prob": [
-   0.014,
-   0.018,
-   0.969
-  ],
-  "market_prob": [
-   0.095,
-   0.173,
-   0.732
-  ],
-  "direction": "客胜",
-  "edge": 0.237,
-  "action": "大热场次，建议关注让球盘或跳过",
-  "stake": "21.6%",
-  "big_fav": true,
-  "exp_goals": [
-   0.89,
-   2.43
-  ],
-  "over25": 0.644,
-  "home_rank": 19,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（保级）",
-  "intl_break": "无",
-  "streak": "近5场净胜-2场",
-  "env_score": 6.0,
-  "actual": "客胜",
-  "score": "0-2"
- },
- {
-  "league": "意甲",
-  "date": "2026-05-24",
-  "home": "Lecce",
-  "away": "Genoa",
-  "model_prob": [
-   0.881,
-   0.055,
-   0.064
-  ],
-  "market_prob": [
-   0.541,
-   0.27,
-   0.189
-  ],
-  "direction": "主胜",
-  "edge": 0.3404,
-  "action": "可介入",
-  "stake": "18.1%",
-  "big_fav": false,
-  "exp_goals": [
-   1.87,
-   0.89
-  ],
-  "over25": 0.521,
-  "home_rank": 17,
-  "injury": "未取得",
-  "odds_move": "热门方(主胜/客胜)概率下降5% → 市场信心增强",
-  "market_conf": "强",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（保级）",
-  "intl_break": "无",
-  "streak": "近5场净胜1场",
-  "env_score": 6.0,
-  "actual": "主胜",
-  "score": "1-0"
- },
- {
-  "league": "意甲",
-  "date": "2026-05-24",
-  "home": "Napoli",
-  "away": "Udinese",
-  "model_prob": [
-   0.718,
-   0.143,
-   0.139
-  ],
-  "market_prob": [
-   0.643,
-   0.238,
-   0.119
-  ],
-  "direction": "主胜",
-  "edge": 0.0748,
-  "action": "可介入",
-  "stake": "3.3%",
-  "big_fav": false,
-  "exp_goals": [
-   1.65,
-   0.6
-  ],
-  "over25": 0.39,
-  "home_rank": 2,
-  "injury": "未取得",
-  "odds_move": "热门方(主胜/客胜)概率下降14% → 市场信心增强",
-  "market_conf": "强",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（争冠/欧战）",
-  "intl_break": "无",
-  "streak": "近5场净胜0场",
-  "env_score": 6.0,
-  "actual": "主胜",
-  "score": "1-0"
- },
- {
-  "league": "德甲",
-  "date": "2026-05-16",
-  "home": "Heidenheim",
-  "away": "Mainz",
-  "model_prob": [
-   0.313,
-   0.113,
-   0.574
-  ],
-  "market_prob": [
-   0.499,
-   0.22,
-   0.28
-  ],
-  "direction": "客胜",
-  "edge": 0.2934,
-  "action": "可介入",
-  "stake": "9.9%",
-  "big_fav": false,
-  "exp_goals": [
-   2.18,
-   1.86
-  ],
-  "over25": 0.767,
-  "home_rank": 17,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（保级）",
-  "intl_break": "无",
-  "streak": "近5场净胜2场",
-  "env_score": 6.0,
-  "actual": "客胜",
-  "score": "0-2"
- },
- {
-  "league": "德甲",
-  "date": "2026-05-16",
-  "home": "Leverkusen",
-  "away": "Hamburg",
-  "model_prob": [
-   0.764,
-   0.195,
-   0.041
-  ],
-  "market_prob": [
-   0.759,
-   0.141,
-   0.1
-  ],
-  "direction": "主胜",
-  "edge": 0.005,
-  "action": "大热场次，建议关注让球盘或跳过",
+  "action": "放弃",
   "stake": "0.0%",
-  "big_fav": true,
-  "exp_goals": [
-   1.49,
-   0.9
-  ],
-  "over25": 0.427,
-  "home_rank": 6,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中高（欧战资格）",
-  "intl_break": "无",
-  "streak": "近5场净胜1场",
-  "env_score": 5.0,
-  "actual": "平局",
-  "score": "1-1"
- },
- {
-  "league": "德甲",
-  "date": "2026-05-16",
-  "home": "Freiburg",
-  "away": "RB Leipzig",
-  "model_prob": [
-   0.112,
-   0.421,
-   0.467
-  ],
-  "market_prob": [
-   0.351,
-   0.237,
-   0.412
-  ],
-  "direction": "客胜",
-  "edge": 0.0548,
-  "action": "可介入",
-  "stake": "1.4%",
-  "big_fav": false,
-  "exp_goals": [
-   1.86,
-   2.45
-  ],
-  "over25": 0.804,
-  "home_rank": 7,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜0场",
-  "env_score": 5.0,
-  "actual": "主胜",
-  "score": "4-1"
- },
- {
-  "league": "德甲",
-  "date": "2026-05-16",
-  "home": "M'gladbach",
-  "away": "Hoffenheim",
-  "model_prob": [
-   0.121,
-   0.141,
-   0.737
-  ],
-  "market_prob": [
-   0.22,
-   0.211,
-   0.569
-  ],
-  "direction": "客胜",
-  "edge": 0.1681,
-  "action": "可介入",
-  "stake": "8.6%",
+  "stake_pct": 0.0,
+  "stake_note": "理论仓位，实际不建议介入",
   "big_fav": false,
   "exp_goals": [
    1.46,
-   3.34
+   1.34
   ],
-  "over25": 0.857,
-  "home_rank": 12,
+  "over25": 0.5305,
+  "home_rank": null,
   "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
+  "injury_score": null,
+  "odds_move": "官方最新1X2（初盘未取得）：1.80/3.70/3.30",
+  "market_conf": "官方竞彩",
   "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜-1场",
-  "env_score": 5.0,
-  "actual": "主胜",
-  "score": "4-0"
+  "cold_risk_sources": [
+   "伤停、天气和临场初盘未取得"
+  ],
+  "weather": "未取得",
+  "referee": "未取得",
+  "tactics": "未取得",
+  "motivation": "未取得",
+  "intl_break": "未取得",
+  "streak": "未取得",
+  "env_score": null,
+  "actual": null,
+  "score": null,
+  "prediction_view": {
+   "model_status": "欧冠混合模型（欧冠历史+本土联赛）",
+   "direction": "主胜",
+   "edge": -0.0906,
+   "action": "放弃",
+   "stake_pct": 0.0,
+   "cold_risk": "低",
+   "coverage_home": 302,
+   "coverage_away": 294
+  },
+  "market_view": {
+   "odds": [
+    1.8,
+    3.7,
+    3.3
+   ],
+   "market_prob": [
+    0.4921,
+    0.2394,
+    0.2684
+   ],
+   "odds_source": "sporttery-official",
+   "odds_stage": "official",
+   "handicap": {
+    "line": "-1.0",
+    "home": 3.25,
+    "draw": 3.75,
+    "away": 1.8,
+    "source": "sporttery-official",
+    "stage": "official"
+   }
+  },
+  "model_coverage": {
+   "home": 302,
+   "away": 294,
+   "total": 294,
+   "minimum_for_intervention": 10
+  },
+  "model_sources": [
+   "UEFA历史赛果",
+   "本土联赛赛果支持"
+  ],
+  "data_mode": "竞彩官方在售比赛池"
  },
  {
-  "league": "德甲",
-  "date": "2026-05-16",
-  "home": "Bayern Munich",
-  "away": "FC Koln",
+  "lottery_id": "周二006",
+  "league": "欧冠",
+  "date": "2026-08-26",
+  "kickoff_bjt": "2026-08-26T03:00+08:00",
+  "home": "博德闪耀",
+  "away": "奈梅亨",
+  "model_status": "欧冠混合模型（欧冠历史+本土联赛）",
   "model_prob": [
-   0.915,
-   0.021,
-   0.064
+   0.6354,
+   0.1887,
+   0.1759
   ],
   "market_prob": [
-   0.832,
-   0.1,
-   0.068
+   0.6149,
+   0.1968,
+   0.1884
+  ],
+  "edge": 0.0206,
+  "edge_by_outcome": [
+   0.0206,
+   -0.0081,
+   -0.0125
   ],
   "direction": "主胜",
-  "edge": 0.0822,
-  "action": "大热场次，建议关注让球盘或跳过",
-  "stake": "7.6%",
-  "big_fav": true,
-  "exp_goals": [
-   3.55,
-   1.92
-  ],
-  "over25": 0.909,
-  "home_rank": 1,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（争冠/欧战）",
-  "intl_break": "无",
-  "streak": "近5场净胜4场（状态好）",
-  "env_score": 7.0,
-  "actual": "主胜",
-  "score": "5-1"
- },
- {
-  "league": "德甲",
-  "date": "2026-05-16",
-  "home": "Werder Bremen",
-  "away": "Dortmund",
-  "model_prob": [
-   0.265,
-   0.482,
-   0.254
-  ],
-  "market_prob": [
-   0.272,
-   0.238,
-   0.489
-  ],
-  "direction": "平局",
-  "edge": 0.2432,
-  "action": "可介入",
-  "stake": "7.7%",
-  "big_fav": false,
-  "exp_goals": [
-   1.4,
-   1.96
-  ],
-  "over25": 0.651,
-  "home_rank": 14,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜-2场",
-  "env_score": 5.0,
-  "actual": "客胜",
-  "score": "0-2"
- },
- {
-  "league": "德甲",
-  "date": "2026-05-16",
-  "home": "Union Berlin",
-  "away": "Augsburg",
-  "model_prob": [
-   0.216,
-   0.214,
-   0.57
-  ],
-  "market_prob": [
-   0.364,
-   0.242,
-   0.394
-  ],
-  "direction": "客胜",
-  "edge": 0.1757,
-  "action": "可介入",
-  "stake": "6.6%",
-  "big_fav": false,
-  "exp_goals": [
-   1.41,
-   2.18
-  ],
-  "over25": 0.696,
-  "home_rank": 11,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜-2场",
-  "env_score": 5.0,
-  "actual": "主胜",
-  "score": "4-0"
- },
- {
-  "league": "德甲",
-  "date": "2026-05-16",
-  "home": "Ein Frankfurt",
-  "away": "Stuttgart",
-  "model_prob": [
-   0.101,
-   0.318,
-   0.581
-  ],
-  "market_prob": [
-   0.276,
-   0.217,
-   0.507
-  ],
-  "direction": "客胜",
-  "edge": 0.0737,
-  "action": "可介入",
-  "stake": "2.2%",
-  "big_fav": false,
-  "exp_goals": [
-   1.79,
-   3.13
-  ],
-  "over25": 0.868,
-  "home_rank": 8,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜-2场",
-  "env_score": 5.0,
-  "actual": "平局",
-  "score": "2-2"
- },
- {
-  "league": "德甲",
-  "date": "2026-05-16",
-  "home": "St Pauli",
-  "away": "Wolfsburg",
-  "model_prob": [
-   0.158,
-   0.217,
-   0.625
-  ],
-  "market_prob": [
-   0.34,
-   0.254,
-   0.406
-  ],
-  "direction": "客胜",
-  "edge": 0.2194,
-  "action": "可介入",
-  "stake": "8.7%",
-  "big_fav": false,
-  "exp_goals": [
-   0.89,
-   2.26
-  ],
-  "over25": 0.61,
-  "home_rank": 18,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（保级）",
-  "intl_break": "无",
-  "streak": "近5场净胜-4场（状态差）",
-  "env_score": 5.0,
-  "actual": "客胜",
-  "score": "1-3"
- },
- {
-  "league": "法甲",
-  "date": "2026-05-17",
-  "home": "Brest",
-  "away": "Angers",
-  "model_prob": [
-   0.329,
-   0.462,
-   0.209
-  ],
-  "market_prob": [
-   0.513,
-   0.256,
-   0.231
-  ],
-  "direction": "平局",
-  "edge": 0.2053,
-  "action": "可介入",
-  "stake": "6.4%",
-  "big_fav": false,
-  "exp_goals": [
-   1.23,
-   1.14
-  ],
-  "over25": 0.423,
-  "home_rank": 12,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜-3场（状态差）",
-  "env_score": 4.0,
-  "actual": "平局",
-  "score": "1-1"
- },
- {
-  "league": "法甲",
-  "date": "2026-05-17",
-  "home": "Paris FC",
-  "away": "Paris SG",
-  "model_prob": [
-   0.063,
-   0.315,
-   0.622
-  ],
-  "market_prob": [
-   0.168,
-   0.226,
-   0.606
-  ],
-  "direction": "客胜",
-  "edge": 0.016,
-  "action": "观望",
-  "stake": "0.0%",
-  "big_fav": false,
-  "exp_goals": [
-   0.99,
-   2.08
-  ],
-  "over25": 0.592,
-  "home_rank": 11,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜1场",
-  "env_score": 5.0,
-  "actual": "主胜",
-  "score": "2-1"
- },
- {
-  "league": "法甲",
-  "date": "2026-05-17",
-  "home": "Lille",
-  "away": "Auxerre",
-  "model_prob": [
-   0.587,
-   0.348,
-   0.065
-  ],
-  "market_prob": [
-   0.674,
-   0.204,
-   0.122
-  ],
-  "direction": "主胜",
-  "edge": -0.0871,
-  "action": "放弃该方向",
-  "stake": "0.0%",
-  "big_fav": false,
-  "exp_goals": [
-   1.3,
-   0.57
-  ],
-  "over25": 0.288,
-  "home_rank": 3,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（争冠/欧战）",
-  "intl_break": "无",
-  "streak": "近5场净胜3场（状态好）",
-  "env_score": 7.0,
-  "actual": "客胜",
-  "score": "0-2"
- },
- {
-  "league": "法甲",
-  "date": "2026-05-17",
-  "home": "Lorient",
-  "away": "Le Havre",
-  "model_prob": [
-   0.547,
-   0.248,
-   0.205
-  ],
-  "market_prob": [
-   0.358,
-   0.277,
-   0.365
-  ],
-  "direction": "主胜",
-  "edge": 0.1893,
-  "action": "可介入",
-  "stake": "6.4%",
-  "big_fav": false,
-  "exp_goals": [
-   1.12,
-   1.0
-  ],
-  "over25": 0.356,
-  "home_rank": 10,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜0场",
-  "env_score": 5.0,
-  "actual": "客胜",
-  "score": "0-2"
- },
- {
-  "league": "法甲",
-  "date": "2026-05-17",
-  "home": "Lyon",
-  "away": "Lens",
-  "model_prob": [
-   0.852,
-   0.05,
-   0.098
-  ],
-  "market_prob": [
-   0.539,
-   0.233,
-   0.228
-  ],
-  "direction": "主胜",
-  "edge": 0.3129,
-  "action": "观望（冷门风险高）",
-  "stake": "16.2%",
-  "big_fav": false,
-  "exp_goals": [
-   1.85,
-   0.9
-  ],
-  "over25": 0.52,
-  "home_rank": 4,
-  "injury": "未取得",
-  "odds_move": "热门方概率上升10% → 市场信心减弱，冷门警报",
-  "market_conf": "弱",
-  "cold_risk": "高",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（争冠/欧战）",
-  "intl_break": "无",
-  "streak": "近5场净胜3场（状态好）",
-  "env_score": 5.0,
-  "actual": "客胜",
-  "score": "0-4"
- },
- {
-  "league": "法甲",
-  "date": "2026-05-17",
-  "home": "Nantes",
-  "away": "Toulouse",
-  "model_prob": [
-   0.592,
-   0.194,
-   0.214
-  ],
-  "market_prob": [
-   0.368,
-   0.263,
-   0.368
-  ],
-  "direction": "主胜",
-  "edge": 0.2235,
-  "action": "可介入",
-  "stake": "8.0%",
-  "big_fav": false,
-  "exp_goals": [
-   1.61,
-   0.86
-  ],
-  "over25": 0.45,
-  "home_rank": 17,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（保级）",
-  "intl_break": "无",
-  "streak": "近5场净胜-2场",
-  "env_score": 6.0,
-  "actual": "平局",
-  "score": "0-0"
- },
- {
-  "league": "法甲",
-  "date": "2026-05-17",
-  "home": "Marseille",
-  "away": "Rennes",
-  "model_prob": [
-   0.899,
-   0.033,
-   0.069
-  ],
-  "market_prob": [
-   0.47,
-   0.248,
-   0.282
-  ],
-  "direction": "主胜",
-  "edge": 0.4286,
-  "action": "可介入",
-  "stake": "19.8%",
+  "action": "轻仓观察",
+  "stake": "1.5%",
+  "stake_pct": 1.5,
+  "stake_note": "按风险规则计算的参考仓位",
   "big_fav": false,
   "exp_goals": [
    2.33,
-   0.52
+   1.15
   ],
-  "over25": 0.543,
-  "home_rank": 6,
+  "over25": 0.6752,
+  "home_rank": null,
   "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
+  "injury_score": null,
+  "odds_move": "官方最新1X2（初盘未取得）：1.44/4.50/4.70",
+  "market_conf": "官方竞彩",
   "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中高（欧战资格）",
-  "intl_break": "无",
-  "streak": "近5场净胜0场",
-  "env_score": 5.0,
-  "actual": "主胜",
-  "score": "3-1"
- },
- {
-  "league": "法甲",
-  "date": "2026-05-17",
-  "home": "Strasbourg",
-  "away": "Monaco",
-  "model_prob": [
-   0.667,
-   0.134,
-   0.199
+  "cold_risk_sources": [
+   "伤停、天气和临场初盘未取得"
   ],
-  "market_prob": [
-   0.32,
-   0.242,
-   0.438
+  "weather": "未取得",
+  "referee": "未取得",
+  "tactics": "未取得",
+  "motivation": "未取得",
+  "intl_break": "未取得",
+  "streak": "未取得",
+  "env_score": null,
+  "actual": null,
+  "score": null,
+  "prediction_view": {
+   "model_status": "欧冠混合模型（欧冠历史+本土联赛）",
+   "direction": "主胜",
+   "edge": 0.0206,
+   "action": "轻仓观察",
+   "stake_pct": 1.5,
+   "cold_risk": "低",
+   "coverage_home": 347,
+   "coverage_away": 67
+  },
+  "market_view": {
+   "odds": [
+    1.44,
+    4.5,
+    4.7
+   ],
+   "market_prob": [
+    0.6149,
+    0.1968,
+    0.1884
+   ],
+   "odds_source": "sporttery-official",
+   "odds_stage": "official",
+   "handicap": {
+    "line": "-1.0",
+    "home": 2.24,
+    "draw": 3.75,
+    "away": 2.4,
+    "source": "sporttery-official",
+    "stage": "official"
+   }
+  },
+  "model_coverage": {
+   "home": 347,
+   "away": 67,
+   "total": 67,
+   "minimum_for_intervention": 10
+  },
+  "model_sources": [
+   "UEFA历史赛果",
+   "本土联赛赛果支持"
   ],
-  "direction": "主胜",
-  "edge": 0.3478,
-  "action": "可介入",
-  "stake": "12.3%",
-  "big_fav": false,
-  "exp_goals": [
-   1.7,
-   0.88
-  ],
-  "over25": 0.476,
-  "home_rank": 8,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜0场",
-  "env_score": 5.0,
-  "actual": "主胜",
-  "score": "5-4"
- },
- {
-  "league": "法甲",
-  "date": "2026-05-17",
-  "home": "Nice",
-  "away": "Metz",
-  "model_prob": [
-   0.939,
-   0.034,
-   0.027
-  ],
-  "market_prob": [
-   0.682,
-   0.186,
-   0.133
-  ],
-  "direction": "主胜",
-  "edge": 0.257,
-  "action": "观望（冷门风险高）",
-  "stake": "19.2%",
-  "big_fav": false,
-  "exp_goals": [
-   3.18,
-   0.53
-  ],
-  "over25": 0.716,
-  "home_rank": 16,
-  "injury": "未取得",
-  "odds_move": "热门方概率上升9% → 市场信心减弱，冷门警报",
-  "market_conf": "弱",
-  "cold_risk": "高",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜-1场",
-  "env_score": 3.0,
-  "actual": "平局",
-  "score": "0-0"
- },
- {
-  "league": "荷甲",
-  "date": "2026-05-17",
-  "home": "AZ Alkmaar",
-  "away": "NAC Breda",
-  "model_prob": [
-   0.809,
-   0.159,
-   0.033
-  ],
-  "market_prob": [
-   0.678,
-   0.197,
-   0.125
-  ],
-  "direction": "主胜",
-  "edge": 0.1307,
-  "action": "可介入",
-  "stake": "7.6%",
-  "big_fav": false,
-  "exp_goals": [
-   1.29,
-   0.65
-  ],
-  "over25": 0.306,
-  "home_rank": 7,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜2场",
-  "env_score": 5.0,
-  "actual": "平局",
-  "score": "3-3"
- },
- {
-  "league": "荷甲",
-  "date": "2026-05-17",
-  "home": "Volendam",
-  "away": "Telstar",
-  "model_prob": [
-   0.527,
-   0.183,
-   0.29
-  ],
-  "market_prob": [
-   0.347,
-   0.26,
-   0.393
-  ],
-  "direction": "主胜",
-  "edge": 0.1805,
-  "action": "可介入",
-  "stake": "6.2%",
-  "big_fav": false,
-  "exp_goals": [
-   1.25,
-   1.07
-  ],
-  "over25": 0.409,
-  "home_rank": 16,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜-1场",
-  "env_score": 5.0,
-  "actual": "客胜",
-  "score": "1-2"
- },
- {
-  "league": "荷甲",
-  "date": "2026-05-17",
-  "home": "Heerenveen",
-  "away": "Ajax",
-  "model_prob": [
-   0.347,
-   0.342,
-   0.31
-  ],
-  "market_prob": [
-   0.317,
-   0.235,
-   0.448
-  ],
-  "direction": "主胜",
-  "edge": 0.0307,
-  "action": "轻仓观察",
-  "stake": "0.1%",
-  "big_fav": false,
-  "exp_goals": [
-   1.96,
-   2.06
-  ],
-  "over25": 0.765,
-  "home_rank": 8,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜1场",
-  "env_score": 5.0,
-  "actual": "平局",
-  "score": "0-0"
- },
- {
-  "league": "荷甲",
-  "date": "2026-05-17",
-  "home": "Heracles",
-  "away": "Groningen",
-  "model_prob": [
-   0.105,
-   0.285,
-   0.609
-  ],
-  "market_prob": [
-   0.196,
-   0.222,
-   0.582
-  ],
-  "direction": "客胜",
-  "edge": 0.0273,
-  "action": "轻仓观察",
-  "stake": "0.0%",
-  "big_fav": false,
-  "exp_goals": [
-   1.75,
-   2.59
-  ],
-  "over25": 0.807,
-  "home_rank": 18,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（保级）",
-  "intl_break": "无",
-  "streak": "近5场净胜-5场（状态差）",
-  "env_score": 5.0,
-  "actual": "客胜",
-  "score": "1-2"
- },
- {
-  "league": "荷甲",
-  "date": "2026-05-17",
-  "home": "Nijmegen",
-  "away": "Go Ahead Eagles",
-  "model_prob": [
-   0.912,
-   0.044,
-   0.044
-  ],
-  "market_prob": [
-   0.672,
-   0.195,
-   0.133
-  ],
-  "direction": "主胜",
-  "edge": 0.2398,
-  "action": "可介入",
-  "stake": "17.0%",
-  "big_fav": false,
-  "exp_goals": [
-   3.43,
-   1.1
-  ],
-  "over25": 0.829,
-  "home_rank": 3,
-  "injury": "未取得",
-  "odds_move": "热门方(主胜/客胜)概率下降6% → 市场信心增强",
-  "market_conf": "强",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（争冠/欧战）",
-  "intl_break": "无",
-  "streak": "近5场净胜0场",
-  "env_score": 6.0,
-  "actual": "主胜",
-  "score": "2-1"
- },
- {
-  "league": "荷甲",
-  "date": "2026-05-17",
-  "home": "Sparta Rotterdam",
-  "away": "Excelsior",
-  "model_prob": [
-   0.437,
-   0.295,
-   0.268
-  ],
-  "market_prob": [
-   0.456,
-   0.252,
-   0.292
-  ],
-  "direction": "主胜",
-  "edge": -0.0191,
-  "action": "观望",
-  "stake": "0.0%",
-  "big_fav": false,
-  "exp_goals": [
-   0.99,
-   1.65
-  ],
-  "over25": 0.492,
-  "home_rank": 10,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜-3场（状态差）",
-  "env_score": 4.0,
-  "actual": "客胜",
-  "score": "2-3"
- },
- {
-  "league": "荷甲",
-  "date": "2026-05-17",
-  "home": "PSV Eindhoven",
-  "away": "Twente",
-  "model_prob": [
-   0.266,
-   0.339,
-   0.394
-  ],
-  "market_prob": [
-   0.45,
-   0.23,
-   0.32
-  ],
-  "direction": "客胜",
-  "edge": 0.0745,
-  "action": "可介入",
-  "stake": "1.8%",
-  "big_fav": false,
-  "exp_goals": [
-   1.75,
-   1.79
-  ],
-  "over25": 0.686,
-  "home_rank": 1,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（争冠/欧战）",
-  "intl_break": "无",
-  "streak": "近5场净胜4场（状态好）",
-  "env_score": 7.0,
-  "actual": "主胜",
-  "score": "5-1"
- },
- {
-  "league": "荷甲",
-  "date": "2026-05-17",
-  "home": "Zwolle",
-  "away": "Feyenoord",
-  "model_prob": [
-   0.292,
-   0.332,
-   0.375
-  ],
-  "market_prob": [
-   0.214,
-   0.226,
-   0.561
-  ],
-  "direction": "客胜",
-  "edge": -0.1854,
-  "action": "观望（冷门风险高）",
-  "stake": "0.0%",
-  "big_fav": false,
-  "exp_goals": [
-   1.4,
-   2.12
-  ],
-  "over25": 0.684,
-  "home_rank": 15,
-  "injury": "未取得",
-  "odds_move": "热门方概率上升9% → 市场信心减弱，冷门警报",
-  "market_conf": "弱",
-  "cold_risk": "高",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜-2场",
-  "env_score": 3.0,
-  "actual": "客胜",
-  "score": "0-2"
- },
- {
-  "league": "荷甲",
-  "date": "2026-05-17",
-  "home": "Utrecht",
-  "away": "For Sittard",
-  "model_prob": [
-   0.383,
-   0.552,
-   0.065
-  ],
-  "market_prob": [
-   0.633,
-   0.197,
-   0.17
-  ],
-  "direction": "平局",
-  "edge": 0.3544,
-  "action": "可介入",
-  "stake": "10.8%",
-  "big_fav": false,
-  "exp_goals": [
-   2.31,
-   1.76
-  ],
-  "over25": 0.772,
-  "home_rank": 5,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中高（欧战资格）",
-  "intl_break": "无",
-  "streak": "近5场净胜1场",
-  "env_score": 5.0,
-  "actual": "主胜",
-  "score": "2-0"
- },
- {
-  "league": "葡超",
-  "date": "2026-05-16",
-  "home": "Arouca",
-  "away": "Tondela",
-  "model_prob": [
-   0.155,
-   0.23,
-   0.615
-  ],
-  "market_prob": [
-   0.301,
-   0.275,
-   0.424
-  ],
-  "direction": "客胜",
-  "edge": 0.1905,
-  "action": "可介入",
-  "stake": "7.3%",
-  "big_fav": false,
-  "exp_goals": [
-   1.39,
-   1.97
-  ],
-  "over25": 0.651,
-  "home_rank": 7,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜0场",
-  "env_score": 5.0,
-  "actual": "主胜",
-  "score": "3-1"
- },
- {
-  "league": "葡超",
-  "date": "2026-05-16",
-  "home": "Nacional",
-  "away": "Guimaraes",
-  "model_prob": [
-   0.643,
-   0.221,
-   0.136
-  ],
-  "market_prob": [
-   0.472,
-   0.264,
-   0.264
-  ],
-  "direction": "主胜",
-  "edge": 0.1714,
-  "action": "可介入",
-  "stake": "6.8%",
-  "big_fav": false,
-  "exp_goals": [
-   2.24,
-   1.6
-  ],
-  "over25": 0.736,
-  "home_rank": 14,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜-1场",
-  "env_score": 5.0,
-  "actual": "主胜",
-  "score": "2-0"
- },
- {
-  "league": "葡超",
-  "date": "2026-05-16",
-  "home": "Sp Braga",
-  "away": "Estrela",
-  "model_prob": [
-   0.693,
-   0.241,
-   0.066
-  ],
-  "market_prob": [
-   0.586,
-   0.23,
-   0.184
-  ],
-  "direction": "主胜",
-  "edge": 0.1067,
-  "action": "可介入",
-  "stake": "3.8%",
-  "big_fav": false,
-  "exp_goals": [
-   2.56,
-   1.17
-  ],
-  "over25": 0.719,
-  "home_rank": 5,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中高（欧战资格）",
-  "intl_break": "无",
-  "streak": "近5场净胜0场",
-  "env_score": 5.0,
-  "actual": "平局",
-  "score": "2-2"
- },
- {
-  "league": "葡超",
-  "date": "2026-05-16",
-  "home": "Casa Pia",
-  "away": "Rio Ave",
-  "model_prob": [
-   0.568,
-   0.168,
-   0.264
-  ],
-  "market_prob": [
-   0.569,
-   0.246,
-   0.185
-  ],
-  "direction": "主胜",
-  "edge": -0.0016,
-  "action": "观望",
-  "stake": "0.0%",
-  "big_fav": false,
-  "exp_goals": [
-   1.98,
-   1.47
-  ],
-  "over25": 0.67,
-  "home_rank": 15,
-  "injury": "未取得",
-  "odds_move": "热门方(主胜/客胜)概率下降10% → 市场信心增强",
-  "market_conf": "强",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜-2场",
-  "env_score": 5.0,
-  "actual": "平局",
-  "score": "1-1"
- },
- {
-  "league": "葡超",
-  "date": "2026-05-16",
-  "home": "Sp Lisbon",
-  "away": "Gil Vicente",
-  "model_prob": [
-   0.91,
-   0.082,
-   0.008
-  ],
-  "market_prob": [
-   0.755,
-   0.153,
-   0.092
-  ],
-  "direction": "主胜",
-  "edge": 0.1555,
-  "action": "大热场次，建议关注让球盘或跳过",
-  "stake": "12.5%",
-  "big_fav": true,
-  "exp_goals": [
-   2.57,
-   0.73
-  ],
-  "over25": 0.639,
-  "home_rank": 2,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（争冠/欧战）",
-  "intl_break": "无",
-  "streak": "近5场净胜1场",
-  "env_score": 6.0,
-  "actual": "主胜",
-  "score": "3-0"
- },
- {
-  "league": "葡超",
-  "date": "2026-05-16",
-  "home": "Porto",
-  "away": "Santa Clara",
-  "model_prob": [
-   0.885,
-   0.095,
-   0.019
-  ],
-  "market_prob": [
-   0.709,
-   0.176,
-   0.115
-  ],
-  "direction": "主胜",
-  "edge": 0.1763,
-  "action": "大热场次，建议关注让球盘或跳过",
-  "stake": "12.6%",
-  "big_fav": true,
-  "exp_goals": [
-   2.66,
-   0.76
-  ],
-  "over25": 0.665,
-  "home_rank": 1,
-  "injury": "未取得",
-  "odds_move": "热门方概率上升8% → 市场信心减弱，冷门警报；平局概率下降9% → 市场防平，平局概率上调",
-  "market_conf": "弱",
-  "cold_risk": "高",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（争冠/欧战）",
-  "intl_break": "无",
-  "streak": "近5场净胜3场（状态好）",
-  "env_score": 5.0,
-  "actual": "主胜",
-  "score": "1-0"
- },
- {
-  "league": "葡超",
-  "date": "2026-05-16",
-  "home": "Moreirense",
-  "away": "AVS",
-  "model_prob": [
-   0.804,
-   0.118,
-   0.078
-  ],
-  "market_prob": [
-   0.539,
-   0.236,
-   0.225
-  ],
-  "direction": "主胜",
-  "edge": 0.265,
-  "action": "可介入",
-  "stake": "13.2%",
-  "big_fav": false,
-  "exp_goals": [
-   1.79,
-   0.52
-  ],
-  "over25": 0.408,
-  "home_rank": 9,
-  "injury": "未取得",
-  "odds_move": "热门方(主胜/客胜)概率下降12% → 市场信心增强",
-  "market_conf": "强",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜0场",
-  "env_score": 5.0,
-  "actual": "平局",
-  "score": "0-0"
- },
- {
-  "league": "葡超",
-  "date": "2026-05-16",
-  "home": "Famalicao",
-  "away": "Alverca",
-  "model_prob": [
-   0.924,
-   0.035,
-   0.042
-  ],
-  "market_prob": [
-   0.586,
-   0.23,
-   0.184
-  ],
-  "direction": "主胜",
-  "edge": 0.3377,
-  "action": "观望（冷门风险高）",
-  "stake": "19.7%",
-  "big_fav": false,
-  "exp_goals": [
-   2.05,
-   0.64
-  ],
-  "over25": 0.504,
-  "home_rank": 4,
-  "injury": "未取得",
-  "odds_move": "热门方概率上升6% → 市场信心减弱，冷门警报",
-  "market_conf": "弱",
-  "cold_risk": "高",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（争冠/欧战）",
-  "intl_break": "无",
-  "streak": "近5场净胜1场",
-  "env_score": 4.0,
-  "actual": "主胜",
-  "score": "1-0"
- },
- {
-  "league": "葡超",
-  "date": "2026-05-16",
-  "home": "Estoril",
-  "away": "Benfica",
-  "model_prob": [
-   0.026,
-   0.035,
-   0.94
-  ],
-  "market_prob": [
-   0.103,
-   0.185,
-   0.712
-  ],
-  "direction": "客胜",
-  "edge": 0.2275,
-  "action": "大热场次，建议关注让球盘或跳过",
-  "stake": "18.5%",
-  "big_fav": true,
-  "exp_goals": [
-   0.81,
-   2.13
-  ],
-  "over25": 0.564,
-  "home_rank": 10,
-  "injury": "未取得",
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "中（中游）",
-  "intl_break": "无",
-  "streak": "近5场净胜-3场（状态差）",
-  "env_score": 4.0,
-  "actual": "客胜",
-  "score": "1-3"
+  "data_mode": "竞彩官方在售比赛池"
  }
 ]

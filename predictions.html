@@ -8,6 +8,7 @@ body{font-family:-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;backgroun
 .wrap{max-width:1280px;margin:0 auto;padding:18px 14px 50px}
 header{background:linear-gradient(135deg,#1e3a8a,#1a56db);color:#fff;padding:24px 20px;border-radius:14px;margin-bottom:16px}
 h1{margin:0 0 6px;font-size:23px}header p{margin:2px 0;opacity:.93;font-size:13px}
+.warn{background:#fff7ed;border:1px solid #fdba74;border-radius:10px;padding:10px 14px;margin-bottom:14px;color:#9a3412;font-size:13px}
 .card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:14px 16px;margin-bottom:14px}
 h2{font-size:16px;margin:0 0 8px;color:#1e3a8a;border-left:4px solid #1a56db;padding-left:10px}
 table{width:100%;border-collapse:collapse;font-size:11.5px}
@@ -18,29 +19,40 @@ th,td{border:1px solid #e5e7eb;padding:5px 6px;text-align:left}th{background:#ee
 footer{text-align:center;color:#9ca3af;font-size:11.5px;margin-top:20px}
 </style></head><body><div class="wrap">
 <header><h1>⚽ 足球预测日报（多联赛）</h1><p id="meta">加载中…</p><p>仅为概率与风险分析，不构成投注建议</p></header>
+<div id="warn"></div>
 <div id="content"><div class="card">加载中…</div></div>
 <footer>predict_all.py 生成 · 每日自动更新</footer>
 </div>
 <script>
+var TEAM_CN = {"AVS":"阿维斯","AZ Alkmaar":"阿尔克马尔","Ajax":"阿贾克斯","Alverca":"阿尔韦卡","Angers":"昂热","Arouca":"阿罗卡","Arsenal":"阿森纳","Aston Villa":"阿斯顿维拉","Ath Madrid":"马德里竞技","Augsburg":"奥格斯堡","Auxerre":"欧塞尔","Bayern Munich":"拜仁慕尼黑","Benfica":"本菲卡","Bournemouth":"伯恩茅斯","Brest":"布雷斯特","Brighton":"布莱顿","Cagliari":"卡利亚里","Casa Pia":"卡萨皮亚","Celtic":"凯尔特人","Como":"科莫","Cremonese":"克雷莫纳","Crystal Palace":"水晶宫","Dortmund":"多特蒙德","Ein Frankfurt":"法兰克福","Estoril":"埃斯托里尔","Estrela":"埃斯特雷拉","Everton":"埃弗顿","Excelsior":"鹿特丹精英","FC Koln":"科隆","Famalicao":"法马利康","Feyenoord":"费耶诺德","For Sittard":"锡塔德福图纳","Freiburg":"弗赖堡","Fulham":"富勒姆","Genoa":"热那亚","Gil Vicente":"吉维森特","Go Ahead Eagles":"前进之鹰","Groningen":"格罗宁根","Guimaraes":"吉马良斯","Hamburg":"汉堡","Heerenveen":"海伦芬","Heidenheim":"海登海姆","Heracles":"赫拉克勒斯","Hoffenheim":"霍芬海姆","Juventus":"尤文图斯","LASK林茨":"LASK林茨","Le Havre":"勒阿弗尔","Lecce":"莱切","Leeds":"利兹联","Lens":"朗斯","Leverkusen":"勒沃库森","Lille":"里尔","Lorient":"洛里昂","Lyon":"里昂","M'gladbach":"门兴格拉德巴赫","Mainz":"美因茨","Man City":"曼城","Man United":"曼联","Marseille":"马赛","Metz":"梅斯","Milan":"AC米兰","Monaco":"摩纳哥","Moreirense":"莫雷伦斯","NAC Breda":"布雷达","Nacional":"国民队","Nantes":"南特","Napoli":"那不勒斯","Newcastle":"纽卡斯尔","Nice":"尼斯","Nijmegen":"奈梅亨","Nott'm Forest":"诺丁汉森林","PSV Eindhoven":"埃因霍温","Paris FC":"巴黎FC","Paris SG":"巴黎圣日耳曼","Parma":"帕尔马","Porto":"波尔图","RB Leipzig":"莱比锡红牛","Rennes":"雷恩","Rio Ave":"里奥阿维","Roma":"罗马","Santa Clara":"圣克拉拉","Sassuolo":"萨索洛","Sp Braga":"布拉加","Sp Lisbon":"葡萄牙体育","Sparta Rotterdam":"鹿特丹斯巴达","St Pauli":"圣保利","Strasbourg":"斯特拉斯堡","Stuttgart":"斯图加特","Sunderland":"桑德兰","Telstar":"特尔斯达","Tondela":"通德拉","Torino":"都灵","Tottenham":"托特纳姆热刺","Toulouse":"图卢兹","Twente":"特温特","Udinese":"乌迪内斯","Union Berlin":"柏林联合","Utrecht":"乌得勒支","Verona":"维罗纳","Villarreal":"比利亚雷亚尔","Volendam":"沃伦丹","Werder Bremen":"云达不莱梅","West Ham":"西汉姆联","Wolfsburg":"沃尔夫斯堡","Zwolle":"兹沃勒","Bodo/Glimt":"博德闪耀","NEC Nijmegen":"奈梅亨"};
+function esc(s){var d=document.createElement("div");d.textContent=(s==null?"":String(s));return d.innerHTML;}
+function cn(n){return TEAM_CN[n]||n;}
 fetch("predictions.json").then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();}).then(function(list){
-  document.getElementById("meta").textContent = "共 " + list.length + " 场 · 数据：Football-data + Sofascore xG + 官方赔率";
+  var dates=list.map(function(m){return m.date;}).filter(Boolean).sort();
+  var maxd=dates[dates.length-1]||"未取得";
+  var mode=list[0]&&list[0].data_mode?list[0].data_mode:"未取得";
+  document.getElementById("meta").textContent="共 "+list.length+" 场 · "+mode+" · 数据日期 "+(dates[0]||"未取得")+" ~ "+maxd;
+  if(mode.indexOf("历史")>=0){document.getElementById("warn").innerHTML='<div class="warn">⚠️ 当前未取得竞彩在售比赛池，页面展示历史验证数据；模型未覆盖的赛事不会生成虚假概率。</div>';}
   var by={}; list.forEach(function(m){ (by[m.league]=by[m.league]||[]).push(m); });
   var html="";
   Object.keys(by).forEach(function(lg){
-    html+='<div class="card"><h2>'+lg+'（'+by[lg].length+' 场）</h2><table><tr><th>日期</th><th>对阵</th><th>模型 主/平/客</th><th>市场</th><th>方向</th><th>Edge</th><th>动作</th><th>仓位</th><th>冷门</th><th>环境</th><th>盘口</th><th>实际</th></tr>';
+    html+='<div class="card"><h2>'+esc(lg)+'（'+by[lg].length+' 场）</h2><table><tr><th>时间</th><th>对阵</th><th>模型 主/平/客</th><th>市场 主/平/客</th><th>方向</th><th>Edge</th><th>动作/仓位</th><th>冷门来源</th><th>环境</th><th>官方盘口</th></tr>';
     by[lg].forEach(function(m){
-      var mp=m.model_prob.map(function(x){return (x*100).toFixed(0)+"%";}).join("/");
-      var mk=m.market_prob.map(function(x){return (x*100).toFixed(0)+"%";}).join("/");
+      var mp=m.model_prob?m.model_prob.map(function(x){return (x*100).toFixed(0)+"%";}).join("/"):"模型未覆盖";
+      if(m.model_status){mp += '<br><small>'+esc(m.model_status)+'</small>';}
+      var mk=m.market_prob?m.market_prob.map(function(x){return (x*100).toFixed(0)+"%";}).join("/"):"未取得";
       var ac=m.action==="可介入"?"g":(m.action.indexOf("轻仓")>=0||m.action.indexOf("观察")>=0?"y":"r");
       var ck=m.cold_risk==="高"?"r":(m.cold_risk==="中"?"y":"g");
-      var act=m.actual?(""+m.score+" "+m.actual):"—";
-      html+='<tr><td>'+m.date+'</td><td><b>'+m.home+'</b> vs <b>'+m.away+'</b></td><td>'+mp+'</td><td>'+mk+'</td><td><b>'+m.direction+'</b></td><td>'+(m.edge*100).toFixed(1)+'%</td><td><span class="tag '+ac+'">'+m.action+'</span></td><td>'+m.stake+'</td><td><span class="tag '+ck+'">'+m.cold_risk+'</span></td><td>'+m.env_score+'</td><td style="font-size:10.5px">'+m.odds_move+'</td><td>'+act+'</td></tr>';
+      var edge=m.edge==null?"—":(m.edge*100).toFixed(1)+"%";
+      var source=(m.cold_risk_sources||[]).join("、")||"无";
+      var hand=m.market_view&&m.market_view.handicap?"让"+m.market_view.handicap.line+" "+m.market_view.handicap.home+"/"+m.market_view.handicap.draw+"/"+m.market_view.handicap.away:"未取得";
+      html+='<tr><td>'+esc(m.kickoff_bjt||m.date)+'</td><td><b>'+esc(cn(m.home))+'</b> vs <b>'+esc(cn(m.away))+'</b></td><td>'+mp+'</td><td>'+mk+'</td><td><b>'+esc(m.direction)+'</b></td><td>'+edge+'</td><td><span class="tag '+ac+'">'+esc(m.action)+'</span><br>'+esc(m.stake||"0.0%")+'</td><td><span class="tag '+ck+'">'+esc(m.cold_risk)+'</span><br>'+esc(source)+'</td><td>'+esc(m.env_score==null?"未取得":m.env_score)+'</td><td>'+esc(hand)+'</td></tr>';
     });
     html+='</table></div>';
   });
   document.getElementById("content").innerHTML=html;
 }).catch(function(e){
-  document.getElementById("content").innerHTML='<div class="card"><h2 style="color:#b91c1c">加载失败</h2><p>'+e+'</p><button class="btn" onclick="location.reload()">重试</button></div>';
+  document.getElementById("content").innerHTML='<div class="card"><h2 style="color:#b91c1c">加载失败</h2><p>'+esc(e)+'</p><button class="btn" onclick="location.reload()">重试</button></div>';
 });
 </script>
 </body></html>
