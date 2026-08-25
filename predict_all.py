@@ -445,7 +445,7 @@ def cold_risk_from_signals(odds_cold, injury_score, env_score_value, direction_d
     if direction_disagree:
         sources.append("模型与市场方向不一致且 Edge 为负")
     level = "高" if len(sources) >= 2 else ("中" if sources else "低")
-    return level, sources
+    return level, (sources or ["无明显冷门信号"])
 
 
 def strategy(p_model, p_market, odds_home, draw, away, cold_risk, cold_sources=None):
@@ -455,17 +455,16 @@ def strategy(p_model, p_market, odds_home, draw, away, cold_risk, cold_sources=N
     edge = p_model[k] - mkt[k]
     lab = ["主胜", "平局", "客胜"]
     big_fav = mkt.max() >= 0.70
-    # 高风险不再一票否决高价值信号，动作和仓位严格联动。
-    if cold_risk == "高" and edge >= 0.10:
-        action, stake_pct = "轻仓观察", 1.5
-    elif cold_risk == "高" and edge >= 0.05:
+    # 动作与仓位严格联动：高 Edge 也必须经过冷门风险分层。
+    # 低风险的高价值信号才允许“可介入”；中风险降级为轻仓，高风险观望。
+    if edge >= 0.10 and cold_risk == "高":
         action, stake_pct = "观望", 0.0
-    elif cold_risk == "中" and edge >= 0.05:
-        action, stake_pct = "可介入", 3.0
-    elif cold_risk == "低" and edge >= 0.05:
-        action, stake_pct = "可介入", 3.5
-    elif edge >= 0.02:
+    elif edge >= 0.10 and cold_risk == "中":
         action, stake_pct = "轻仓观察", 1.5
+    elif edge >= 0.10 and cold_risk == "低":
+        action, stake_pct = "可介入", 3.0
+    elif 0.05 <= edge < 0.10 and cold_risk in ("低", "中"):
+        action, stake_pct = "轻仓观察", 1.0
     elif edge < 0:
         action, stake_pct = "放弃", 0.0
     else:
@@ -765,6 +764,57 @@ def _parse_bj_time(value):
         return None
 
 
+def _odds_move_detail(opening, latest):
+    """将官方赔率初盘与最新快照统一为可供两个前端使用的结构。"""
+    detail = {
+        "opening": opening,
+        "latest": latest,
+        "change": None,
+        "hot_outcome": None,
+        "hot_change": None,
+        "draw_change": None,
+        "signal": "未取得",
+        "cold_alert": False,
+        "text": "盘口变化：未取得",
+    }
+    try:
+        if not opening or not latest:
+            if latest:
+                detail["latest"] = latest
+                detail["text"] = "初盘未取得；最新赔率：" + "/".join(f"{float(x):.2f}" for x in latest)
+            return detail
+        o = np.asarray(opening, dtype=float); c = np.asarray(latest, dtype=float)
+        if not np.isfinite(o).all() or not np.isfinite(c).all() or (o <= 1.01).any() or (c <= 1.01).any():
+            detail["text"] = "盘口变化：赔率快照异常或未取得"
+            return detail
+        chg = (c - o) / o
+        fav = int(np.argmin([o[0], o[2]]))
+        fav_outcome = "主胜" if fav == 0 else "客胜"
+        hot_chg = float(chg[fav]); draw_chg = float(chg[1])
+        detail.update({
+            "opening": [float(x) for x in o], "latest": [float(x) for x in c],
+            "change": [float(x) for x in chg], "hot_outcome": fav_outcome,
+            "hot_change": hot_chg, "draw_change": draw_chg,
+        })
+        parts = ["初盘 " + "/".join(f"{x:.2f}" for x in o) + " → 最新 " + "/".join(f"{x:.2f}" for x in c)]
+        if hot_chg < -0.05:
+            parts.append(f"热门方赔率下降{abs(hot_chg)*100:.1f}% → 市场信心增强")
+            detail["signal"] = "市场信心增强"
+        elif hot_chg > 0.05:
+            parts.append(f"热门方赔率上升{hot_chg*100:.1f}% → 市场信心减弱，冷门警报")
+            detail["signal"] = "市场信心减弱"
+            detail["cold_alert"] = True
+        if draw_chg < -0.08:
+            parts.append(f"平局赔率下降{abs(draw_chg)*100:.1f}% → 市场防平")
+        if len(parts) == 1:
+            parts.append("变化未超过提示阈值")
+            detail["signal"] = "无明显变化"
+        detail["text"] = "；".join(parts)
+    except Exception:
+        pass
+    return detail
+
+
 def load_lottery_pool(hours=36):
     """Read the latest official open fixtures and odds from the synced SQLite store."""
     if not LOTTERY_DB.exists():
@@ -788,7 +838,10 @@ def load_lottery_pool(hours=36):
                 "SELECT * FROM odds_snapshots WHERE lottery_id=? ORDER BY observed_at DESC, id DESC",
                 (f["lottery_id"],),
             ).fetchall()
-            one = next((o for o in odds_rows if str(o["market"]).lower() in {"1x2", "胜平负"}), None)
+            one_rows = [o for o in odds_rows if str(o["market"]).lower() in {"1x2", "胜平负"}]
+            one = one_rows[0] if one_rows else None
+            latest_one = one_rows[0] if one_rows else None
+            opening_one = one_rows[-1] if one_rows else None
             handicap = next((o for o in odds_rows if str(o["market"]).lower() in {"让球胜平负", "hhad"}), None)
             market_odds = None
             market_prob = None
@@ -802,6 +855,12 @@ def load_lottery_pool(hours=36):
                 "home": f["home_team"], "away": f["away_team"],
                 "kickoff_at": kickoff.isoformat(timespec="minutes"),
                 "market_odds": market_odds, "market_prob": market_prob,
+                "opening_market_odds": None if opening_one is None else [opening_one[k] for k in ("home", "draw", "away")],
+                "latest_market_odds": None if latest_one is None else [latest_one[k] for k in ("home", "draw", "away")],
+                "odds_move_detail": _odds_move_detail(
+                    None if opening_one is None else [opening_one[k] for k in ("home", "draw", "away")],
+                    None if latest_one is None else [latest_one[k] for k in ("home", "draw", "away")],
+                ),
                 "odds_source": None if one is None else one["source"],
                 "odds_stage": None if one is None else one["stage"],
                 "handicap": None if handicap is None else {
@@ -818,7 +877,7 @@ def load_lottery_pool(hours=36):
 
 
 def rows_from_lottery_pool(pool, model_map=None):
-    """Create honest, model-uncovered rows for competitions outside trained leagues."""
+    """Create rows for the shared official pool with explicit model fallback semantics."""
     rows = []
     for item in pool:
         mp = item.get("market_prob")
@@ -829,70 +888,85 @@ def rows_from_lottery_pool(pool, model_map=None):
             direction, market_text = "无明显方向", None
         kickoff = _parse_bj_time(item["kickoff_at"])
         date = kickoff.strftime("%Y-%m-%d") if kickoff else datetime.now(BJ_TZ).strftime("%Y-%m-%d")
-        odds_desc = "官方赔率未取得"
-        if item.get("market_odds"):
-            o = item["market_odds"]
-            odds_desc = f"官方最新1X2（初盘未取得）：{o[0]:.2f}/{o[1]:.2f}/{o[2]:.2f}"
+        odds_detail = item.get("odds_move_detail") or _odds_move_detail(
+            item.get("opening_market_odds"), item.get("latest_market_odds") or item.get("market_odds")
+        )
+        odds_desc = odds_detail.get("text") or "官方赔率未取得"
         model = (model_map or {}).get(item["lottery_id"])
         row = {
             "lottery_id": item["lottery_id"], "league": item["league"], "date": date,
             "kickoff_bjt": item["kickoff_at"], "home": item["home"], "away": item["away"],
-            "model_status": "模型未覆盖", "model_prob": None, "market_prob": market_text,
-            "edge": None, "edge_by_outcome": None, "direction": direction,
-            "action": "略过", "stake": "0.0%", "stake_pct": 0.0,
-            "stake_note": "模型未覆盖，实际不建议介入", "big_fav": bool(mp and max(mp) >= .70),
+            "model_status": "模型待训练/样本不足，暂用市场概率", "model_prob": market_text, "market_prob": market_text,
+            "model_confidence": "低", "model_prob_source": "market_fallback",
+            "edge": 0.0 if market_text is not None else None,
+            "edge_by_outcome": [0.0, 0.0, 0.0] if market_text is not None else None, "direction": direction,
+            "action": "观望", "stake": "0.0%", "stake_pct": 0.0,
+            "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入", "big_fav": bool(mp and max(mp) >= .70),
             "exp_goals": None, "over25": None, "home_rank": None,
             "injury": "未取得", "injury_score": None, "odds_move": odds_desc,
-            "market_conf": "官方竞彩", "cold_risk": "未取得",
-            "cold_risk_sources": ["未取得模型覆盖/历史特征"], "weather": "未取得",
+            "odds_move_detail": odds_detail, "market_conf": "官方竞彩", "cold_risk": "未取得",
+            "cold_risk_sources": ["伤停未取得", "环境未取得", "盘口异常未取得"], "weather": "未取得",
             "referee": "未取得", "tactics": "未取得", "motivation": "未取得",
             "intl_break": "未取得", "streak": "未取得", "env_score": None,
             "actual": None, "score": None,
-            "prediction_view": {"model_status": "模型未覆盖", "direction": direction,
-                                "action": "略过", "stake_pct": 0.0, "cold_risk": "未取得"},
+            "prediction_view": {"model_status": "模型待训练/样本不足，暂用市场概率", "model_confidence": "低",
+                                "model_prob": market_text, "direction": direction, "edge": 0.0 if market_text is not None else None,
+                                "action": "观望", "stake_pct": 0.0, "cold_risk": "未取得"},
             "market_view": {"odds": item.get("market_odds"), "market_prob": market_text,
+                            "opening_odds": item.get("opening_market_odds"), "latest_odds": item.get("latest_market_odds") or item.get("market_odds"),
+                            "odds_move": odds_detail,
                             "odds_source": item.get("odds_source"), "odds_stage": item.get("odds_stage"),
                             "handicap": item.get("handicap")},
         }
         if model and market_text is not None:
             model_prob = np.asarray(model["model_prob"], dtype=float)
             market_prob = np.asarray(market_text, dtype=float)
-            st = strategy(model_prob, market_prob, *(item.get("market_odds") or [np.nan, np.nan, np.nan]),
-                          "低", ["官方初盘未取得；伤停/环境未取得"])
             coverage = int(model.get("coverage", 0))
-            # 历史样本不足时只展示独立方向，不允许直接介入。
+            # 欧冠历史样本不足时完全回退到市场去水概率，禁止输出固定占位概率。
             if coverage < 10:
-                action, stake_pct = "观望", 0.0
-                stake_note = "历史样本不足，理论仓位，实际不建议介入"
-                cold_risk, cold_sources = "中", ["欧冠历史样本不足"]
+                fallback_status = "欧冠样本不足，暂用市场概率"
+                row.update({
+                    "model_status": fallback_status, "model_prob": [round(float(x), 4) for x in market_prob],
+                    "market_prob": [round(float(x), 4) for x in market_prob], "model_confidence": "低",
+                    "model_prob_source": "market_fallback", "edge": 0.0,
+                    "edge_by_outcome": [0.0, 0.0, 0.0], "direction": direction,
+                    "action": "观望", "stake": "0.0%", "stake_pct": 0.0,
+                    "stake_note": "历史样本不足，暂用市场概率；实际不建议介入",
+                    "cold_risk": "未取得", "cold_risk_sources": ["伤停未取得", "环境未取得", "盘口异常未取得"],
+                    "model_coverage": {"home": int(model.get("coverage_home", 0)), "away": int(model.get("coverage_away", 0)),
+                                       "total": coverage, "minimum_for_intervention": 10},
+                    "model_sources": model.get("sources", ["欧冠历史+本土联赛"]),
+                    "prediction_view": {"model_status": fallback_status, "model_confidence": "低",
+                                        "model_prob": [round(float(x), 4) for x in market_prob], "direction": direction,
+                                        "edge": 0.0, "action": "观望", "stake_pct": 0.0, "cold_risk": "未取得"},
+                })
             else:
-                action, stake_pct = st["action"], st["stake_pct"]
-                stake_note = st["stake_note"]
-                cold_risk, cold_sources = "低", ["伤停、天气和临场初盘未取得"]
-            direction = st["方向"]
-            edge = float(st["edge"])
-            row.update({
-                "model_status": model["model_status"], "model_prob": [round(float(x), 4) for x in model_prob],
-                "market_prob": [round(float(x), 4) for x in market_prob], "edge": round(edge, 4),
-                "edge_by_outcome": [round(float(x), 4) for x in st["edge_by_outcome"]],
-                "direction": direction, "action": action, "stake": f"{stake_pct:.1f}%",
-                "stake_pct": stake_pct, "stake_note": stake_note, "exp_goals": [round(float(x), 2) for x in model["exp_goals"]],
-                "over25": round(float(1 - sum(poisson.pmf(i, model["exp_goals"][0]) * poisson.pmf(j, model["exp_goals"][1])
-                                              for i in range(11) for j in range(11) if i + j <= 2)), 4),
-                "injury": "未取得", "injury_score": None, "cold_risk": cold_risk,
-                "cold_risk_sources": cold_sources,
-                "model_coverage": {
-                    "home": int(model.get("coverage_home", 0)),
-                    "away": int(model.get("coverage_away", 0)),
-                    "total": coverage,
-                    "minimum_for_intervention": 10,
-                },
-                "model_sources": model.get("sources", ["欧冠历史+本土联赛"]),
-                "prediction_view": {"model_status": model["model_status"], "direction": direction,
-                                    "edge": round(edge, 4), "action": action, "stake_pct": stake_pct,
-                                    "cold_risk": cold_risk, "coverage_home": model["coverage_home"],
-                                    "coverage_away": model["coverage_away"]},
-            })
+                cold_risk, cold_sources = cold_risk_from_signals(
+                    bool(odds_detail.get("cold_alert")), 0.0, 5.0, False
+                )
+                st = strategy(model_prob, market_prob, *(item.get("market_odds") or [np.nan, np.nan, np.nan]),
+                              cold_risk, cold_sources)
+                edge = float(st["edge"])
+                row.update({
+                    "model_status": model["model_status"], "model_prob": [round(float(x), 4) for x in model_prob],
+                    "market_prob": [round(float(x), 4) for x in market_prob], "model_confidence": "高",
+                    "model_prob_source": "trained_model", "edge": round(edge, 4),
+                    "edge_by_outcome": [round(float(x), 4) for x in st["edge_by_outcome"]],
+                    "direction": st["方向"], "action": st["action"], "stake": f"{st['stake_pct']:.1f}%",
+                    "stake_pct": st["stake_pct"], "stake_note": st["stake_note"], "exp_goals": [round(float(x), 2) for x in model["exp_goals"]],
+                    "over25": round(float(1 - sum(poisson.pmf(i, model["exp_goals"][0]) * poisson.pmf(j, model["exp_goals"][1])
+                                                  for i in range(11) for j in range(11) if i + j <= 2)), 4),
+                    "injury": "未取得", "injury_score": None, "cold_risk": cold_risk,
+                    "cold_risk_sources": cold_sources,
+                    "model_coverage": {"home": int(model.get("coverage_home", 0)), "away": int(model.get("coverage_away", 0)),
+                                       "total": coverage, "minimum_for_intervention": 10},
+                    "model_sources": model.get("sources", ["欧冠历史+本土联赛"]),
+                    "prediction_view": {"model_status": model["model_status"], "model_confidence": "高",
+                                        "model_prob": [round(float(x), 4) for x in model_prob], "direction": st["方向"],
+                                        "edge": round(edge, 4), "action": st["action"], "stake_pct": st["stake_pct"],
+                                        "cold_risk": cold_risk, "coverage_home": model["coverage_home"],
+                                        "coverage_away": model["coverage_away"]},
+                })
         rows.append(row)
     return rows
 
@@ -952,6 +1026,7 @@ def main():
             preds.append({
                 "league": r["name"], "date": row["Date"].strftime("%Y-%m-%d"),
                 "home": row["HomeTeam"], "away": row["AwayTeam"],
+                "model_status": "历史训练模型", "model_confidence": "高", "model_prob_source": "trained_model",
                 "model_prob": [round(float(x), 3) for x in p[i]],
                 "market_prob": [round(float(x), 3) for x in mkt[i]],
                 "direction": st["方向"], "edge": round(st["edge"], 4), "action": st["action"],
@@ -964,13 +1039,15 @@ def main():
                 "tactics": "未取得（无风格标签数据源）", "motivation": mot,
                 "intl_break": ib or "无", "streak": streak, "env_score": round(es, 1),
                 "actual": actual, "score": f"{int(row['FTHG'])}-{int(row['FTAG'])}",
-                "prediction_view": {"model_prob": [round(float(x), 3) for x in p[i]],
+                "prediction_view": {"model_status": "历史训练模型", "model_confidence": "高",
+                                    "model_prob": [round(float(x), 3) for x in p[i]],
                                     "edge": round(st["edge"], 4), "direction": st["方向"],
                                     "action": st["action"], "stake_pct": st["stake_pct"],
                                     "cold_risk": cold_risk, "env_score": round(es, 1)},
                 "market_view": {"odds": [float(row["B365H"]), float(row["B365D"]), float(row["B365A"])],
                                 "market_prob": [round(float(x), 3) for x in mkt[i]],
-                                "odds_source": "Bet365/历史快照", "odds_stage": "historical",
+                                 "odds_source": "Bet365/历史快照", "odds_stage": "historical",
+                                 "odds_move": {"text": om_desc, "signal": om_conf, "cold_alert": bool(om_cold)},
                                 "handicap": None},
             })
     # 官方竞彩池是两个前端的共同比赛源；模型未覆盖的赛事明确略过，不生成估算概率。

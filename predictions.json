@@ -6,31 +6,66 @@
   "kickoff_bjt": "2026-08-25T18:30+08:00",
   "home": "金泉尚武",
   "away": "全北现代",
-  "model_status": "模型未覆盖",
-  "model_prob": null,
+  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_prob": [
+   0.2932,
+   0.2811,
+   0.4257
+  ],
   "market_prob": [
    0.2932,
    0.2811,
    0.4257
   ],
-  "edge": null,
-  "edge_by_outcome": null,
+  "model_confidence": "低",
+  "model_prob_source": "market_fallback",
+  "edge": 0.0,
+  "edge_by_outcome": [
+   0.0,
+   0.0,
+   0.0
+  ],
   "direction": "客胜",
-  "action": "略过",
+  "action": "观望",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "模型未覆盖，实际不建议介入",
+  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
   "big_fav": false,
   "exp_goals": null,
   "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
-  "odds_move": "官方最新1X2（初盘未取得）：3.02/3.15/2.08",
+  "odds_move": "初盘 3.02/3.15/2.08 → 最新 3.02/3.15/2.08；变化未超过提示阈值",
+  "odds_move_detail": {
+   "opening": [
+    3.02,
+    3.15,
+    2.08
+   ],
+   "latest": [
+    3.02,
+    3.15,
+    2.08
+   ],
+   "change": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hot_outcome": "客胜",
+   "hot_change": 0.0,
+   "draw_change": 0.0,
+   "signal": "无明显变化",
+   "cold_alert": false,
+   "text": "初盘 3.02/3.15/2.08 → 最新 3.02/3.15/2.08；变化未超过提示阈值"
+  },
   "market_conf": "官方竞彩",
   "cold_risk": "未取得",
   "cold_risk_sources": [
-   "未取得模型覆盖/历史特征"
+   "伤停未取得",
+   "环境未取得",
+   "盘口异常未取得"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -42,9 +77,16 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型未覆盖",
+   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_confidence": "低",
+   "model_prob": [
+    0.2932,
+    0.2811,
+    0.4257
+   ],
    "direction": "客胜",
-   "action": "略过",
+   "edge": 0.0,
+   "action": "观望",
    "stake_pct": 0.0,
    "cold_risk": "未取得"
   },
@@ -59,6 +101,39 @@
     0.2811,
     0.4257
    ],
+   "opening_odds": [
+    3.02,
+    3.15,
+    2.08
+   ],
+   "latest_odds": [
+    3.02,
+    3.15,
+    2.08
+   ],
+   "odds_move": {
+    "opening": [
+     3.02,
+     3.15,
+     2.08
+    ],
+    "latest": [
+     3.02,
+     3.15,
+     2.08
+    ],
+    "change": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hot_outcome": "客胜",
+    "hot_change": 0.0,
+    "draw_change": 0.0,
+    "signal": "无明显变化",
+    "cold_alert": false,
+    "text": "初盘 3.02/3.15/2.08 → 最新 3.02/3.15/2.08；变化未超过提示阈值"
+   },
    "odds_source": "sporttery-official",
    "odds_stage": "official",
    "handicap": {
@@ -79,31 +154,66 @@
   "kickoff_bjt": "2026-08-25T18:30+08:00",
   "home": "济州SK",
   "away": "浦项制铁",
-  "model_status": "模型未覆盖",
-  "model_prob": null,
+  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_prob": [
+   0.4156,
+   0.297,
+   0.2874
+  ],
   "market_prob": [
    0.4156,
    0.297,
    0.2874
   ],
-  "edge": null,
-  "edge_by_outcome": null,
+  "model_confidence": "低",
+  "model_prob_source": "market_fallback",
+  "edge": 0.0,
+  "edge_by_outcome": [
+   0.0,
+   0.0,
+   0.0
+  ],
   "direction": "主胜",
-  "action": "略过",
+  "action": "观望",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "模型未覆盖，实际不建议介入",
+  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
   "big_fav": false,
   "exp_goals": null,
   "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
-  "odds_move": "官方最新1X2（初盘未取得）：2.13/2.98/3.08",
+  "odds_move": "初盘 2.13/2.98/3.08 → 最新 2.13/2.98/3.08；变化未超过提示阈值",
+  "odds_move_detail": {
+   "opening": [
+    2.13,
+    2.98,
+    3.08
+   ],
+   "latest": [
+    2.13,
+    2.98,
+    3.08
+   ],
+   "change": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hot_outcome": "主胜",
+   "hot_change": 0.0,
+   "draw_change": 0.0,
+   "signal": "无明显变化",
+   "cold_alert": false,
+   "text": "初盘 2.13/2.98/3.08 → 最新 2.13/2.98/3.08；变化未超过提示阈值"
+  },
   "market_conf": "官方竞彩",
   "cold_risk": "未取得",
   "cold_risk_sources": [
-   "未取得模型覆盖/历史特征"
+   "伤停未取得",
+   "环境未取得",
+   "盘口异常未取得"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -115,9 +225,16 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型未覆盖",
+   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_confidence": "低",
+   "model_prob": [
+    0.4156,
+    0.297,
+    0.2874
+   ],
    "direction": "主胜",
-   "action": "略过",
+   "edge": 0.0,
+   "action": "观望",
    "stake_pct": 0.0,
    "cold_risk": "未取得"
   },
@@ -132,6 +249,39 @@
     0.297,
     0.2874
    ],
+   "opening_odds": [
+    2.13,
+    2.98,
+    3.08
+   ],
+   "latest_odds": [
+    2.13,
+    2.98,
+    3.08
+   ],
+   "odds_move": {
+    "opening": [
+     2.13,
+     2.98,
+     3.08
+    ],
+    "latest": [
+     2.13,
+     2.98,
+     3.08
+    ],
+    "change": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hot_outcome": "主胜",
+    "hot_change": 0.0,
+    "draw_change": 0.0,
+    "signal": "无明显变化",
+    "cold_alert": false,
+    "text": "初盘 2.13/2.98/3.08 → 最新 2.13/2.98/3.08；变化未超过提示阈值"
+   },
    "odds_source": "sporttery-official",
    "odds_stage": "official",
    "handicap": {
@@ -152,31 +302,66 @@
   "kickoff_bjt": "2026-08-26T02:00+08:00",
   "home": "达曼协定",
   "away": "利雅得胜利",
-  "model_status": "模型未覆盖",
-  "model_prob": null,
+  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_prob": [
+   0.0908,
+   0.1394,
+   0.7698
+  ],
   "market_prob": [
    0.0908,
    0.1394,
    0.7698
   ],
-  "edge": null,
-  "edge_by_outcome": null,
+  "model_confidence": "低",
+  "model_prob_source": "market_fallback",
+  "edge": 0.0,
+  "edge_by_outcome": [
+   0.0,
+   0.0,
+   0.0
+  ],
   "direction": "客胜",
-  "action": "略过",
+  "action": "观望",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "模型未覆盖，实际不建议介入",
+  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
   "big_fav": true,
   "exp_goals": null,
   "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
-  "odds_move": "官方最新1X2（初盘未取得）：9.75/6.35/1.15",
+  "odds_move": "初盘 9.75/6.35/1.15 → 最新 9.75/6.35/1.15；变化未超过提示阈值",
+  "odds_move_detail": {
+   "opening": [
+    9.75,
+    6.35,
+    1.15
+   ],
+   "latest": [
+    9.75,
+    6.35,
+    1.15
+   ],
+   "change": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hot_outcome": "客胜",
+   "hot_change": 0.0,
+   "draw_change": 0.0,
+   "signal": "无明显变化",
+   "cold_alert": false,
+   "text": "初盘 9.75/6.35/1.15 → 最新 9.75/6.35/1.15；变化未超过提示阈值"
+  },
   "market_conf": "官方竞彩",
   "cold_risk": "未取得",
   "cold_risk_sources": [
-   "未取得模型覆盖/历史特征"
+   "伤停未取得",
+   "环境未取得",
+   "盘口异常未取得"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -188,9 +373,16 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型未覆盖",
+   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_confidence": "低",
+   "model_prob": [
+    0.0908,
+    0.1394,
+    0.7698
+   ],
    "direction": "客胜",
-   "action": "略过",
+   "edge": 0.0,
+   "action": "观望",
    "stake_pct": 0.0,
    "cold_risk": "未取得"
   },
@@ -205,6 +397,39 @@
     0.1394,
     0.7698
    ],
+   "opening_odds": [
+    9.75,
+    6.35,
+    1.15
+   ],
+   "latest_odds": [
+    9.75,
+    6.35,
+    1.15
+   ],
+   "odds_move": {
+    "opening": [
+     9.75,
+     6.35,
+     1.15
+    ],
+    "latest": [
+     9.75,
+     6.35,
+     1.15
+    ],
+    "change": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hot_outcome": "客胜",
+    "hot_change": 0.0,
+    "draw_change": 0.0,
+    "signal": "无明显变化",
+    "cold_alert": false,
+    "text": "初盘 9.75/6.35/1.15 → 最新 9.75/6.35/1.15；变化未超过提示阈值"
+   },
    "odds_source": "sporttery-official",
    "odds_stage": "official",
    "handicap": {
@@ -225,31 +450,66 @@
   "kickoff_bjt": "2026-08-26T02:45+08:00",
   "home": "斯托克城",
   "away": "赫尔城",
-  "model_status": "模型未覆盖",
-  "model_prob": null,
+  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_prob": [
+   0.328,
+   0.2952,
+   0.3768
+  ],
   "market_prob": [
    0.328,
    0.2952,
    0.3768
   ],
-  "edge": null,
-  "edge_by_outcome": null,
+  "model_confidence": "低",
+  "model_prob_source": "market_fallback",
+  "edge": 0.0,
+  "edge_by_outcome": [
+   0.0,
+   0.0,
+   0.0
+  ],
   "direction": "客胜",
-  "action": "略过",
+  "action": "观望",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "模型未覆盖，实际不建议介入",
+  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
   "big_fav": false,
   "exp_goals": null,
   "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
-  "odds_move": "官方最新1X2（初盘未取得）：2.70/3.00/2.35",
+  "odds_move": "初盘 2.70/3.00/2.35 → 最新 2.70/3.00/2.35；变化未超过提示阈值",
+  "odds_move_detail": {
+   "opening": [
+    2.7,
+    3.0,
+    2.35
+   ],
+   "latest": [
+    2.7,
+    3.0,
+    2.35
+   ],
+   "change": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hot_outcome": "客胜",
+   "hot_change": 0.0,
+   "draw_change": 0.0,
+   "signal": "无明显变化",
+   "cold_alert": false,
+   "text": "初盘 2.70/3.00/2.35 → 最新 2.70/3.00/2.35；变化未超过提示阈值"
+  },
   "market_conf": "官方竞彩",
   "cold_risk": "未取得",
   "cold_risk_sources": [
-   "未取得模型覆盖/历史特征"
+   "伤停未取得",
+   "环境未取得",
+   "盘口异常未取得"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -261,9 +521,16 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型未覆盖",
+   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_confidence": "低",
+   "model_prob": [
+    0.328,
+    0.2952,
+    0.3768
+   ],
    "direction": "客胜",
-   "action": "略过",
+   "edge": 0.0,
+   "action": "观望",
    "stake_pct": 0.0,
    "cold_risk": "未取得"
   },
@@ -278,6 +545,39 @@
     0.2952,
     0.3768
    ],
+   "opening_odds": [
+    2.7,
+    3.0,
+    2.35
+   ],
+   "latest_odds": [
+    2.7,
+    3.0,
+    2.35
+   ],
+   "odds_move": {
+    "opening": [
+     2.7,
+     3.0,
+     2.35
+    ],
+    "latest": [
+     2.7,
+     3.0,
+     2.35
+    ],
+    "change": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hot_outcome": "客胜",
+    "hot_change": 0.0,
+    "draw_change": 0.0,
+    "signal": "无明显变化",
+    "cold_alert": false,
+    "text": "初盘 2.70/3.00/2.35 → 最新 2.70/3.00/2.35；变化未超过提示阈值"
+   },
    "odds_source": "sporttery-official",
    "odds_stage": "official",
    "handicap": {
@@ -300,40 +600,65 @@
   "away": "凯尔特人",
   "model_status": "欧冠混合模型（欧冠历史+本土联赛）",
   "model_prob": [
-   0.4685,
-   0.2489,
-   0.2825
+   0.508,
+   0.2472,
+   0.2448
   ],
   "market_prob": [
    0.5063,
    0.2331,
    0.2606
   ],
-  "edge": -0.0378,
+  "model_confidence": "高",
+  "model_prob_source": "trained_model",
+  "edge": 0.0017,
   "edge_by_outcome": [
-   -0.0378,
-   0.0158,
-   0.0219
+   0.0017,
+   0.0141,
+   -0.0158
   ],
   "direction": "主胜",
-  "action": "放弃",
+  "action": "观望",
   "stake": "0.0%",
   "stake_pct": 0.0,
   "stake_note": "理论仓位，实际不建议介入",
   "big_fav": false,
   "exp_goals": [
-   1.58,
-   1.17
+   1.63,
+   1.05
   ],
-  "over25": 0.5204,
+  "over25": 0.5001,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
-  "odds_move": "官方最新1X2（初盘未取得）：1.75/3.80/3.40",
+  "odds_move": "初盘 1.80/3.70/3.30 → 最新 1.75/3.80/3.40；变化未超过提示阈值",
+  "odds_move_detail": {
+   "opening": [
+    1.8,
+    3.7,
+    3.3
+   ],
+   "latest": [
+    1.75,
+    3.8,
+    3.4
+   ],
+   "change": [
+    -0.0277777777777778,
+    0.02702702702702693,
+    0.03030303030303033
+   ],
+   "hot_outcome": "主胜",
+   "hot_change": -0.0277777777777778,
+   "draw_change": 0.02702702702702693,
+   "signal": "无明显变化",
+   "cold_alert": false,
+   "text": "初盘 1.80/3.70/3.30 → 最新 1.75/3.80/3.40；变化未超过提示阈值"
+  },
   "market_conf": "官方竞彩",
   "cold_risk": "低",
   "cold_risk_sources": [
-   "伤停、天气和临场初盘未取得"
+   "无明显冷门信号"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -346,13 +671,19 @@
   "score": null,
   "prediction_view": {
    "model_status": "欧冠混合模型（欧冠历史+本土联赛）",
+   "model_confidence": "高",
+   "model_prob": [
+    0.508,
+    0.2472,
+    0.2448
+   ],
    "direction": "主胜",
-   "edge": -0.0378,
-   "action": "放弃",
+   "edge": 0.0017,
+   "action": "观望",
    "stake_pct": 0.0,
    "cold_risk": "低",
    "coverage_home": 302,
-   "coverage_away": 256
+   "coverage_away": 216
   },
   "market_view": {
    "odds": [
@@ -365,6 +696,39 @@
     0.2331,
     0.2606
    ],
+   "opening_odds": [
+    1.8,
+    3.7,
+    3.3
+   ],
+   "latest_odds": [
+    1.75,
+    3.8,
+    3.4
+   ],
+   "odds_move": {
+    "opening": [
+     1.8,
+     3.7,
+     3.3
+    ],
+    "latest": [
+     1.75,
+     3.8,
+     3.4
+    ],
+    "change": [
+     -0.0277777777777778,
+     0.02702702702702693,
+     0.03030303030303033
+    ],
+    "hot_outcome": "主胜",
+    "hot_change": -0.0277777777777778,
+    "draw_change": 0.02702702702702693,
+    "signal": "无明显变化",
+    "cold_alert": false,
+    "text": "初盘 1.80/3.70/3.30 → 最新 1.75/3.80/3.40；变化未超过提示阈值"
+   },
    "odds_source": "sporttery-official",
    "odds_stage": "official",
    "handicap": {
@@ -378,8 +742,8 @@
   },
   "model_coverage": {
    "home": 302,
-   "away": 256,
-   "total": 256,
+   "away": 216,
+   "total": 216,
    "minimum_for_intervention": 10
   },
   "model_sources": [
@@ -397,20 +761,22 @@
   "away": "奈梅亨",
   "model_status": "欧冠混合模型（欧冠历史+本土联赛）",
   "model_prob": [
-   0.6362,
-   0.1884,
-   0.1753
+   0.636,
+   0.1889,
+   0.1751
   ],
   "market_prob": [
    0.6284,
    0.1926,
    0.179
   ],
-  "edge": 0.0078,
+  "model_confidence": "高",
+  "model_prob_source": "trained_model",
+  "edge": 0.0076,
   "edge_by_outcome": [
-   0.0078,
-   -0.0042,
-   -0.0037
+   0.0076,
+   -0.0037,
+   -0.0039
   ],
   "direction": "主胜",
   "action": "观望",
@@ -419,18 +785,41 @@
   "stake_note": "理论仓位，实际不建议介入",
   "big_fav": false,
   "exp_goals": [
-   2.33,
+   2.32,
    1.15
   ],
-  "over25": 0.6753,
+  "over25": 0.6728,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
-  "odds_move": "官方最新1X2（初盘未取得）：1.41/4.60/4.95",
+  "odds_move": "初盘 1.44/4.50/4.70 → 最新 1.41/4.60/4.95；变化未超过提示阈值",
+  "odds_move_detail": {
+   "opening": [
+    1.44,
+    4.5,
+    4.7
+   ],
+   "latest": [
+    1.41,
+    4.6,
+    4.95
+   ],
+   "change": [
+    -0.020833333333333353,
+    0.022222222222222143,
+    0.05319148936170213
+   ],
+   "hot_outcome": "主胜",
+   "hot_change": -0.020833333333333353,
+   "draw_change": 0.022222222222222143,
+   "signal": "无明显变化",
+   "cold_alert": false,
+   "text": "初盘 1.44/4.50/4.70 → 最新 1.41/4.60/4.95；变化未超过提示阈值"
+  },
   "market_conf": "官方竞彩",
   "cold_risk": "低",
   "cold_risk_sources": [
-   "伤停、天气和临场初盘未取得"
+   "无明显冷门信号"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -443,8 +832,14 @@
   "score": null,
   "prediction_view": {
    "model_status": "欧冠混合模型（欧冠历史+本土联赛）",
+   "model_confidence": "高",
+   "model_prob": [
+    0.636,
+    0.1889,
+    0.1751
+   ],
    "direction": "主胜",
-   "edge": 0.0078,
+   "edge": 0.0076,
    "action": "观望",
    "stake_pct": 0.0,
    "cold_risk": "低",
@@ -462,6 +857,39 @@
     0.1926,
     0.179
    ],
+   "opening_odds": [
+    1.44,
+    4.5,
+    4.7
+   ],
+   "latest_odds": [
+    1.41,
+    4.6,
+    4.95
+   ],
+   "odds_move": {
+    "opening": [
+     1.44,
+     4.5,
+     4.7
+    ],
+    "latest": [
+     1.41,
+     4.6,
+     4.95
+    ],
+    "change": [
+     -0.020833333333333353,
+     0.022222222222222143,
+     0.05319148936170213
+    ],
+    "hot_outcome": "主胜",
+    "hot_change": -0.020833333333333353,
+    "draw_change": 0.022222222222222143,
+    "signal": "无明显变化",
+    "cold_alert": false,
+    "text": "初盘 1.44/4.50/4.70 → 最新 1.41/4.60/4.95；变化未超过提示阈值"
+   },
    "odds_source": "sporttery-official",
    "odds_stage": "official",
    "handicap": {
@@ -492,31 +920,66 @@
   "kickoff_bjt": "2026-08-26T03:00+08:00",
   "home": "诺丁汉森林",
   "away": "利兹联",
-  "model_status": "模型未覆盖",
-  "model_prob": null,
+  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_prob": [
+   0.4297,
+   0.281,
+   0.2893
+  ],
   "market_prob": [
    0.4297,
    0.281,
    0.2893
   ],
-  "edge": null,
-  "edge_by_outcome": null,
+  "model_confidence": "低",
+  "model_prob_source": "market_fallback",
+  "edge": 0.0,
+  "edge_by_outcome": [
+   0.0,
+   0.0,
+   0.0
+  ],
   "direction": "主胜",
-  "action": "略过",
+  "action": "观望",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "模型未覆盖，实际不建议介入",
+  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
   "big_fav": false,
   "exp_goals": null,
   "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
-  "odds_move": "官方最新1X2（初盘未取得）：2.06/3.15/3.06",
+  "odds_move": "初盘 2.06/3.15/3.06 → 最新 2.06/3.15/3.06；变化未超过提示阈值",
+  "odds_move_detail": {
+   "opening": [
+    2.06,
+    3.15,
+    3.06
+   ],
+   "latest": [
+    2.06,
+    3.15,
+    3.06
+   ],
+   "change": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hot_outcome": "主胜",
+   "hot_change": 0.0,
+   "draw_change": 0.0,
+   "signal": "无明显变化",
+   "cold_alert": false,
+   "text": "初盘 2.06/3.15/3.06 → 最新 2.06/3.15/3.06；变化未超过提示阈值"
+  },
   "market_conf": "官方竞彩",
   "cold_risk": "未取得",
   "cold_risk_sources": [
-   "未取得模型覆盖/历史特征"
+   "伤停未取得",
+   "环境未取得",
+   "盘口异常未取得"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -528,9 +991,16 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型未覆盖",
+   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_confidence": "低",
+   "model_prob": [
+    0.4297,
+    0.281,
+    0.2893
+   ],
    "direction": "主胜",
-   "action": "略过",
+   "edge": 0.0,
+   "action": "观望",
    "stake_pct": 0.0,
    "cold_risk": "未取得"
   },
@@ -545,6 +1015,39 @@
     0.281,
     0.2893
    ],
+   "opening_odds": [
+    2.06,
+    3.15,
+    3.06
+   ],
+   "latest_odds": [
+    2.06,
+    3.15,
+    3.06
+   ],
+   "odds_move": {
+    "opening": [
+     2.06,
+     3.15,
+     3.06
+    ],
+    "latest": [
+     2.06,
+     3.15,
+     3.06
+    ],
+    "change": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hot_outcome": "主胜",
+    "hot_change": 0.0,
+    "draw_change": 0.0,
+    "signal": "无明显变化",
+    "cold_alert": false,
+    "text": "初盘 2.06/3.15/3.06 → 最新 2.06/3.15/3.06；变化未超过提示阈值"
+   },
    "odds_source": "sporttery-official",
    "odds_stage": "official",
    "handicap": {
@@ -565,31 +1068,66 @@
   "kickoff_bjt": "2026-08-26T03:00+08:00",
   "home": "伯明翰",
   "away": "布伦特福德",
-  "model_status": "模型未覆盖",
-  "model_prob": null,
+  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_prob": [
+   0.2241,
+   0.2459,
+   0.53
+  ],
   "market_prob": [
    0.2241,
    0.2459,
    0.53
   ],
-  "edge": null,
-  "edge_by_outcome": null,
+  "model_confidence": "低",
+  "model_prob_source": "market_fallback",
+  "edge": 0.0,
+  "edge_by_outcome": [
+   0.0,
+   0.0,
+   0.0
+  ],
   "direction": "客胜",
-  "action": "略过",
+  "action": "观望",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "模型未覆盖，实际不建议介入",
+  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
   "big_fav": false,
   "exp_goals": null,
   "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
-  "odds_move": "官方最新1X2（初盘未取得）：3.95/3.60/1.67",
+  "odds_move": "初盘 3.95/3.60/1.67 → 最新 3.95/3.60/1.67；变化未超过提示阈值",
+  "odds_move_detail": {
+   "opening": [
+    3.95,
+    3.6,
+    1.67
+   ],
+   "latest": [
+    3.95,
+    3.6,
+    1.67
+   ],
+   "change": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hot_outcome": "客胜",
+   "hot_change": 0.0,
+   "draw_change": 0.0,
+   "signal": "无明显变化",
+   "cold_alert": false,
+   "text": "初盘 3.95/3.60/1.67 → 最新 3.95/3.60/1.67；变化未超过提示阈值"
+  },
   "market_conf": "官方竞彩",
   "cold_risk": "未取得",
   "cold_risk_sources": [
-   "未取得模型覆盖/历史特征"
+   "伤停未取得",
+   "环境未取得",
+   "盘口异常未取得"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -601,9 +1139,16 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型未覆盖",
+   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_confidence": "低",
+   "model_prob": [
+    0.2241,
+    0.2459,
+    0.53
+   ],
    "direction": "客胜",
-   "action": "略过",
+   "edge": 0.0,
+   "action": "观望",
    "stake_pct": 0.0,
    "cold_risk": "未取得"
   },
@@ -618,6 +1163,39 @@
     0.2459,
     0.53
    ],
+   "opening_odds": [
+    3.95,
+    3.6,
+    1.67
+   ],
+   "latest_odds": [
+    3.95,
+    3.6,
+    1.67
+   ],
+   "odds_move": {
+    "opening": [
+     3.95,
+     3.6,
+     1.67
+    ],
+    "latest": [
+     3.95,
+     3.6,
+     1.67
+    ],
+    "change": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hot_outcome": "客胜",
+    "hot_change": 0.0,
+    "draw_change": 0.0,
+    "signal": "无明显变化",
+    "cold_alert": false,
+    "text": "初盘 3.95/3.60/1.67 → 最新 3.95/3.60/1.67；变化未超过提示阈值"
+   },
    "odds_source": "sporttery-official",
    "odds_stage": "official",
    "handicap": {
@@ -638,31 +1216,66 @@
   "kickoff_bjt": "2026-08-26T03:00+08:00",
   "home": "巴伦西亚",
   "away": "皇家贝蒂斯",
-  "model_status": "模型未覆盖",
-  "model_prob": null,
+  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_prob": [
+   0.3476,
+   0.2906,
+   0.3618
+  ],
   "market_prob": [
    0.3476,
    0.2906,
    0.3618
   ],
-  "edge": null,
-  "edge_by_outcome": null,
+  "model_confidence": "低",
+  "model_prob_source": "market_fallback",
+  "edge": 0.0,
+  "edge_by_outcome": [
+   0.0,
+   0.0,
+   0.0
+  ],
   "direction": "客胜",
-  "action": "略过",
+  "action": "观望",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "模型未覆盖，实际不建议介入",
+  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
   "big_fav": false,
   "exp_goals": null,
   "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
-  "odds_move": "官方最新1X2（初盘未取得）：2.55/3.05/2.45",
+  "odds_move": "初盘 2.55/3.05/2.45 → 最新 2.55/3.05/2.45；变化未超过提示阈值",
+  "odds_move_detail": {
+   "opening": [
+    2.55,
+    3.05,
+    2.45
+   ],
+   "latest": [
+    2.55,
+    3.05,
+    2.45
+   ],
+   "change": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hot_outcome": "客胜",
+   "hot_change": 0.0,
+   "draw_change": 0.0,
+   "signal": "无明显变化",
+   "cold_alert": false,
+   "text": "初盘 2.55/3.05/2.45 → 最新 2.55/3.05/2.45；变化未超过提示阈值"
+  },
   "market_conf": "官方竞彩",
   "cold_risk": "未取得",
   "cold_risk_sources": [
-   "未取得模型覆盖/历史特征"
+   "伤停未取得",
+   "环境未取得",
+   "盘口异常未取得"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -674,9 +1287,16 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型未覆盖",
+   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_confidence": "低",
+   "model_prob": [
+    0.3476,
+    0.2906,
+    0.3618
+   ],
    "direction": "客胜",
-   "action": "略过",
+   "edge": 0.0,
+   "action": "观望",
    "stake_pct": 0.0,
    "cold_risk": "未取得"
   },
@@ -691,6 +1311,39 @@
     0.2906,
     0.3618
    ],
+   "opening_odds": [
+    2.55,
+    3.05,
+    2.45
+   ],
+   "latest_odds": [
+    2.55,
+    3.05,
+    2.45
+   ],
+   "odds_move": {
+    "opening": [
+     2.55,
+     3.05,
+     2.45
+    ],
+    "latest": [
+     2.55,
+     3.05,
+     2.45
+    ],
+    "change": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hot_outcome": "客胜",
+    "hot_change": 0.0,
+    "draw_change": 0.0,
+    "signal": "无明显变化",
+    "cold_alert": false,
+    "text": "初盘 2.55/3.05/2.45 → 最新 2.55/3.05/2.45；变化未超过提示阈值"
+   },
    "odds_source": "sporttery-official",
    "odds_stage": "official",
    "handicap": {
@@ -711,31 +1364,66 @@
   "kickoff_bjt": "2026-08-26T18:30+08:00",
   "home": "大田市民",
   "away": "蔚山现代",
-  "model_status": "模型未覆盖",
-  "model_prob": null,
+  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_prob": [
+   0.4239,
+   0.2685,
+   0.3076
+  ],
   "market_prob": [
    0.4239,
    0.2685,
    0.3076
   ],
-  "edge": null,
-  "edge_by_outcome": null,
+  "model_confidence": "低",
+  "model_prob_source": "market_fallback",
+  "edge": 0.0,
+  "edge_by_outcome": [
+   0.0,
+   0.0,
+   0.0
+  ],
   "direction": "主胜",
-  "action": "略过",
+  "action": "观望",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "模型未覆盖，实际不建议介入",
+  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
   "big_fav": false,
   "exp_goals": null,
   "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
-  "odds_move": "官方最新1X2（初盘未取得）：2.09/3.30/2.88",
+  "odds_move": "初盘 2.09/3.30/2.88 → 最新 2.09/3.30/2.88；变化未超过提示阈值",
+  "odds_move_detail": {
+   "opening": [
+    2.09,
+    3.3,
+    2.88
+   ],
+   "latest": [
+    2.09,
+    3.3,
+    2.88
+   ],
+   "change": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hot_outcome": "主胜",
+   "hot_change": 0.0,
+   "draw_change": 0.0,
+   "signal": "无明显变化",
+   "cold_alert": false,
+   "text": "初盘 2.09/3.30/2.88 → 最新 2.09/3.30/2.88；变化未超过提示阈值"
+  },
   "market_conf": "官方竞彩",
   "cold_risk": "未取得",
   "cold_risk_sources": [
-   "未取得模型覆盖/历史特征"
+   "伤停未取得",
+   "环境未取得",
+   "盘口异常未取得"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -747,9 +1435,16 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型未覆盖",
+   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_confidence": "低",
+   "model_prob": [
+    0.4239,
+    0.2685,
+    0.3076
+   ],
    "direction": "主胜",
-   "action": "略过",
+   "edge": 0.0,
+   "action": "观望",
    "stake_pct": 0.0,
    "cold_risk": "未取得"
   },
@@ -764,6 +1459,39 @@
     0.2685,
     0.3076
    ],
+   "opening_odds": [
+    2.09,
+    3.3,
+    2.88
+   ],
+   "latest_odds": [
+    2.09,
+    3.3,
+    2.88
+   ],
+   "odds_move": {
+    "opening": [
+     2.09,
+     3.3,
+     2.88
+    ],
+    "latest": [
+     2.09,
+     3.3,
+     2.88
+    ],
+    "change": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hot_outcome": "主胜",
+    "hot_change": 0.0,
+    "draw_change": 0.0,
+    "signal": "无明显变化",
+    "cold_alert": false,
+    "text": "初盘 2.09/3.30/2.88 → 最新 2.09/3.30/2.88；变化未超过提示阈值"
+   },
    "odds_source": "sporttery-official",
    "odds_stage": "official",
    "handicap": {
@@ -784,31 +1512,66 @@
   "kickoff_bjt": "2026-08-26T18:30+08:00",
   "home": "安养FC",
   "away": "仁川联",
-  "model_status": "模型未覆盖",
-  "model_prob": null,
+  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_prob": [
+   0.2951,
+   0.2951,
+   0.4098
+  ],
   "market_prob": [
    0.2951,
    0.2951,
    0.4098
   ],
-  "edge": null,
-  "edge_by_outcome": null,
+  "model_confidence": "低",
+  "model_prob_source": "market_fallback",
+  "edge": 0.0,
+  "edge_by_outcome": [
+   0.0,
+   0.0,
+   0.0
+  ],
   "direction": "客胜",
-  "action": "略过",
+  "action": "观望",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "模型未覆盖，实际不建议介入",
+  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
   "big_fav": false,
   "exp_goals": null,
   "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
-  "odds_move": "官方最新1X2（初盘未取得）：3.00/3.00/2.16",
+  "odds_move": "初盘 3.00/3.00/2.16 → 最新 3.00/3.00/2.16；变化未超过提示阈值",
+  "odds_move_detail": {
+   "opening": [
+    3.0,
+    3.0,
+    2.16
+   ],
+   "latest": [
+    3.0,
+    3.0,
+    2.16
+   ],
+   "change": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hot_outcome": "客胜",
+   "hot_change": 0.0,
+   "draw_change": 0.0,
+   "signal": "无明显变化",
+   "cold_alert": false,
+   "text": "初盘 3.00/3.00/2.16 → 最新 3.00/3.00/2.16；变化未超过提示阈值"
+  },
   "market_conf": "官方竞彩",
   "cold_risk": "未取得",
   "cold_risk_sources": [
-   "未取得模型覆盖/历史特征"
+   "伤停未取得",
+   "环境未取得",
+   "盘口异常未取得"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -820,9 +1583,16 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型未覆盖",
+   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_confidence": "低",
+   "model_prob": [
+    0.2951,
+    0.2951,
+    0.4098
+   ],
    "direction": "客胜",
-   "action": "略过",
+   "edge": 0.0,
+   "action": "观望",
    "stake_pct": 0.0,
    "cold_risk": "未取得"
   },
@@ -837,6 +1607,39 @@
     0.2951,
     0.4098
    ],
+   "opening_odds": [
+    3.0,
+    3.0,
+    2.16
+   ],
+   "latest_odds": [
+    3.0,
+    3.0,
+    2.16
+   ],
+   "odds_move": {
+    "opening": [
+     3.0,
+     3.0,
+     2.16
+    ],
+    "latest": [
+     3.0,
+     3.0,
+     2.16
+    ],
+    "change": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hot_outcome": "客胜",
+    "hot_change": 0.0,
+    "draw_change": 0.0,
+    "signal": "无明显变化",
+    "cold_alert": false,
+    "text": "初盘 3.00/3.00/2.16 → 最新 3.00/3.00/2.16；变化未超过提示阈值"
+   },
    "odds_source": "sporttery-official",
    "odds_stage": "official",
    "handicap": {
@@ -857,42 +1660,66 @@
   "kickoff_bjt": "2026-08-27T03:00+08:00",
   "home": "雅典AEK",
   "away": "索菲亚列夫斯基",
-  "model_status": "欧冠历史样本不足",
+  "model_status": "欧冠样本不足，暂用市场概率",
   "model_prob": [
-   0.5226,
-   0.2378,
-   0.2396
+   0.6247,
+   0.2334,
+   0.1419
   ],
   "market_prob": [
    0.6247,
    0.2334,
    0.1419
   ],
-  "edge": -0.1021,
+  "model_confidence": "低",
+  "model_prob_source": "market_fallback",
+  "edge": 0.0,
   "edge_by_outcome": [
-   -0.1021,
-   0.0044,
-   0.0977
+   0.0,
+   0.0,
+   0.0
   ],
   "direction": "主胜",
   "action": "观望",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "历史样本不足，理论仓位，实际不建议介入",
+  "stake_note": "历史样本不足，暂用市场概率；实际不建议介入",
   "big_fav": false,
-  "exp_goals": [
-   1.73,
-   1.09
-  ],
-  "over25": 0.5346,
+  "exp_goals": null,
+  "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
-  "odds_move": "官方最新1X2（初盘未取得）：1.42/3.80/6.25",
+  "odds_move": "初盘 1.42/3.80/6.25 → 最新 1.42/3.80/6.25；变化未超过提示阈值",
+  "odds_move_detail": {
+   "opening": [
+    1.42,
+    3.8,
+    6.25
+   ],
+   "latest": [
+    1.42,
+    3.8,
+    6.25
+   ],
+   "change": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hot_outcome": "主胜",
+   "hot_change": 0.0,
+   "draw_change": 0.0,
+   "signal": "无明显变化",
+   "cold_alert": false,
+   "text": "初盘 1.42/3.80/6.25 → 最新 1.42/3.80/6.25；变化未超过提示阈值"
+  },
   "market_conf": "官方竞彩",
-  "cold_risk": "中",
+  "cold_risk": "未取得",
   "cold_risk_sources": [
-   "欧冠历史样本不足"
+   "伤停未取得",
+   "环境未取得",
+   "盘口异常未取得"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -904,14 +1731,18 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠历史样本不足",
+   "model_status": "欧冠样本不足，暂用市场概率",
+   "model_confidence": "低",
+   "model_prob": [
+    0.6247,
+    0.2334,
+    0.1419
+   ],
    "direction": "主胜",
-   "edge": -0.1021,
+   "edge": 0.0,
    "action": "观望",
    "stake_pct": 0.0,
-   "cold_risk": "中",
-   "coverage_home": 0,
-   "coverage_away": 0
+   "cold_risk": "未取得"
   },
   "market_view": {
    "odds": [
@@ -924,6 +1755,39 @@
     0.2334,
     0.1419
    ],
+   "opening_odds": [
+    1.42,
+    3.8,
+    6.25
+   ],
+   "latest_odds": [
+    1.42,
+    3.8,
+    6.25
+   ],
+   "odds_move": {
+    "opening": [
+     1.42,
+     3.8,
+     6.25
+    ],
+    "latest": [
+     1.42,
+     3.8,
+     6.25
+    ],
+    "change": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hot_outcome": "主胜",
+    "hot_change": 0.0,
+    "draw_change": 0.0,
+    "signal": "无明显变化",
+    "cold_alert": false,
+    "text": "初盘 1.42/3.80/6.25 → 最新 1.42/3.80/6.25；变化未超过提示阈值"
+   },
    "odds_source": "sporttery-official",
    "odds_stage": "official",
    "handicap": {
@@ -954,42 +1818,66 @@
   "kickoff_bjt": "2026-08-27T03:00+08:00",
   "home": "采列",
   "away": "布拉迪斯拉发",
-  "model_status": "欧冠历史样本不足",
+  "model_status": "欧冠样本不足，暂用市场概率",
   "model_prob": [
-   0.5226,
-   0.2378,
-   0.2396
+   0.4029,
+   0.277,
+   0.32
   ],
   "market_prob": [
    0.4029,
    0.277,
    0.32
   ],
-  "edge": 0.1197,
+  "model_confidence": "低",
+  "model_prob_source": "market_fallback",
+  "edge": 0.0,
   "edge_by_outcome": [
-   0.1197,
-   -0.0392,
-   -0.0805
+   0.0,
+   0.0,
+   0.0
   ],
   "direction": "主胜",
   "action": "观望",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "历史样本不足，理论仓位，实际不建议介入",
+  "stake_note": "历史样本不足，暂用市场概率；实际不建议介入",
   "big_fav": false,
-  "exp_goals": [
-   1.73,
-   1.09
-  ],
-  "over25": 0.5346,
+  "exp_goals": null,
+  "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
-  "odds_move": "官方最新1X2（初盘未取得）：2.20/3.20/2.77",
+  "odds_move": "初盘 2.20/3.20/2.77 → 最新 2.20/3.20/2.77；变化未超过提示阈值",
+  "odds_move_detail": {
+   "opening": [
+    2.2,
+    3.2,
+    2.77
+   ],
+   "latest": [
+    2.2,
+    3.2,
+    2.77
+   ],
+   "change": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hot_outcome": "主胜",
+   "hot_change": 0.0,
+   "draw_change": 0.0,
+   "signal": "无明显变化",
+   "cold_alert": false,
+   "text": "初盘 2.20/3.20/2.77 → 最新 2.20/3.20/2.77；变化未超过提示阈值"
+  },
   "market_conf": "官方竞彩",
-  "cold_risk": "中",
+  "cold_risk": "未取得",
   "cold_risk_sources": [
-   "欧冠历史样本不足"
+   "伤停未取得",
+   "环境未取得",
+   "盘口异常未取得"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -1001,14 +1889,18 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠历史样本不足",
+   "model_status": "欧冠样本不足，暂用市场概率",
+   "model_confidence": "低",
+   "model_prob": [
+    0.4029,
+    0.277,
+    0.32
+   ],
    "direction": "主胜",
-   "edge": 0.1197,
+   "edge": 0.0,
    "action": "观望",
    "stake_pct": 0.0,
-   "cold_risk": "中",
-   "coverage_home": 0,
-   "coverage_away": 0
+   "cold_risk": "未取得"
   },
   "market_view": {
    "odds": [
@@ -1021,6 +1913,39 @@
     0.277,
     0.32
    ],
+   "opening_odds": [
+    2.2,
+    3.2,
+    2.77
+   ],
+   "latest_odds": [
+    2.2,
+    3.2,
+    2.77
+   ],
+   "odds_move": {
+    "opening": [
+     2.2,
+     3.2,
+     2.77
+    ],
+    "latest": [
+     2.2,
+     3.2,
+     2.77
+    ],
+    "change": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hot_outcome": "主胜",
+    "hot_change": 0.0,
+    "draw_change": 0.0,
+    "signal": "无明显变化",
+    "cold_alert": false,
+    "text": "初盘 2.20/3.20/2.77 → 最新 2.20/3.20/2.77；变化未超过提示阈值"
+   },
    "odds_source": "sporttery-official",
    "odds_stage": "official",
    "handicap": {
@@ -1051,42 +1976,66 @@
   "kickoff_bjt": "2026-08-27T03:00+08:00",
   "home": "维京",
   "away": "萨格勒布迪纳摩",
-  "model_status": "欧冠历史样本不足",
+  "model_status": "欧冠样本不足，暂用市场概率",
   "model_prob": [
-   0.5226,
-   0.2378,
-   0.2396
+   0.3853,
+   0.2645,
+   0.3502
   ],
   "market_prob": [
    0.3853,
    0.2645,
    0.3502
   ],
-  "edge": 0.1373,
+  "model_confidence": "低",
+  "model_prob_source": "market_fallback",
+  "edge": 0.0,
   "edge_by_outcome": [
-   0.1373,
-   -0.0267,
-   -0.1106
+   0.0,
+   0.0,
+   0.0
   ],
   "direction": "主胜",
   "action": "观望",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "历史样本不足，理论仓位，实际不建议介入",
+  "stake_note": "历史样本不足，暂用市场概率；实际不建议介入",
   "big_fav": false,
-  "exp_goals": [
-   1.73,
-   1.09
-  ],
-  "over25": 0.5346,
+  "exp_goals": null,
+  "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
-  "odds_move": "官方最新1X2（初盘未取得）：2.30/3.35/2.53",
+  "odds_move": "初盘 2.30/3.35/2.53 → 最新 2.30/3.35/2.53；变化未超过提示阈值",
+  "odds_move_detail": {
+   "opening": [
+    2.3,
+    3.35,
+    2.53
+   ],
+   "latest": [
+    2.3,
+    3.35,
+    2.53
+   ],
+   "change": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hot_outcome": "主胜",
+   "hot_change": 0.0,
+   "draw_change": 0.0,
+   "signal": "无明显变化",
+   "cold_alert": false,
+   "text": "初盘 2.30/3.35/2.53 → 最新 2.30/3.35/2.53；变化未超过提示阈值"
+  },
   "market_conf": "官方竞彩",
-  "cold_risk": "中",
+  "cold_risk": "未取得",
   "cold_risk_sources": [
-   "欧冠历史样本不足"
+   "伤停未取得",
+   "环境未取得",
+   "盘口异常未取得"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -1098,14 +2047,18 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠历史样本不足",
+   "model_status": "欧冠样本不足，暂用市场概率",
+   "model_confidence": "低",
+   "model_prob": [
+    0.3853,
+    0.2645,
+    0.3502
+   ],
    "direction": "主胜",
-   "edge": 0.1373,
+   "edge": 0.0,
    "action": "观望",
    "stake_pct": 0.0,
-   "cold_risk": "中",
-   "coverage_home": 0,
-   "coverage_away": 0
+   "cold_risk": "未取得"
   },
   "market_view": {
    "odds": [
@@ -1118,6 +2071,39 @@
     0.2645,
     0.3502
    ],
+   "opening_odds": [
+    2.3,
+    3.35,
+    2.53
+   ],
+   "latest_odds": [
+    2.3,
+    3.35,
+    2.53
+   ],
+   "odds_move": {
+    "opening": [
+     2.3,
+     3.35,
+     2.53
+    ],
+    "latest": [
+     2.3,
+     3.35,
+     2.53
+    ],
+    "change": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hot_outcome": "主胜",
+    "hot_change": 0.0,
+    "draw_change": 0.0,
+    "signal": "无明显变化",
+    "cold_alert": false,
+    "text": "初盘 2.30/3.35/2.53 → 最新 2.30/3.35/2.53；变化未超过提示阈值"
+   },
    "odds_source": "sporttery-official",
    "odds_stage": "official",
    "handicap": {
@@ -1148,42 +2134,66 @@
   "kickoff_bjt": "2026-08-27T03:00+08:00",
   "home": "里昂",
   "away": "费内巴切",
-  "model_status": "欧冠历史样本不足",
+  "model_status": "欧冠样本不足，暂用市场概率",
   "model_prob": [
-   0.5226,
-   0.2378,
-   0.2396
+   0.4743,
+   0.2648,
+   0.2609
   ],
   "market_prob": [
    0.4743,
    0.2648,
    0.2609
   ],
-  "edge": 0.0483,
+  "model_confidence": "低",
+  "model_prob_source": "market_fallback",
+  "edge": 0.0,
   "edge_by_outcome": [
-   0.0483,
-   -0.027,
-   -0.0213
+   0.0,
+   0.0,
+   0.0
   ],
   "direction": "主胜",
   "action": "观望",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "历史样本不足，理论仓位，实际不建议介入",
+  "stake_note": "历史样本不足，暂用市场概率；实际不建议介入",
   "big_fav": false,
-  "exp_goals": [
-   1.73,
-   1.09
-  ],
-  "over25": 0.5346,
+  "exp_goals": null,
+  "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
-  "odds_move": "官方最新1X2（初盘未取得）：1.87/3.35/3.40",
+  "odds_move": "初盘 1.87/3.35/3.40 → 最新 1.87/3.35/3.40；变化未超过提示阈值",
+  "odds_move_detail": {
+   "opening": [
+    1.87,
+    3.35,
+    3.4
+   ],
+   "latest": [
+    1.87,
+    3.35,
+    3.4
+   ],
+   "change": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hot_outcome": "主胜",
+   "hot_change": 0.0,
+   "draw_change": 0.0,
+   "signal": "无明显变化",
+   "cold_alert": false,
+   "text": "初盘 1.87/3.35/3.40 → 最新 1.87/3.35/3.40；变化未超过提示阈值"
+  },
   "market_conf": "官方竞彩",
-  "cold_risk": "中",
+  "cold_risk": "未取得",
   "cold_risk_sources": [
-   "欧冠历史样本不足"
+   "伤停未取得",
+   "环境未取得",
+   "盘口异常未取得"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -1195,14 +2205,18 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠历史样本不足",
+   "model_status": "欧冠样本不足，暂用市场概率",
+   "model_confidence": "低",
+   "model_prob": [
+    0.4743,
+    0.2648,
+    0.2609
+   ],
    "direction": "主胜",
-   "edge": 0.0483,
+   "edge": 0.0,
    "action": "观望",
    "stake_pct": 0.0,
-   "cold_risk": "中",
-   "coverage_home": 0,
-   "coverage_away": 0
+   "cold_risk": "未取得"
   },
   "market_view": {
    "odds": [
@@ -1215,6 +2229,39 @@
     0.2648,
     0.2609
    ],
+   "opening_odds": [
+    1.87,
+    3.35,
+    3.4
+   ],
+   "latest_odds": [
+    1.87,
+    3.35,
+    3.4
+   ],
+   "odds_move": {
+    "opening": [
+     1.87,
+     3.35,
+     3.4
+    ],
+    "latest": [
+     1.87,
+     3.35,
+     3.4
+    ],
+    "change": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hot_outcome": "主胜",
+    "hot_change": 0.0,
+    "draw_change": 0.0,
+    "signal": "无明显变化",
+    "cold_alert": false,
+    "text": "初盘 1.87/3.35/3.40 → 最新 1.87/3.35/3.40；变化未超过提示阈值"
+   },
    "odds_source": "sporttery-official",
    "odds_stage": "official",
    "handicap": {
@@ -1245,31 +2292,66 @@
   "kickoff_bjt": "2026-08-27T03:00+08:00",
   "home": "皇家马德里",
   "away": "皇家社会",
-  "model_status": "模型未覆盖",
-  "model_prob": null,
+  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_prob": [
+   0.7265,
+   0.1641,
+   0.1094
+  ],
   "market_prob": [
    0.7265,
    0.1641,
    0.1094
   ],
-  "edge": null,
-  "edge_by_outcome": null,
+  "model_confidence": "低",
+  "model_prob_source": "market_fallback",
+  "edge": 0.0,
+  "edge_by_outcome": [
+   0.0,
+   0.0,
+   0.0
+  ],
   "direction": "主胜",
-  "action": "略过",
+  "action": "观望",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "模型未覆盖，实际不建议介入",
+  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
   "big_fav": true,
   "exp_goals": null,
   "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
-  "odds_move": "官方最新1X2（初盘未取得）：1.22/5.40/8.10",
+  "odds_move": "初盘 1.22/5.40/8.10 → 最新 1.22/5.40/8.10；变化未超过提示阈值",
+  "odds_move_detail": {
+   "opening": [
+    1.22,
+    5.4,
+    8.1
+   ],
+   "latest": [
+    1.22,
+    5.4,
+    8.1
+   ],
+   "change": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "hot_outcome": "主胜",
+   "hot_change": 0.0,
+   "draw_change": 0.0,
+   "signal": "无明显变化",
+   "cold_alert": false,
+   "text": "初盘 1.22/5.40/8.10 → 最新 1.22/5.40/8.10；变化未超过提示阈值"
+  },
   "market_conf": "官方竞彩",
   "cold_risk": "未取得",
   "cold_risk_sources": [
-   "未取得模型覆盖/历史特征"
+   "伤停未取得",
+   "环境未取得",
+   "盘口异常未取得"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -1281,9 +2363,16 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型未覆盖",
+   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_confidence": "低",
+   "model_prob": [
+    0.7265,
+    0.1641,
+    0.1094
+   ],
    "direction": "主胜",
-   "action": "略过",
+   "edge": 0.0,
+   "action": "观望",
    "stake_pct": 0.0,
    "cold_risk": "未取得"
   },
@@ -1298,6 +2387,39 @@
     0.1641,
     0.1094
    ],
+   "opening_odds": [
+    1.22,
+    5.4,
+    8.1
+   ],
+   "latest_odds": [
+    1.22,
+    5.4,
+    8.1
+   ],
+   "odds_move": {
+    "opening": [
+     1.22,
+     5.4,
+     8.1
+    ],
+    "latest": [
+     1.22,
+     5.4,
+     8.1
+    ],
+    "change": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hot_outcome": "主胜",
+    "hot_change": 0.0,
+    "draw_change": 0.0,
+    "signal": "无明显变化",
+    "cold_alert": false,
+    "text": "初盘 1.22/5.40/8.10 → 最新 1.22/5.40/8.10；变化未超过提示阈值"
+   },
    "odds_source": "sporttery-official",
    "odds_stage": "official",
    "handicap": {
