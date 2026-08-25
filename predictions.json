@@ -6,42 +6,31 @@
   "kickoff_bjt": "2026-08-25T18:30+08:00",
   "home": "金泉尚武",
   "away": "全北现代",
-  "model_status": "欧冠历史样本不足",
-  "model_prob": [
-   0.5226,
-   0.2378,
-   0.2396
-  ],
+  "model_status": "模型未覆盖",
+  "model_prob": null,
   "market_prob": [
    0.2932,
    0.2811,
    0.4257
   ],
-  "edge": 0.2294,
-  "edge_by_outcome": [
-   0.2294,
-   -0.0433,
-   -0.1861
-  ],
-  "direction": "主胜",
-  "action": "观望",
+  "edge": null,
+  "edge_by_outcome": null,
+  "direction": "客胜",
+  "action": "略过",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "历史样本不足，理论仓位，实际不建议介入",
+  "stake_note": "模型未覆盖，实际不建议介入",
   "big_fav": false,
-  "exp_goals": [
-   1.73,
-   1.09
-  ],
-  "over25": 0.5346,
+  "exp_goals": null,
+  "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
   "odds_move": "官方最新1X2（初盘未取得）：3.02/3.15/2.08",
   "market_conf": "官方竞彩",
-  "cold_risk": "中",
+  "cold_risk": "未取得",
   "cold_risk_sources": [
-   "欧冠历史样本不足"
+   "未取得模型覆盖/历史特征"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -53,14 +42,11 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠历史样本不足",
-   "direction": "主胜",
-   "edge": 0.2294,
-   "action": "观望",
+   "model_status": "模型未覆盖",
+   "direction": "客胜",
+   "action": "略过",
    "stake_pct": 0.0,
-   "cold_risk": "中",
-   "coverage_home": 0,
-   "coverage_away": 0
+   "cold_risk": "未取得"
   },
   "market_view": {
    "odds": [
@@ -84,16 +70,6 @@
     "stage": "official"
    }
   },
-  "model_coverage": {
-   "home": 0,
-   "away": 0,
-   "total": 0,
-   "minimum_for_intervention": 10
-  },
-  "model_sources": [
-   "UEFA历史赛果",
-   "本土联赛赛果支持"
-  ],
   "data_mode": "竞彩官方在售比赛池"
  },
  {
@@ -103,42 +79,31 @@
   "kickoff_bjt": "2026-08-25T18:30+08:00",
   "home": "济州SK",
   "away": "浦项制铁",
-  "model_status": "欧冠历史样本不足",
-  "model_prob": [
-   0.5226,
-   0.2378,
-   0.2396
-  ],
+  "model_status": "模型未覆盖",
+  "model_prob": null,
   "market_prob": [
    0.4156,
    0.297,
    0.2874
   ],
-  "edge": 0.107,
-  "edge_by_outcome": [
-   0.107,
-   -0.0592,
-   -0.0478
-  ],
+  "edge": null,
+  "edge_by_outcome": null,
   "direction": "主胜",
-  "action": "观望",
+  "action": "略过",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "历史样本不足，理论仓位，实际不建议介入",
+  "stake_note": "模型未覆盖，实际不建议介入",
   "big_fav": false,
-  "exp_goals": [
-   1.73,
-   1.09
-  ],
-  "over25": 0.5346,
+  "exp_goals": null,
+  "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
   "odds_move": "官方最新1X2（初盘未取得）：2.13/2.98/3.08",
   "market_conf": "官方竞彩",
-  "cold_risk": "中",
+  "cold_risk": "未取得",
   "cold_risk_sources": [
-   "欧冠历史样本不足"
+   "未取得模型覆盖/历史特征"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -150,14 +115,11 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠历史样本不足",
+   "model_status": "模型未覆盖",
    "direction": "主胜",
-   "edge": 0.107,
-   "action": "观望",
+   "action": "略过",
    "stake_pct": 0.0,
-   "cold_risk": "中",
-   "coverage_home": 0,
-   "coverage_away": 0
+   "cold_risk": "未取得"
   },
   "market_view": {
    "odds": [
@@ -181,16 +143,6 @@
     "stage": "official"
    }
   },
-  "model_coverage": {
-   "home": 0,
-   "away": 0,
-   "total": 0,
-   "minimum_for_intervention": 10
-  },
-  "model_sources": [
-   "UEFA历史赛果",
-   "本土联赛赛果支持"
-  ],
   "data_mode": "竞彩官方在售比赛池"
  },
  {
@@ -200,42 +152,31 @@
   "kickoff_bjt": "2026-08-26T02:00+08:00",
   "home": "达曼协定",
   "away": "利雅得胜利",
-  "model_status": "欧冠历史样本不足",
-  "model_prob": [
-   0.5226,
-   0.2378,
-   0.2396
-  ],
+  "model_status": "模型未覆盖",
+  "model_prob": null,
   "market_prob": [
    0.0908,
    0.1394,
    0.7698
   ],
-  "edge": 0.4318,
-  "edge_by_outcome": [
-   0.4318,
-   0.0984,
-   -0.5302
-  ],
-  "direction": "主胜",
-  "action": "观望",
+  "edge": null,
+  "edge_by_outcome": null,
+  "direction": "客胜",
+  "action": "略过",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "历史样本不足，理论仓位，实际不建议介入",
+  "stake_note": "模型未覆盖，实际不建议介入",
   "big_fav": true,
-  "exp_goals": [
-   1.73,
-   1.09
-  ],
-  "over25": 0.5346,
+  "exp_goals": null,
+  "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
   "odds_move": "官方最新1X2（初盘未取得）：9.75/6.35/1.15",
   "market_conf": "官方竞彩",
-  "cold_risk": "中",
+  "cold_risk": "未取得",
   "cold_risk_sources": [
-   "欧冠历史样本不足"
+   "未取得模型覆盖/历史特征"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -247,14 +188,11 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠历史样本不足",
-   "direction": "主胜",
-   "edge": 0.4318,
-   "action": "观望",
+   "model_status": "模型未覆盖",
+   "direction": "客胜",
+   "action": "略过",
    "stake_pct": 0.0,
-   "cold_risk": "中",
-   "coverage_home": 0,
-   "coverage_away": 0
+   "cold_risk": "未取得"
   },
   "market_view": {
    "odds": [
@@ -278,16 +216,6 @@
     "stage": "official"
    }
   },
-  "model_coverage": {
-   "home": 0,
-   "away": 0,
-   "total": 0,
-   "minimum_for_intervention": 10
-  },
-  "model_sources": [
-   "UEFA历史赛果",
-   "本土联赛赛果支持"
-  ],
   "data_mode": "竞彩官方在售比赛池"
  },
  {
@@ -297,42 +225,31 @@
   "kickoff_bjt": "2026-08-26T02:45+08:00",
   "home": "斯托克城",
   "away": "赫尔城",
-  "model_status": "欧冠历史样本不足",
-  "model_prob": [
-   0.5226,
-   0.2378,
-   0.2396
-  ],
+  "model_status": "模型未覆盖",
+  "model_prob": null,
   "market_prob": [
    0.328,
    0.2952,
    0.3768
   ],
-  "edge": 0.1946,
-  "edge_by_outcome": [
-   0.1946,
-   -0.0574,
-   -0.1372
-  ],
-  "direction": "主胜",
-  "action": "观望",
+  "edge": null,
+  "edge_by_outcome": null,
+  "direction": "客胜",
+  "action": "略过",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "历史样本不足，理论仓位，实际不建议介入",
+  "stake_note": "模型未覆盖，实际不建议介入",
   "big_fav": false,
-  "exp_goals": [
-   1.73,
-   1.09
-  ],
-  "over25": 0.5346,
+  "exp_goals": null,
+  "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
   "odds_move": "官方最新1X2（初盘未取得）：2.70/3.00/2.35",
   "market_conf": "官方竞彩",
-  "cold_risk": "中",
+  "cold_risk": "未取得",
   "cold_risk_sources": [
-   "欧冠历史样本不足"
+   "未取得模型覆盖/历史特征"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -344,14 +261,11 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠历史样本不足",
-   "direction": "主胜",
-   "edge": 0.1946,
-   "action": "观望",
+   "model_status": "模型未覆盖",
+   "direction": "客胜",
+   "action": "略过",
    "stake_pct": 0.0,
-   "cold_risk": "中",
-   "coverage_home": 0,
-   "coverage_away": 0
+   "cold_risk": "未取得"
   },
   "market_view": {
    "odds": [
@@ -375,16 +289,6 @@
     "stage": "official"
    }
   },
-  "model_coverage": {
-   "home": 0,
-   "away": 0,
-   "total": 0,
-   "minimum_for_intervention": 10
-  },
-  "model_sources": [
-   "UEFA历史赛果",
-   "本土联赛赛果支持"
-  ],
   "data_mode": "竞彩官方在售比赛池"
  },
  {
@@ -396,20 +300,20 @@
   "away": "凯尔特人",
   "model_status": "欧冠混合模型（欧冠历史+本土联赛）",
   "model_prob": [
-   0.4016,
-   0.2523,
-   0.3462
+   0.4685,
+   0.2489,
+   0.2825
   ],
   "market_prob": [
    0.5063,
    0.2331,
    0.2606
   ],
-  "edge": -0.1047,
+  "edge": -0.0378,
   "edge_by_outcome": [
-   -0.1047,
-   0.0192,
-   0.0856
+   -0.0378,
+   0.0158,
+   0.0219
   ],
   "direction": "主胜",
   "action": "放弃",
@@ -418,10 +322,10 @@
   "stake_note": "理论仓位，实际不建议介入",
   "big_fav": false,
   "exp_goals": [
-   1.46,
-   1.34
+   1.58,
+   1.17
   ],
-  "over25": 0.5305,
+  "over25": 0.5204,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
@@ -443,12 +347,12 @@
   "prediction_view": {
    "model_status": "欧冠混合模型（欧冠历史+本土联赛）",
    "direction": "主胜",
-   "edge": -0.1047,
+   "edge": -0.0378,
    "action": "放弃",
    "stake_pct": 0.0,
    "cold_risk": "低",
    "coverage_home": 302,
-   "coverage_away": 294
+   "coverage_away": 256
   },
   "market_view": {
    "odds": [
@@ -474,8 +378,8 @@
   },
   "model_coverage": {
    "home": 302,
-   "away": 294,
-   "total": 294,
+   "away": 256,
+   "total": 256,
    "minimum_for_intervention": 10
   },
   "model_sources": [
@@ -493,20 +397,20 @@
   "away": "奈梅亨",
   "model_status": "欧冠混合模型（欧冠历史+本土联赛）",
   "model_prob": [
-   0.6354,
-   0.1887,
-   0.1759
+   0.6362,
+   0.1884,
+   0.1753
   ],
   "market_prob": [
    0.6284,
    0.1926,
    0.179
   ],
-  "edge": 0.007,
+  "edge": 0.0078,
   "edge_by_outcome": [
-   0.007,
-   -0.0039,
-   -0.0031
+   0.0078,
+   -0.0042,
+   -0.0037
   ],
   "direction": "主胜",
   "action": "观望",
@@ -518,7 +422,7 @@
    2.33,
    1.15
   ],
-  "over25": 0.6752,
+  "over25": 0.6753,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
@@ -540,7 +444,7 @@
   "prediction_view": {
    "model_status": "欧冠混合模型（欧冠历史+本土联赛）",
    "direction": "主胜",
-   "edge": 0.007,
+   "edge": 0.0078,
    "action": "观望",
    "stake_pct": 0.0,
    "cold_risk": "低",
@@ -588,42 +492,31 @@
   "kickoff_bjt": "2026-08-26T03:00+08:00",
   "home": "诺丁汉森林",
   "away": "利兹联",
-  "model_status": "欧冠历史样本不足",
-  "model_prob": [
-   0.5226,
-   0.2378,
-   0.2396
-  ],
+  "model_status": "模型未覆盖",
+  "model_prob": null,
   "market_prob": [
    0.4297,
    0.281,
    0.2893
   ],
-  "edge": 0.0929,
-  "edge_by_outcome": [
-   0.0929,
-   -0.0432,
-   -0.0497
-  ],
+  "edge": null,
+  "edge_by_outcome": null,
   "direction": "主胜",
-  "action": "观望",
+  "action": "略过",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "历史样本不足，理论仓位，实际不建议介入",
+  "stake_note": "模型未覆盖，实际不建议介入",
   "big_fav": false,
-  "exp_goals": [
-   1.73,
-   1.09
-  ],
-  "over25": 0.5346,
+  "exp_goals": null,
+  "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
   "odds_move": "官方最新1X2（初盘未取得）：2.06/3.15/3.06",
   "market_conf": "官方竞彩",
-  "cold_risk": "中",
+  "cold_risk": "未取得",
   "cold_risk_sources": [
-   "欧冠历史样本不足"
+   "未取得模型覆盖/历史特征"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -635,14 +528,11 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠历史样本不足",
+   "model_status": "模型未覆盖",
    "direction": "主胜",
-   "edge": 0.0929,
-   "action": "观望",
+   "action": "略过",
    "stake_pct": 0.0,
-   "cold_risk": "中",
-   "coverage_home": 0,
-   "coverage_away": 0
+   "cold_risk": "未取得"
   },
   "market_view": {
    "odds": [
@@ -666,16 +556,6 @@
     "stage": "official"
    }
   },
-  "model_coverage": {
-   "home": 0,
-   "away": 0,
-   "total": 0,
-   "minimum_for_intervention": 10
-  },
-  "model_sources": [
-   "UEFA历史赛果",
-   "本土联赛赛果支持"
-  ],
   "data_mode": "竞彩官方在售比赛池"
  },
  {
@@ -685,42 +565,31 @@
   "kickoff_bjt": "2026-08-26T03:00+08:00",
   "home": "伯明翰",
   "away": "布伦特福德",
-  "model_status": "欧冠历史样本不足",
-  "model_prob": [
-   0.5226,
-   0.2378,
-   0.2396
-  ],
+  "model_status": "模型未覆盖",
+  "model_prob": null,
   "market_prob": [
    0.2241,
    0.2459,
    0.53
   ],
-  "edge": 0.2985,
-  "edge_by_outcome": [
-   0.2985,
-   -0.0081,
-   -0.2904
-  ],
-  "direction": "主胜",
-  "action": "观望",
+  "edge": null,
+  "edge_by_outcome": null,
+  "direction": "客胜",
+  "action": "略过",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "历史样本不足，理论仓位，实际不建议介入",
+  "stake_note": "模型未覆盖，实际不建议介入",
   "big_fav": false,
-  "exp_goals": [
-   1.73,
-   1.09
-  ],
-  "over25": 0.5346,
+  "exp_goals": null,
+  "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
   "odds_move": "官方最新1X2（初盘未取得）：3.95/3.60/1.67",
   "market_conf": "官方竞彩",
-  "cold_risk": "中",
+  "cold_risk": "未取得",
   "cold_risk_sources": [
-   "欧冠历史样本不足"
+   "未取得模型覆盖/历史特征"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -732,14 +601,11 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠历史样本不足",
-   "direction": "主胜",
-   "edge": 0.2985,
-   "action": "观望",
+   "model_status": "模型未覆盖",
+   "direction": "客胜",
+   "action": "略过",
    "stake_pct": 0.0,
-   "cold_risk": "中",
-   "coverage_home": 0,
-   "coverage_away": 0
+   "cold_risk": "未取得"
   },
   "market_view": {
    "odds": [
@@ -763,16 +629,6 @@
     "stage": "official"
    }
   },
-  "model_coverage": {
-   "home": 0,
-   "away": 0,
-   "total": 0,
-   "minimum_for_intervention": 10
-  },
-  "model_sources": [
-   "UEFA历史赛果",
-   "本土联赛赛果支持"
-  ],
   "data_mode": "竞彩官方在售比赛池"
  },
  {
@@ -782,42 +638,31 @@
   "kickoff_bjt": "2026-08-26T03:00+08:00",
   "home": "巴伦西亚",
   "away": "皇家贝蒂斯",
-  "model_status": "欧冠历史样本不足",
-  "model_prob": [
-   0.5226,
-   0.2378,
-   0.2396
-  ],
+  "model_status": "模型未覆盖",
+  "model_prob": null,
   "market_prob": [
    0.3476,
    0.2906,
    0.3618
   ],
-  "edge": 0.175,
-  "edge_by_outcome": [
-   0.175,
-   -0.0528,
-   -0.1222
-  ],
-  "direction": "主胜",
-  "action": "观望",
+  "edge": null,
+  "edge_by_outcome": null,
+  "direction": "客胜",
+  "action": "略过",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "历史样本不足，理论仓位，实际不建议介入",
+  "stake_note": "模型未覆盖，实际不建议介入",
   "big_fav": false,
-  "exp_goals": [
-   1.73,
-   1.09
-  ],
-  "over25": 0.5346,
+  "exp_goals": null,
+  "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
   "odds_move": "官方最新1X2（初盘未取得）：2.55/3.05/2.45",
   "market_conf": "官方竞彩",
-  "cold_risk": "中",
+  "cold_risk": "未取得",
   "cold_risk_sources": [
-   "欧冠历史样本不足"
+   "未取得模型覆盖/历史特征"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -829,14 +674,11 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠历史样本不足",
-   "direction": "主胜",
-   "edge": 0.175,
-   "action": "观望",
+   "model_status": "模型未覆盖",
+   "direction": "客胜",
+   "action": "略过",
    "stake_pct": 0.0,
-   "cold_risk": "中",
-   "coverage_home": 0,
-   "coverage_away": 0
+   "cold_risk": "未取得"
   },
   "market_view": {
    "odds": [
@@ -860,16 +702,6 @@
     "stage": "official"
    }
   },
-  "model_coverage": {
-   "home": 0,
-   "away": 0,
-   "total": 0,
-   "minimum_for_intervention": 10
-  },
-  "model_sources": [
-   "UEFA历史赛果",
-   "本土联赛赛果支持"
-  ],
   "data_mode": "竞彩官方在售比赛池"
  },
  {
@@ -879,42 +711,31 @@
   "kickoff_bjt": "2026-08-26T18:30+08:00",
   "home": "大田市民",
   "away": "蔚山现代",
-  "model_status": "欧冠历史样本不足",
-  "model_prob": [
-   0.5226,
-   0.2378,
-   0.2396
-  ],
+  "model_status": "模型未覆盖",
+  "model_prob": null,
   "market_prob": [
    0.4239,
    0.2685,
    0.3076
   ],
-  "edge": 0.0987,
-  "edge_by_outcome": [
-   0.0987,
-   -0.0307,
-   -0.068
-  ],
+  "edge": null,
+  "edge_by_outcome": null,
   "direction": "主胜",
-  "action": "观望",
+  "action": "略过",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "历史样本不足，理论仓位，实际不建议介入",
+  "stake_note": "模型未覆盖，实际不建议介入",
   "big_fav": false,
-  "exp_goals": [
-   1.73,
-   1.09
-  ],
-  "over25": 0.5346,
+  "exp_goals": null,
+  "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
   "odds_move": "官方最新1X2（初盘未取得）：2.09/3.30/2.88",
   "market_conf": "官方竞彩",
-  "cold_risk": "中",
+  "cold_risk": "未取得",
   "cold_risk_sources": [
-   "欧冠历史样本不足"
+   "未取得模型覆盖/历史特征"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -926,14 +747,11 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠历史样本不足",
+   "model_status": "模型未覆盖",
    "direction": "主胜",
-   "edge": 0.0987,
-   "action": "观望",
+   "action": "略过",
    "stake_pct": 0.0,
-   "cold_risk": "中",
-   "coverage_home": 0,
-   "coverage_away": 0
+   "cold_risk": "未取得"
   },
   "market_view": {
    "odds": [
@@ -957,16 +775,6 @@
     "stage": "official"
    }
   },
-  "model_coverage": {
-   "home": 0,
-   "away": 0,
-   "total": 0,
-   "minimum_for_intervention": 10
-  },
-  "model_sources": [
-   "UEFA历史赛果",
-   "本土联赛赛果支持"
-  ],
   "data_mode": "竞彩官方在售比赛池"
  },
  {
@@ -976,42 +784,31 @@
   "kickoff_bjt": "2026-08-26T18:30+08:00",
   "home": "安养FC",
   "away": "仁川联",
-  "model_status": "欧冠历史样本不足",
-  "model_prob": [
-   0.5226,
-   0.2378,
-   0.2396
-  ],
+  "model_status": "模型未覆盖",
+  "model_prob": null,
   "market_prob": [
    0.2951,
    0.2951,
    0.4098
   ],
-  "edge": 0.2275,
-  "edge_by_outcome": [
-   0.2275,
-   -0.0573,
-   -0.1702
-  ],
-  "direction": "主胜",
-  "action": "观望",
+  "edge": null,
+  "edge_by_outcome": null,
+  "direction": "客胜",
+  "action": "略过",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "历史样本不足，理论仓位，实际不建议介入",
+  "stake_note": "模型未覆盖，实际不建议介入",
   "big_fav": false,
-  "exp_goals": [
-   1.73,
-   1.09
-  ],
-  "over25": 0.5346,
+  "exp_goals": null,
+  "over25": null,
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
   "odds_move": "官方最新1X2（初盘未取得）：3.00/3.00/2.16",
   "market_conf": "官方竞彩",
-  "cold_risk": "中",
+  "cold_risk": "未取得",
   "cold_risk_sources": [
-   "欧冠历史样本不足"
+   "未取得模型覆盖/历史特征"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -1023,14 +820,11 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠历史样本不足",
-   "direction": "主胜",
-   "edge": 0.2275,
-   "action": "观望",
+   "model_status": "模型未覆盖",
+   "direction": "客胜",
+   "action": "略过",
    "stake_pct": 0.0,
-   "cold_risk": "中",
-   "coverage_home": 0,
-   "coverage_away": 0
+   "cold_risk": "未取得"
   },
   "market_view": {
    "odds": [
@@ -1054,6 +848,93 @@
     "stage": "official"
    }
   },
+  "data_mode": "竞彩官方在售比赛池"
+ },
+ {
+  "lottery_id": "周三005",
+  "league": "欧冠",
+  "date": "2026-08-27",
+  "kickoff_bjt": "2026-08-27T03:00+08:00",
+  "home": "雅典AEK",
+  "away": "索菲亚列夫斯基",
+  "model_status": "欧冠历史样本不足",
+  "model_prob": [
+   0.5226,
+   0.2378,
+   0.2396
+  ],
+  "market_prob": [
+   0.6247,
+   0.2334,
+   0.1419
+  ],
+  "edge": -0.1021,
+  "edge_by_outcome": [
+   -0.1021,
+   0.0044,
+   0.0977
+  ],
+  "direction": "主胜",
+  "action": "观望",
+  "stake": "0.0%",
+  "stake_pct": 0.0,
+  "stake_note": "历史样本不足，理论仓位，实际不建议介入",
+  "big_fav": false,
+  "exp_goals": [
+   1.73,
+   1.09
+  ],
+  "over25": 0.5346,
+  "home_rank": null,
+  "injury": "未取得",
+  "injury_score": null,
+  "odds_move": "官方最新1X2（初盘未取得）：1.42/3.80/6.25",
+  "market_conf": "官方竞彩",
+  "cold_risk": "中",
+  "cold_risk_sources": [
+   "欧冠历史样本不足"
+  ],
+  "weather": "未取得",
+  "referee": "未取得",
+  "tactics": "未取得",
+  "motivation": "未取得",
+  "intl_break": "未取得",
+  "streak": "未取得",
+  "env_score": null,
+  "actual": null,
+  "score": null,
+  "prediction_view": {
+   "model_status": "欧冠历史样本不足",
+   "direction": "主胜",
+   "edge": -0.1021,
+   "action": "观望",
+   "stake_pct": 0.0,
+   "cold_risk": "中",
+   "coverage_home": 0,
+   "coverage_away": 0
+  },
+  "market_view": {
+   "odds": [
+    1.42,
+    3.8,
+    6.25
+   ],
+   "market_prob": [
+    0.6247,
+    0.2334,
+    0.1419
+   ],
+   "odds_source": "sporttery-official",
+   "odds_stage": "official",
+   "handicap": {
+    "line": "-1.0",
+    "home": 2.48,
+    "draw": 3.15,
+    "away": 2.45,
+    "source": "sporttery-official",
+    "stage": "official"
+   }
+  },
   "model_coverage": {
    "home": 0,
    "away": 0,
@@ -1064,6 +945,370 @@
    "UEFA历史赛果",
    "本土联赛赛果支持"
   ],
+  "data_mode": "竞彩官方在售比赛池"
+ },
+ {
+  "lottery_id": "周三006",
+  "league": "欧冠",
+  "date": "2026-08-27",
+  "kickoff_bjt": "2026-08-27T03:00+08:00",
+  "home": "采列",
+  "away": "布拉迪斯拉发",
+  "model_status": "欧冠历史样本不足",
+  "model_prob": [
+   0.5226,
+   0.2378,
+   0.2396
+  ],
+  "market_prob": [
+   0.4029,
+   0.277,
+   0.32
+  ],
+  "edge": 0.1197,
+  "edge_by_outcome": [
+   0.1197,
+   -0.0392,
+   -0.0805
+  ],
+  "direction": "主胜",
+  "action": "观望",
+  "stake": "0.0%",
+  "stake_pct": 0.0,
+  "stake_note": "历史样本不足，理论仓位，实际不建议介入",
+  "big_fav": false,
+  "exp_goals": [
+   1.73,
+   1.09
+  ],
+  "over25": 0.5346,
+  "home_rank": null,
+  "injury": "未取得",
+  "injury_score": null,
+  "odds_move": "官方最新1X2（初盘未取得）：2.20/3.20/2.77",
+  "market_conf": "官方竞彩",
+  "cold_risk": "中",
+  "cold_risk_sources": [
+   "欧冠历史样本不足"
+  ],
+  "weather": "未取得",
+  "referee": "未取得",
+  "tactics": "未取得",
+  "motivation": "未取得",
+  "intl_break": "未取得",
+  "streak": "未取得",
+  "env_score": null,
+  "actual": null,
+  "score": null,
+  "prediction_view": {
+   "model_status": "欧冠历史样本不足",
+   "direction": "主胜",
+   "edge": 0.1197,
+   "action": "观望",
+   "stake_pct": 0.0,
+   "cold_risk": "中",
+   "coverage_home": 0,
+   "coverage_away": 0
+  },
+  "market_view": {
+   "odds": [
+    2.2,
+    3.2,
+    2.77
+   ],
+   "market_prob": [
+    0.4029,
+    0.277,
+    0.32
+   ],
+   "odds_source": "sporttery-official",
+   "odds_stage": "official",
+   "handicap": {
+    "line": "-1.0",
+    "home": 4.7,
+    "draw": 3.9,
+    "away": 1.52,
+    "source": "sporttery-official",
+    "stage": "official"
+   }
+  },
+  "model_coverage": {
+   "home": 0,
+   "away": 0,
+   "total": 0,
+   "minimum_for_intervention": 10
+  },
+  "model_sources": [
+   "UEFA历史赛果",
+   "本土联赛赛果支持"
+  ],
+  "data_mode": "竞彩官方在售比赛池"
+ },
+ {
+  "lottery_id": "周三007",
+  "league": "欧冠",
+  "date": "2026-08-27",
+  "kickoff_bjt": "2026-08-27T03:00+08:00",
+  "home": "维京",
+  "away": "萨格勒布迪纳摩",
+  "model_status": "欧冠历史样本不足",
+  "model_prob": [
+   0.5226,
+   0.2378,
+   0.2396
+  ],
+  "market_prob": [
+   0.3853,
+   0.2645,
+   0.3502
+  ],
+  "edge": 0.1373,
+  "edge_by_outcome": [
+   0.1373,
+   -0.0267,
+   -0.1106
+  ],
+  "direction": "主胜",
+  "action": "观望",
+  "stake": "0.0%",
+  "stake_pct": 0.0,
+  "stake_note": "历史样本不足，理论仓位，实际不建议介入",
+  "big_fav": false,
+  "exp_goals": [
+   1.73,
+   1.09
+  ],
+  "over25": 0.5346,
+  "home_rank": null,
+  "injury": "未取得",
+  "injury_score": null,
+  "odds_move": "官方最新1X2（初盘未取得）：2.30/3.35/2.53",
+  "market_conf": "官方竞彩",
+  "cold_risk": "中",
+  "cold_risk_sources": [
+   "欧冠历史样本不足"
+  ],
+  "weather": "未取得",
+  "referee": "未取得",
+  "tactics": "未取得",
+  "motivation": "未取得",
+  "intl_break": "未取得",
+  "streak": "未取得",
+  "env_score": null,
+  "actual": null,
+  "score": null,
+  "prediction_view": {
+   "model_status": "欧冠历史样本不足",
+   "direction": "主胜",
+   "edge": 0.1373,
+   "action": "观望",
+   "stake_pct": 0.0,
+   "cold_risk": "中",
+   "coverage_home": 0,
+   "coverage_away": 0
+  },
+  "market_view": {
+   "odds": [
+    2.3,
+    3.35,
+    2.53
+   ],
+   "market_prob": [
+    0.3853,
+    0.2645,
+    0.3502
+   ],
+   "odds_source": "sporttery-official",
+   "odds_stage": "official",
+   "handicap": {
+    "line": "-1.0",
+    "home": 4.8,
+    "draw": 4.1,
+    "away": 1.48,
+    "source": "sporttery-official",
+    "stage": "official"
+   }
+  },
+  "model_coverage": {
+   "home": 0,
+   "away": 0,
+   "total": 0,
+   "minimum_for_intervention": 10
+  },
+  "model_sources": [
+   "UEFA历史赛果",
+   "本土联赛赛果支持"
+  ],
+  "data_mode": "竞彩官方在售比赛池"
+ },
+ {
+  "lottery_id": "周三008",
+  "league": "欧冠",
+  "date": "2026-08-27",
+  "kickoff_bjt": "2026-08-27T03:00+08:00",
+  "home": "里昂",
+  "away": "费内巴切",
+  "model_status": "欧冠历史样本不足",
+  "model_prob": [
+   0.5226,
+   0.2378,
+   0.2396
+  ],
+  "market_prob": [
+   0.4743,
+   0.2648,
+   0.2609
+  ],
+  "edge": 0.0483,
+  "edge_by_outcome": [
+   0.0483,
+   -0.027,
+   -0.0213
+  ],
+  "direction": "主胜",
+  "action": "观望",
+  "stake": "0.0%",
+  "stake_pct": 0.0,
+  "stake_note": "历史样本不足，理论仓位，实际不建议介入",
+  "big_fav": false,
+  "exp_goals": [
+   1.73,
+   1.09
+  ],
+  "over25": 0.5346,
+  "home_rank": null,
+  "injury": "未取得",
+  "injury_score": null,
+  "odds_move": "官方最新1X2（初盘未取得）：1.87/3.35/3.40",
+  "market_conf": "官方竞彩",
+  "cold_risk": "中",
+  "cold_risk_sources": [
+   "欧冠历史样本不足"
+  ],
+  "weather": "未取得",
+  "referee": "未取得",
+  "tactics": "未取得",
+  "motivation": "未取得",
+  "intl_break": "未取得",
+  "streak": "未取得",
+  "env_score": null,
+  "actual": null,
+  "score": null,
+  "prediction_view": {
+   "model_status": "欧冠历史样本不足",
+   "direction": "主胜",
+   "edge": 0.0483,
+   "action": "观望",
+   "stake_pct": 0.0,
+   "cold_risk": "中",
+   "coverage_home": 0,
+   "coverage_away": 0
+  },
+  "market_view": {
+   "odds": [
+    1.87,
+    3.35,
+    3.4
+   ],
+   "market_prob": [
+    0.4743,
+    0.2648,
+    0.2609
+   ],
+   "odds_source": "sporttery-official",
+   "odds_stage": "official",
+   "handicap": {
+    "line": "-1.0",
+    "home": 3.7,
+    "draw": 3.6,
+    "away": 1.72,
+    "source": "sporttery-official",
+    "stage": "official"
+   }
+  },
+  "model_coverage": {
+   "home": 0,
+   "away": 0,
+   "total": 0,
+   "minimum_for_intervention": 10
+  },
+  "model_sources": [
+   "UEFA历史赛果",
+   "本土联赛赛果支持"
+  ],
+  "data_mode": "竞彩官方在售比赛池"
+ },
+ {
+  "lottery_id": "周三010",
+  "league": "西甲",
+  "date": "2026-08-27",
+  "kickoff_bjt": "2026-08-27T03:00+08:00",
+  "home": "皇家马德里",
+  "away": "皇家社会",
+  "model_status": "模型未覆盖",
+  "model_prob": null,
+  "market_prob": [
+   0.7265,
+   0.1641,
+   0.1094
+  ],
+  "edge": null,
+  "edge_by_outcome": null,
+  "direction": "主胜",
+  "action": "略过",
+  "stake": "0.0%",
+  "stake_pct": 0.0,
+  "stake_note": "模型未覆盖，实际不建议介入",
+  "big_fav": true,
+  "exp_goals": null,
+  "over25": null,
+  "home_rank": null,
+  "injury": "未取得",
+  "injury_score": null,
+  "odds_move": "官方最新1X2（初盘未取得）：1.22/5.40/8.10",
+  "market_conf": "官方竞彩",
+  "cold_risk": "未取得",
+  "cold_risk_sources": [
+   "未取得模型覆盖/历史特征"
+  ],
+  "weather": "未取得",
+  "referee": "未取得",
+  "tactics": "未取得",
+  "motivation": "未取得",
+  "intl_break": "未取得",
+  "streak": "未取得",
+  "env_score": null,
+  "actual": null,
+  "score": null,
+  "prediction_view": {
+   "model_status": "模型未覆盖",
+   "direction": "主胜",
+   "action": "略过",
+   "stake_pct": 0.0,
+   "cold_risk": "未取得"
+  },
+  "market_view": {
+   "odds": [
+    1.22,
+    5.4,
+    8.1
+   ],
+   "market_prob": [
+    0.7265,
+    0.1641,
+    0.1094
+   ],
+   "odds_source": "sporttery-official",
+   "odds_stage": "official",
+   "handicap": {
+    "line": "-1.0",
+    "home": 1.72,
+    "draw": 4.05,
+    "away": 3.32,
+    "source": "sporttery-official",
+    "stage": "official"
+   }
+  },
   "data_mode": "竞彩官方在售比赛池"
  }
 ]
