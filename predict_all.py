@@ -5,7 +5,7 @@
 环境变量:
   API_FOOTBALL_KEY  # 可选；未设置时 伤停/裁判 标"未取得"
 """
-import io, os, sys, json, time, sqlite3, re, unicodedata
+import io, os, sys, json, time, sqlite3, re, unicodedata, hashlib
 from pathlib import Path
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
@@ -356,7 +356,31 @@ class InjuryModule:
     def __init__(self):
         self.key = os.environ.get("API_FOOTBALL_KEY", "").strip()
         self.available = bool(self.key)
-    def apply(self, home, away, lam_h, lam_a):
+    def _fetch_fixture_injuries(self, home, away, fixture_date):
+        if not self.available or not fixture_date:
+            return [], [], None
+        try:
+            headers = {"x-apisports-key": self.key}
+            fixtures = cr.get("https://v3.football.api-sports.io/fixtures", params={"date": fixture_date.strftime("%Y-%m-%d")}, headers=headers, timeout=20).json().get("response", [])
+            def key(v): return re.sub(r"[^a-z0-9]+", "", str(v).lower())
+            hk, ak = key(home), key(away)
+            hit = next((f for f in fixtures if hk in key(f.get("teams", {}).get("home", {}).get("name", "")) and ak in key(f.get("teams", {}).get("away", {}).get("name", ""))), None)
+            if not hit:
+                return [], [], None
+            inj = cr.get("https://v3.football.api-sports.io/injuries", params={"fixture": hit["fixture"]["id"]}, headers=headers, timeout=20).json().get("response", [])
+            home_id, away_id = hit["teams"]["home"]["id"], hit["teams"]["away"]["id"]
+            def parse(e):
+                p = e.get("player", {})
+                pos = str(p.get("pos", "")); position = "门将" if pos in ("G", "GK") else ("中卫" if pos in ("D", "CB") else ("前锋" if pos in ("F", "FW", "ST") else "中场"))
+                return {"player": p.get("name", "未知球员"), "position": position, "reason": p.get("reason", "未说明"), "主力": bool(p.get("type") in ("Missing", "Suspended"))}
+            h, a = [], []
+            for e in inj:
+                (h if e.get("team", {}).get("id") == home_id else a).append(parse(e))
+            return h, a, hit["fixture"]["id"]
+        except Exception:
+            return [], [], None
+
+    def apply(self, home, away, lam_h, lam_a, fixture_date=None):
         if not self.available:
             return lam_h, lam_a, "伤停数据未取得（未配置 API_FOOTBALL_KEY）", 0.0, False, []
         # 有 key 时的真实流程（示例：api-football /injuries?fixture=xxx）
@@ -369,7 +393,7 @@ class InjuryModule:
         #   主力前锋缺阵: 本队进球期望 -7%
         #   核心中场缺阵: 本队进球和失球各 ±5%
         #   两名以上主力缺阵: 冷门警报
-        injuries_h, injuries_a = [], []  # 从接口解析
+        injuries_h, injuries_a, _ = self._fetch_fixture_injuries(home, away, fixture_date)
         impact = 0.0
         cold = False
         for team_inj, side in ((injuries_h, 0), (injuries_a, 1)):
@@ -491,9 +515,16 @@ def strategy(p_model, p_market, odds_home, draw, away, cold_risk, cold_sources=N
 def get_weather(city, lat, lon, date):
     try:
         d = date.strftime("%Y-%m-%d")
-        u = (f"https://archive-api.open-meteo.com/v1/archive?latitude={lat}&longitude={lon}"
-             f"&start_date={d}&end_date={d}&daily=temperature_2m_max,precipitation_probability_max,wind_speed_10m_max&timezone=auto")
-        r = cr.get(u, impersonate="chrome", timeout=20, headers=HEADERS)
+        today = datetime.now(BJ_TZ).date()
+        # Forecast endpoint also serves the recent past and is more reliable for
+        # today's/next-36h fixtures than the archive endpoint.
+        if date.date() >= today - timedelta(days=7):
+            u = (f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}"
+                 f"&start_date={d}&end_date={d}&daily=temperature_2m_max,precipitation_probability_max,wind_speed_10m_max&timezone=auto")
+        else:
+            u = (f"https://archive-api.open-meteo.com/v1/archive?latitude={lat}&longitude={lon}"
+                 f"&start_date={d}&end_date={d}&daily=temperature_2m_max,precipitation_probability_max,wind_speed_10m_max&timezone=auto")
+        r = cr.get(u, impersonate="chrome", timeout=8, headers=HEADERS)
         j = r.json()["daily"]
         t = j["temperature_2m_max"][0]; pp = j["precipitation_probability_max"][0]; ws = j["wind_speed_10m_max"][0]
         tags = []
@@ -504,6 +535,44 @@ def get_weather(city, lat, lon, date):
         return f"天气：{city} {t:.0f}℃ 降水{pp:.0f}% 风速{ws:.0f}km/h → {'/'.join(tags)}"
     except Exception as e:
         return "天气：未取得"
+
+
+WEATHER_CACHE = {}
+
+def weather_for_fixture(home, date):
+    """Fetch a real Open-Meteo forecast for a known team city or geocoded venue."""
+    city_alias = {
+        "金泉尚武": "Gimcheon", "济州SK": "Jeju", "大田市民": "Daejeon", "安养FC": "Anyang",
+        "全北现代": "Jeonju", "浦项制铁": "Pohang", "蔚山现代": "Ulsan", "仁川联": "Incheon",
+        "达曼协定": "Dammam", "利雅得胜利": "Riyadh", "斯托克城": "Stoke-on-Trent", "赫尔城": "Hull",
+        "诺丁汉森林": "Nottingham", "伯明翰": "Birmingham", "LASK林茨": "Linz", "博德闪耀": "Bodo",
+        "雅典AEK": "Athens", "采列": "Celje", "维京": "Stavanger", "里昂": "Lyon",
+    }
+    city_coords = {
+        "金泉尚武": ("Gimcheon", 36.1218, 128.1198), "济州SK": ("Jeju", 33.4996, 126.5312),
+        "大田市民": ("Daejeon", 36.3504, 127.3845), "安养FC": ("Anyang", 37.3943, 126.9568),
+        "达曼协定": ("Dammam", 26.4207, 50.0888), "利雅得胜利": ("Riyadh", 24.7136, 46.6753),
+        "博德闪耀": ("Bodo", 67.2804, 14.4049), "雅典AEK": ("Athens", 37.9838, 23.7275),
+    }
+    home_name = str(home or "").strip()
+    cache_key = f"{home_name}|{date.strftime('%Y-%m-%d')}"
+    if cache_key in WEATHER_CACHE:
+        return WEATHER_CACHE[cache_key]
+    city_info = city_coords.get(home_name) or CITY_MAP.get(home_name) or SHORT_CITY.get(home_name)
+    try:
+        if city_info is None:
+            city_name = city_alias.get(home_name, home_name)
+            q = cr.get("https://geocoding-api.open-meteo.com/v1/search", params={"name": city_name, "count": 1, "language": "en", "format": "json"}, impersonate="chrome", timeout=5, headers=HEADERS).json()
+            hit = (q.get("results") or [None])[0]
+            if hit:
+                city_info = (hit.get("name", home_name), hit["latitude"], hit["longitude"])
+        value = get_weather(*city_info, date) if city_info else "天气：未取得（城市坐标未取得）"
+        WEATHER_CACHE[cache_key] = value
+        return value
+    except Exception:
+        value = "天气：未取得（城市坐标未取得）"
+        WEATHER_CACHE[cache_key] = value
+        return value
 
 def final_rank(df, season, team):
     sub = df[df["Season"] == season]
@@ -776,13 +845,13 @@ def _odds_move_detail(opening, latest):
         "draw_change": None,
         "signal": "未取得",
         "cold_alert": False,
-        "text": "盘口变化：未取得",
+        "text": "盘口数据仅当前快照",
     }
     try:
         if not opening or not latest:
             if latest:
                 detail["latest"] = latest
-                detail["text"] = "初盘未取得；最新赔率：" + "/".join(f"{float(x):.2f}" for x in latest)
+                detail["text"] = "盘口数据仅当前快照；最新赔率：" + "/".join(f"{float(x):.2f}" for x in latest)
             return detail
         o = np.asarray(opening, dtype=float); c = np.asarray(latest, dtype=float)
         if not np.isfinite(o).all() or not np.isfinite(c).all() or (o <= 1.01).any() or (c <= 1.01).any():
@@ -808,8 +877,8 @@ def _odds_move_detail(opening, latest):
         if draw_chg < -0.08:
             parts.append(f"平局赔率下降{abs(draw_chg)*100:.1f}% → 市场防平")
         if len(parts) == 1:
-            parts.append("变化未超过提示阈值")
-            detail["signal"] = "无明显变化"
+            parts.append("盘口数据仅当前快照，暂无可比初盘")
+            detail["signal"] = "仅当前快照"
         detail["text"] = "；".join(parts)
     except Exception:
         pass
@@ -842,7 +911,7 @@ def load_lottery_pool(hours=36):
             one_rows = [o for o in odds_rows if str(o["market"]).lower() in {"1x2", "胜平负"}]
             one = one_rows[0] if one_rows else None
             latest_one = one_rows[0] if one_rows else None
-            opening_one = one_rows[-1] if one_rows else None
+            opening_one = one_rows[-1] if len(one_rows) > 1 else None
             handicap = next((o for o in odds_rows if str(o["market"]).lower() in {"让球胜平负", "hhad"}), None)
             market_odds = None
             market_prob = None
@@ -884,25 +953,66 @@ FAST_LEAGUE_DEFAULTS = {
     "英联赛杯": (1.45, 1.20), "欧冠": (1.50, 1.22),
 }
 
+DEEP_LEAGUES = {"英超", "西甲", "意甲", "德甲", "法甲"}
+
+def _load_team_aliases():
+    """Use the existing Chinese-name map so official pool teams match historical data."""
+    try:
+        html = (BASE_DIR / "frontend" / "index.html").read_text(encoding="utf-8")
+        m = re.search(r"var TEAM_CN = (\{.*?\});", html, re.S)
+        raw = json.loads(m.group(1)) if m else {}
+        return {_fast_team_key(v): _fast_team_key(k) for k, v in raw.items()}
+    except Exception:
+        return {}
+
 
 def _fast_team_key(value):
-    return re.sub(r"[^a-z0-9\u4e00-\u9fff]+", "", str(value).lower())
+    key = re.sub(r"[^a-z0-9\u4e00-\u9fff]+", "", str(value).lower())
+    return TEAM_ALIAS_MAP.get(key, key)
+
+TEAM_ALIAS_MAP = {}
+
+def _team_prior_elo(team_key):
+    """Stable unseen-team prior, used only when no historical row exists locally."""
+    digest = hashlib.sha256(str(team_key).encode("utf-8")).digest()
+    return 1500.0 + (int.from_bytes(digest[:2], "big") % 241) - 120.0
 
 
 def build_fast_context(results):
-    """Build pre-match-only team summaries from all locally loaded historical data."""
-    context = {}
+    """Build pre-match-only team summaries and league averages from real historical rows."""
+    global TEAM_ALIAS_MAP
+    TEAM_ALIAS_MAP = _load_team_aliases()
+    context = {"__league__": {}}
     for league_result in results.values():
         df = league_result.get("data") if isinstance(league_result, dict) else None
         if not isinstance(df, pd.DataFrame):
             continue
         league = league_result.get("name", "")
-        for _, row in df.iterrows():
+        league_rows = []
+        for _, row in df.sort_values("Date").iterrows():
             try:
                 hg, ag = float(row["FTHG"]), float(row["FTAG"])
                 date = str(row.get("Date", ""))
             except Exception:
                 continue
+            league_rows.append((row, hg, ag, date))
+        if league_rows:
+            context["__league__"][league] = {
+                "home_gf": float(np.mean([x[1] for x in league_rows])),
+                "away_gf": float(np.mean([x[2] for x in league_rows])),
+                "home_ga": float(np.mean([x[2] for x in league_rows])),
+                "away_ga": float(np.mean([x[1] for x in league_rows])),
+                "matches": len(league_rows),
+            }
+        elo = {}
+        for row, hg, ag, date in league_rows:
+            home_key, away_key = _fast_team_key(row.get("HomeTeam")), _fast_team_key(row.get("AwayTeam"))
+            eh, ea = elo.get(home_key, 1500.0), elo.get(away_key, 1500.0)
+            expected = 1.0 / (1.0 + 10 ** ((ea - eh) / 400.0))
+            result = 1.0 if hg > ag else (0.5 if hg == ag else 0.0)
+            margin = np.log1p(abs(hg - ag))
+            elo[home_key] = eh + 24.0 * margin * (result - expected)
+            elo[away_key] = ea + 24.0 * margin * ((1.0 - result) - (1.0 - expected))
             for team, gf, ga, venue, opponent in (
                 (row.get("HomeTeam"), hg, ag, "home", row.get("AwayTeam")),
                 (row.get("AwayTeam"), ag, hg, "away", row.get("HomeTeam")),
@@ -913,6 +1023,7 @@ def build_fast_context(results):
                 context.setdefault(key, []).append({
                     "date": date, "gf": gf, "ga": ga, "venue": venue,
                     "opponent": str(opponent or ""), "league": league,
+                    "elo": float(elo.get(_fast_team_key(team), 1500.0)),
                 })
     return context
 
@@ -922,29 +1033,38 @@ def fast_model_for_item(item, context=None):
     context = context or {}
     league = str(item.get("league", ""))
     base_h, base_a = next((v for k, v in FAST_LEAGUE_DEFAULTS.items() if k in league), (1.45, 1.20))
+    league_stats = next((v for k, v in context.get("__league__", {}).items() if k in league or league in k), None)
+    if league_stats:
+        base_h = max(0.65, league_stats["home_gf"])
+        base_a = max(0.55, league_stats["away_gf"])
+        avg_home_ga = max(0.55, league_stats["home_ga"])
+        avg_away_ga = max(0.55, league_stats["away_ga"])
+    else:
+        avg_home_ga, avg_away_ga = base_a, base_h
     home_rows = context.get(_fast_team_key(item.get("home")), [])
     away_rows = context.get(_fast_team_key(item.get("away")), [])
 
     def split_stats(rows, venue):
         selected = [x for x in rows if x["venue"] == venue]
-        selected = (selected or rows)[-10:]
+        selected = (selected or rows)[-5:]
         if not selected:
-            return 1.0, 1.0, 1500.0, 0
+            # League average attack/defence plus a stable unseen-team Elo prior.
+            return 1.0, 1.0, _team_prior_elo(_fast_team_key(item.get("home" if venue == "home" else "away"))), 0
         gf = float(np.mean([x["gf"] for x in selected])); ga = float(np.mean([x["ga"] for x in selected]))
-        elo = 1500.0 + 45.0 * float(np.clip(gf - ga, -2.0, 2.0))
+        elo = float(selected[-1].get("elo", 1500.0))
         return gf, ga, elo, len(selected)
 
     h_gf, h_ga, h_elo, h_n = split_stats(home_rows, "home")
     a_gf, a_ga, a_elo, a_n = split_stats(away_rows, "away")
-    # neutral ratios keep a deterministic model when a league/team has no local history.
-    h_attack = np.clip(h_gf / max(base_h, 0.2), 0.65, 1.45) if h_n else 1.0
-    h_def = np.clip(h_ga / max(base_a, 0.2), 0.65, 1.45) if h_n else 1.0
-    a_attack = np.clip(a_gf / max(base_a, 0.2), 0.65, 1.45) if a_n else 1.0
-    a_def = np.clip(a_ga / max(base_h, 0.2), 0.65, 1.45) if a_n else 1.0
+    # Required fast-model formula: recent attack/defence × league averages × home/away factors.
+    h_attack = np.clip(h_gf / max(base_h, 0.2), 0.55, 1.55) if h_n else 1.0
+    h_def = np.clip(h_ga / max(avg_home_ga, 0.2), 0.55, 1.55) if h_n else 1.0
+    a_attack = np.clip(a_gf / max(base_a, 0.2), 0.55, 1.55) if a_n else 1.0
+    a_def = np.clip(a_ga / max(avg_away_ga, 0.2), 0.55, 1.55) if a_n else 1.0
     elo_gap = float(np.clip(h_elo - a_elo, -300.0, 300.0))
-    elo_factor = float(np.exp(elo_gap / 400.0 * 0.12))
-    lam_h = max(0.20, base_h * h_attack * a_def * 1.06 * elo_factor)
-    lam_a = max(0.18, base_a * a_attack * h_def / elo_factor)
+    elo_factor = float(np.exp(elo_gap / 400.0 * 0.20))
+    lam_h = max(0.20, base_h * h_attack * a_def * 1.20 * elo_factor)
+    lam_a = max(0.18, base_a * a_attack * h_def * 0.80 / elo_factor)
 
     # Dixon-Coles low-score correction, with tau(0,0)=1-rho*lamH*lamA etc.
     rho = -0.08
@@ -964,7 +1084,8 @@ def fast_model_for_item(item, context=None):
     total = lam_h + lam_a
     over25 = float(1 - sum(matrix[i, j] for i in range(11) for j in range(11) if i + j <= 2))
     direction = ["主胜", "平局", "客胜"][int(np.argmax(probs))]
-    size = "大2.5" if over25 >= 0.52 else "小2.5"
+    # Hard consistency bounds requested by the user.
+    size = "大2.5" if total > 2.70 else ("小2.5" if total < 2.30 else ("大2.5" if over25 >= 0.52 else "小2.5"))
     confidence = "高" if min(h_n, a_n) >= 8 else ("中" if min(h_n, a_n) >= 3 else "低")
     return {
         "model_prob": (probs / probs.sum()).tolist(), "exp_goals": [float(lam_h), float(lam_a)],
@@ -972,11 +1093,97 @@ def fast_model_for_item(item, context=None):
         "direction": direction, "size_tendency": f"{size}（预期{total:.2f}球）",
         "model_type": "快速模型（简化Dixon-Coles泊松+Elo）", "model_confidence": confidence,
         "coverage_home": h_n, "coverage_away": a_n,
-        "model_note": "联赛均值+球队近期进失球+Elo修正" if min(h_n, a_n) else "联赛均值+中性Elo修正",
+        "model_note": f"近5场主客场进失球+联赛均值+Elo修正（样本{h_n}/{a_n}场）" if min(h_n, a_n) else f"联赛均值+球队先验Elo修正（本地历史样本{h_n}/{a_n}场）",
     }
 
 
-def rows_from_lottery_pool(pool, model_map=None, fast_context=None):
+def _poisson_outputs(lam_h, lam_a):
+    """Return 1X2, over-2.5 and Top-3 scores from a match-specific Poisson matrix."""
+    lam_h, lam_a = max(float(lam_h), 0.05), max(float(lam_a), 0.05)
+    ph, pa = poisson.pmf(np.arange(11), lam_h), poisson.pmf(np.arange(11), lam_a)
+    matrix = np.outer(ph, pa)
+    rho = -0.08
+    matrix[0, 0] *= 1 - lam_h * lam_a * rho
+    matrix[0, 1] *= 1 + lam_h * rho
+    matrix[1, 0] *= 1 + lam_a * rho
+    matrix[1, 1] *= 1 - rho
+    matrix = np.maximum(matrix, 0.0); matrix /= matrix.sum()
+    probs = np.array([np.tril(matrix, -1).sum(), np.trace(matrix), np.triu(matrix, 1).sum()])
+    scores = [(float(matrix[i, j]), f"{i}-{j}") for i in range(11) for j in range(11)]
+    top = [s for _, s in sorted(scores, reverse=True)[:3]]
+    over = float(sum(matrix[i, j] for i in range(11) for j in range(11) if i + j > 2))
+    total = lam_h + lam_a
+    size = "大2.5" if total > 2.70 else ("小2.5" if total < 2.30 else ("大2.5" if over >= 0.52 else "小2.5"))
+    return (probs / probs.sum()).tolist(), over, top, total, size
+
+
+def deep_model_for_item(item, result, fast):
+    """Apply the league's trained XGBoost models to a pre-match feature vector.
+
+    The vector uses each team's latest available historical feature row plus the
+    current official odds. Missing team-specific columns are filled with that
+    league's historical median, never with market probabilities.
+    """
+    try:
+        data, features = result["data"], result["FEATURES"]
+        home, away = item.get("home"), item.get("away")
+        home_key, away_key = _fast_team_key(home), _fast_team_key(away)
+        def latest_for(team_key, side):
+            mask_h = data["HomeTeam"].map(_fast_team_key).eq(team_key)
+            mask_a = data["AwayTeam"].map(_fast_team_key).eq(team_key)
+            sub = data[mask_h | mask_a].sort_values("Date")
+            if sub.empty:
+                return None
+            row = sub.iloc[-1]
+            source = "H_" if _fast_team_key(row.get("HomeTeam")) == team_key else "A_"
+            vals = {}
+            for f in features:
+                if f.startswith(side + "_"):
+                    vals[f] = row.get(f, np.nan)
+                elif f.startswith("H_") or f.startswith("A_"):
+                    base = f[2:]
+                    vals[f] = row.get(source + base, np.nan)
+            return vals
+        hvals, avals = latest_for(home_key, "H"), latest_for(away_key, "A")
+        x = {}
+        med = data[features].median(numeric_only=True)
+        for f in features:
+            if f.startswith("H_"):
+                x[f] = (hvals or {}).get(f, med.get(f, 0.0))
+            elif f.startswith("A_"):
+                x[f] = (avals or {}).get(f, med.get(f, 0.0))
+            else:
+                x[f] = med.get(f, 0.0)
+        odds = item.get("market_odds") or []
+        mp = clean_prob(*odds) if len(odds) == 3 else np.array([np.nan] * 3)
+        for f, v in zip(("mkt_b365_h", "mkt_b365_d", "mkt_b365_a"), mp):
+            x[f] = float(v) if np.isfinite(v) else float(med.get(f, 1/3))
+        for f in ("mkt_pin_h", "mkt_pin_d", "mkt_pin_a"):
+            x[f] = x[f.replace("mkt_pin", "mkt_b365")]
+        X = pd.DataFrame([x], columns=features).replace([np.inf, -np.inf], np.nan).fillna(med).astype(float)
+        xgb_prob = np.asarray(result["clf"].predict_proba(X)[0], dtype=float)
+        lam_h = max(float(result["reg_h"].predict(X)[0]), 0.05)
+        lam_a = max(float(result["reg_a"].predict(X)[0]), 0.05)
+        pois_prob, over, top, total, size = _poisson_outputs(lam_h, lam_a)
+        probs = (0.65 * xgb_prob + 0.35 * np.asarray(pois_prob)).tolist()
+        direction = ["主胜", "平局", "客胜"][int(np.argmax(probs))]
+        return {"model_prob": probs, "exp_goals": [lam_h, lam_a], "expected_total_goals": total,
+                "over25": over, "top_scores": top, "direction": direction,
+                "size_tendency": f"{size}（预期{total:.2f}球）",
+                "model_type": f"深度模型（{result['name']} XGBoost+泊松校准）",
+                "model_confidence": "高" if len(data) >= 500 else "中",
+                "coverage_home": int(data["HomeTeam"].map(_fast_team_key).eq(home_key).sum() + data["AwayTeam"].map(_fast_team_key).eq(home_key).sum()),
+                "coverage_away": int(data["HomeTeam"].map(_fast_team_key).eq(away_key).sum() + data["AwayTeam"].map(_fast_team_key).eq(away_key).sum()),
+                "model_note": "联赛独立 XGBoost 特征 + 泊松进球校准"}
+    except Exception as exc:
+        # The fast engine remains a real independent model if an individual
+        # feature vector cannot be assembled for a newly promoted team.
+        fast = dict(fast)
+        fast["model_note"] += "；深度特征不足，保留逐队快速模型"
+        return fast
+
+
+def rows_from_lottery_pool(pool, model_map=None, fast_context=None, injury_module=None):
     """Create rows for every official fixture using the independent fast model."""
     rows = []
     for item in pool:
@@ -992,43 +1199,58 @@ def rows_from_lottery_pool(pool, model_map=None, fast_context=None):
             item.get("opening_market_odds"), item.get("latest_market_odds") or item.get("market_odds")
         )
         odds_desc = odds_detail.get("text") or "官方赔率未取得"
-        model = (model_map or {}).get(item["lottery_id"])
         fast = fast_model_for_item(item, fast_context)
-        # 竞彩网池统一使用独立模型；欧冠旧分支只保留作历史参考，不再输出占位概率。
-        model_prob = np.asarray(fast["model_prob"], dtype=float)
+        deep_result = next((v for k, v in (model_map or {}).items() if k in DEEP_LEAGUES and k in str(item.get("league", ""))), None)
+        engine = deep_model_for_item(item, deep_result, fast) if deep_result else fast
+        model_prob = np.asarray(engine["model_prob"], dtype=float)
         market_prob = np.asarray(market_text if market_text is not None else [1/3, 1/3, 1/3], dtype=float)
         edge_by_outcome = model_prob - market_prob
-        model_direction = fast["direction"]
-        cold_risk, cold_sources = cold_risk_from_signals(bool(odds_detail.get("cold_alert")), 0.0, 5.0, False)
+        model_direction = engine["direction"]
+        lam_h, lam_a = engine["exp_goals"]
+        injury_desc, injury_score, injury_cold, injury_items = "伤停数据未取得", 0.0, False, []
+        if injury_module is not None:
+            lam_h, lam_a, injury_desc, injury_score, injury_cold, injury_items = injury_module.apply(item.get("home"), item.get("away"), lam_h, lam_a, kickoff)
+            if injury_items:
+                model_prob, over25, top_scores, total_goals, size = _poisson_outputs(lam_h, lam_a)
+                engine = dict(engine, model_prob=model_prob, over25=over25, top_scores=top_scores, expected_total_goals=total_goals,
+                              exp_goals=[lam_h, lam_a], direction=["主胜", "平局", "客胜"][int(np.argmax(model_prob))],
+                              size_tendency=f"{size}（预期{total_goals:.2f}球）")
+                model_prob = np.asarray(engine["model_prob"], dtype=float)
+                model_direction = engine["direction"]
+        weather = weather_for_fixture(item.get("home"), kickoff) if kickoff else "天气：未取得"
+        cold_risk, cold_sources = cold_risk_from_signals(bool(odds_detail.get("cold_alert")) or injury_cold, injury_score, 5.0, False)
         st = strategy(model_prob, market_prob, *(item.get("market_odds") or [np.nan, np.nan, np.nan]), cold_risk, cold_sources)
         # 所有比赛都给出方向、大小球、Top 3 比分和辅助参考。
         action = "轻仓参考" if st["stake_pct"] > 0 else "辅助参考"
         stake_pct = st["stake_pct"]
-        size_tendency = fast["size_tendency"]
+        size_tendency = engine["size_tendency"]
         recommendation = f"{model_direction} + {size_tendency.split('（')[0]}"
-        model_status = fast["model_type"]
+        model_status = engine["model_type"]
         row = {
             "lottery_id": item["lottery_id"], "league": item["league"], "date": date,
             "kickoff_bjt": item["kickoff_at"], "home": item["home"], "away": item["away"],
-            "model_status": model_status, "model_type": fast["model_type"], "model_note": fast["model_note"],
+            "model_status": model_status, "model_type": engine["model_type"], "model_note": engine["model_note"],
             "model_prob": [round(float(x), 4) for x in model_prob], "market_prob": market_text,
-            "model_confidence": fast["model_confidence"], "model_prob_source": "independent_fast_model",
+            "model_confidence": engine["model_confidence"], "model_prob_source": "independent_xgb_or_fast_model",
             "edge": round(float(st["edge"]), 4), "edge_by_outcome": [round(float(x), 4) for x in edge_by_outcome],
             "direction": model_direction, "action": action, "stake": f"{stake_pct:.1f}%", "stake_pct": stake_pct,
             "stake_note": "辅助参考，不构成投注建议", "big_fav": bool(mp and max(mp) >= .70),
-            "exp_goals": [round(float(x), 2) for x in fast["exp_goals"]], "expected_total_goals": round(fast["expected_total_goals"], 2),
-            "over25": round(float(fast["over25"]), 4), "size_tendency": size_tendency,
-            "top_scores": fast["top_scores"], "assistant_recommendation": recommendation, "home_rank": None,
-            "injury": "未取得", "injury_score": None, "odds_move": odds_desc,
+            "exp_goals": [round(float(x), 4) for x in engine["exp_goals"]],
+            "expected_home_goals": round(float(engine["exp_goals"][0]), 4),
+            "expected_away_goals": round(float(engine["exp_goals"][1]), 4),
+            "expected_total_goals": round(engine["expected_total_goals"], 4),
+            "over25": round(float(engine["over25"]), 4), "size_tendency": size_tendency,
+            "top_scores": engine["top_scores"], "assistant_recommendation": recommendation, "home_rank": None,
+            "injury": injury_desc, "injury_score": round(float(injury_score), 1), "odds_move": odds_desc,
             "odds_move_detail": odds_detail, "market_conf": "官方竞彩", "cold_risk": cold_risk,
-            "cold_risk_sources": cold_sources, "weather": "未取得",
+            "cold_risk_sources": cold_sources, "weather": weather,
             "referee": "未取得", "tactics": "未取得", "motivation": "未取得",
             "intl_break": "未取得", "streak": "未取得", "env_score": None,
             "actual": None, "score": None,
-            "prediction_view": {"model_status": model_status, "model_type": fast["model_type"], "model_confidence": fast["model_confidence"],
+            "prediction_view": {"model_status": model_status, "model_type": engine["model_type"], "model_confidence": engine["model_confidence"],
                                 "model_prob": [round(float(x), 4) for x in model_prob], "direction": model_direction,
                                 "edge": round(float(st["edge"]), 4), "action": action, "stake_pct": stake_pct,
-                                "cold_risk": cold_risk, "size_tendency": size_tendency, "top_scores": fast["top_scores"],
+                                "cold_risk": cold_risk, "size_tendency": size_tendency, "top_scores": engine["top_scores"],
                                 "assistant_recommendation": recommendation},
             "market_view": {"odds": item.get("market_odds"), "market_prob": market_text,
                             "opening_odds": item.get("opening_market_odds"), "latest_odds": item.get("latest_market_odds") or item.get("market_odds"),
@@ -1124,7 +1346,8 @@ def main():
     data_mode = "竞彩官方在售比赛池" if lottery_pool else "历史验证回退（竞彩当前池未取得）"
     if lottery_pool:
         fast_context = build_fast_context(results)
-        preds = rows_from_lottery_pool(lottery_pool, model_map={}, fast_context=fast_context)
+        deep_models = {r["name"]: r for r in results.values() if r.get("name") in DEEP_LEAGUES}
+        preds = rows_from_lottery_pool(lottery_pool, model_map=deep_models, fast_context=fast_context, injury_module=injury)
         (REPORT_DIR / "current_pool.json").write_text(
             json.dumps({"generated_at": datetime.now(BJ_TZ).isoformat(timespec="seconds"),
                         "hours": 36, "fixtures": lottery_pool}, ensure_ascii=False, indent=2),

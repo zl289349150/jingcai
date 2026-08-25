@@ -35,7 +35,7 @@ fetch("predictions.json").then(function(r){return r.json();}).then(function(list
       var edge=m.edge==null?"—":(Number(m.edge)*100).toFixed(1)+"%";
       var cls = m.action === "可介入" ? "g" : (String(m.action||"").indexOf("轻仓")>=0||String(m.action||"").indexOf("观察")>=0 ? "y" : "r");
       var conf=m.model_confidence||"未取得";
-      var goals=m.expected_total_goals==null?"未取得":Number(m.expected_total_goals).toFixed(2);
+      var goals=m.expected_total_goals==null?"未取得":Number(m.expected_total_goals).toFixed(3);
       var size=m.size_tendency||"未取得";
       var scores=(m.top_scores||[]).join("、")||"未取得";
       var rec=m.assistant_recommendation||"未取得";

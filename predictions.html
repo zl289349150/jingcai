@@ -36,7 +36,7 @@ fetch("predictions.json?v="+Date.now(),{cache:"no-store"}).then(function(r){if(!
   var by={}; list.forEach(function(m){ (by[m.league]=by[m.league]||[]).push(m); });
   var html="";
   Object.keys(by).forEach(function(lg){
-    html+='<div class="card"><h2>'+esc(lg)+'（'+by[lg].length+' 场）</h2><table><tr><th>时间</th><th>对阵</th><th>模型 主/平/客</th><th>市场 主/平/客</th><th>方向</th><th>Edge</th><th>预期总进球</th><th>大小球倾向</th><th>Top 3 比分</th><th>辅助参考建议</th><th>模型类型</th><th>动作/仓位</th><th>冷门风险</th><th>冷门来源</th><th>模型置信度</th><th>环境</th><th>官方盘口/盘口变化</th></tr>';
+    html+='<div class="card"><h2>'+esc(lg)+'（'+by[lg].length+' 场）</h2><table><tr><th>时间</th><th>对阵</th><th>模型 主/平/客</th><th>市场 主/平/客</th><th>方向</th><th>Edge</th><th>预期进球(主-客/总)</th><th>大小球倾向</th><th>Top 3 比分</th><th>辅助参考建议</th><th>模型类型</th><th>动作/仓位</th><th>冷门风险</th><th>冷门来源</th><th>模型置信度</th><th>环境</th><th>官方盘口/盘口变化</th></tr>';
     by[lg].forEach(function(m){
       var mp=m.model_prob?m.model_prob.map(function(x){return (x*100).toFixed(0)+"%";}).join("/"):"未取得";
       if(m.model_status){mp += '<br><small>'+esc(m.model_status)+'</small>';}
@@ -45,7 +45,7 @@ fetch("predictions.json?v="+Date.now(),{cache:"no-store"}).then(function(r){if(!
       var ck=m.cold_risk==="高"?"r":(m.cold_risk==="中"?"y":(m.cold_risk==="低"?"g":"y"));
       var edge=m.edge==null?"—":(m.edge*100).toFixed(1)+"%";
       var source=(m.cold_risk_sources||[]).join("、")||"无";
-      var goals=m.expected_total_goals==null?"未取得":Number(m.expected_total_goals).toFixed(2);
+      var goals=m.expected_total_goals==null?"未取得":(Number(m.expected_home_goals!=null?m.expected_home_goals:(m.exp_goals||[])[0]||0).toFixed(3)+" - "+Number(m.expected_away_goals!=null?m.expected_away_goals:(m.exp_goals||[])[1]||0).toFixed(3)+" / "+Number(m.expected_total_goals).toFixed(3));
       var size=m.size_tendency||"未取得";
       var scores=(m.top_scores||[]).join("、")||"未取得";
       var rec=m.assistant_recommendation||"未取得";
