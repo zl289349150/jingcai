@@ -25,7 +25,7 @@ fetch("predictions.json").then(function(r){return r.json();}).then(function(list
   list.forEach(function(m){ (byLg[m.league] = byLg[m.league] || []).push(m); });
   var html = "";
   Object.keys(byLg).forEach(function(lg){
-    html += '<div class="card"><h2>' + lg + '</h2><table><tr><th>开赛（北京时间）</th><th>对阵</th><th>官方1X2赔率</th><th>去水市场概率</th><th>官方让球盘</th><th>初盘→最新/市场信心</th><th>模型方向</th><th>Edge</th><th>模型置信度</th><th>操作/仓位</th></tr>';
+    html += '<div class="card"><h2>' + lg + '</h2><table><tr><th>开赛（北京时间）</th><th>对阵</th><th>官方1X2赔率</th><th>去水市场概率</th><th>官方让球盘</th><th>初盘→最新/市场信心</th><th>模型方向</th><th>Edge</th><th>预期总进球</th><th>大小球</th><th>Top 3 比分</th><th>辅助参考</th><th>模型类型</th><th>模型置信度</th><th>操作/仓位</th></tr>';
     byLg[lg].forEach(function(m){
       var mv=m.market_view||{}, o=mv.odds?mv.odds.map(function(x){return Number(x).toFixed(2);}).join(" / "):"未取得";
       var mk=mv.market_prob?mv.market_prob.map(function(x){return (x*100).toFixed(1)+"%";}).join(" / "):"未取得";
@@ -35,7 +35,12 @@ fetch("predictions.json").then(function(r){return r.json();}).then(function(list
       var edge=m.edge==null?"—":(Number(m.edge)*100).toFixed(1)+"%";
       var cls = m.action === "可介入" ? "g" : (String(m.action||"").indexOf("轻仓")>=0||String(m.action||"").indexOf("观察")>=0 ? "y" : "r");
       var conf=m.model_confidence||"未取得";
-      html += '<tr><td>' + (m.kickoff_bjt||m.date) + '</td><td>' + m.home + ' vs ' + m.away + '</td><td>' + o + '</td><td>' + mk + '</td><td>' + h + '</td><td>' + move + '</td><td>' + dir + '<br><small>' + (m.model_status||"已覆盖") + '</small></td><td>' + edge + '</td><td>' + conf + '</td><td><span class="tag ' + cls + '">' + (m.action||"观望") + '</span><br>' + (m.stake||"0.0%") + '</td></tr>';
+      var goals=m.expected_total_goals==null?"未取得":Number(m.expected_total_goals).toFixed(2);
+      var size=m.size_tendency||"未取得";
+      var scores=(m.top_scores||[]).join("、")||"未取得";
+      var rec=m.assistant_recommendation||"未取得";
+      var modelType=m.model_type||m.model_status||"未取得";
+      html += '<tr><td>' + (m.kickoff_bjt||m.date) + '</td><td>' + m.home + ' vs ' + m.away + '</td><td>' + o + '</td><td>' + mk + '</td><td>' + h + '</td><td>' + move + '</td><td>' + dir + '</td><td>' + edge + '</td><td>' + goals + '</td><td>' + size + '</td><td>' + scores + '</td><td>' + rec + '</td><td>' + modelType + '</td><td>' + conf + '</td><td><span class="tag ' + cls + '">' + (m.action||"辅助参考") + '</span><br>' + (m.stake||"0.0%") + '</td></tr>';
     });
     html += '</table></div>';
   });

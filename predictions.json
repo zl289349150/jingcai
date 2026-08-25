@@ -6,11 +6,13 @@
   "kickoff_bjt": "2026-08-25T18:30+08:00",
   "home": "金泉尚武",
   "away": "全北现代",
-  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_note": "联赛均值+中性Elo修正",
   "model_prob": [
-   0.2932,
-   0.2811,
-   0.4257
+   0.4334,
+   0.2847,
+   0.2819
   ],
   "market_prob": [
    0.2932,
@@ -18,21 +20,32 @@
    0.4257
   ],
   "model_confidence": "低",
-  "model_prob_source": "market_fallback",
-  "edge": 0.0,
+  "model_prob_source": "independent_fast_model",
+  "edge": 0.1402,
   "edge_by_outcome": [
-   0.0,
-   0.0,
-   0.0
+   0.1402,
+   0.0036,
+   -0.1438
   ],
-  "direction": "客胜",
-  "action": "观望",
-  "stake": "0.0%",
-  "stake_pct": 0.0,
-  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
+  "direction": "主胜",
+  "action": "轻仓参考",
+  "stake": "3.0%",
+  "stake_pct": 3.0,
+  "stake_note": "辅助参考，不构成投注建议",
   "big_fav": false,
-  "exp_goals": null,
-  "over25": null,
+  "exp_goals": [
+   1.42,
+   1.1
+  ],
+  "expected_total_goals": 2.52,
+  "over25": 0.4614,
+  "size_tendency": "小2.5（预期2.52球）",
+  "top_scores": [
+   "1-1",
+   "1-0",
+   "0-0"
+  ],
+  "assistant_recommendation": "主胜 + 小2.5",
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
@@ -61,11 +74,9 @@
    "text": "初盘 3.02/3.15/2.08 → 最新 3.02/3.15/2.08；变化未超过提示阈值"
   },
   "market_conf": "官方竞彩",
-  "cold_risk": "未取得",
+  "cold_risk": "低",
   "cold_risk_sources": [
-   "伤停未取得",
-   "环境未取得",
-   "盘口异常未取得"
+   "无明显冷门信号"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -77,18 +88,26 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+   "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
    "model_confidence": "低",
    "model_prob": [
-    0.2932,
-    0.2811,
-    0.4257
+    0.4334,
+    0.2847,
+    0.2819
    ],
-   "direction": "客胜",
-   "edge": 0.0,
-   "action": "观望",
-   "stake_pct": 0.0,
-   "cold_risk": "未取得"
+   "direction": "主胜",
+   "edge": 0.1402,
+   "action": "轻仓参考",
+   "stake_pct": 3.0,
+   "cold_risk": "低",
+   "size_tendency": "小2.5（预期2.52球）",
+   "top_scores": [
+    "1-1",
+    "1-0",
+    "0-0"
+   ],
+   "assistant_recommendation": "主胜 + 小2.5"
   },
   "market_view": {
    "odds": [
@@ -154,11 +173,13 @@
   "kickoff_bjt": "2026-08-25T18:30+08:00",
   "home": "济州SK",
   "away": "浦项制铁",
-  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_note": "联赛均值+中性Elo修正",
   "model_prob": [
-   0.4156,
-   0.297,
-   0.2874
+   0.4334,
+   0.2847,
+   0.2819
   ],
   "market_prob": [
    0.4156,
@@ -166,21 +187,32 @@
    0.2874
   ],
   "model_confidence": "低",
-  "model_prob_source": "market_fallback",
-  "edge": 0.0,
+  "model_prob_source": "independent_fast_model",
+  "edge": 0.0178,
   "edge_by_outcome": [
-   0.0,
-   0.0,
-   0.0
+   0.0178,
+   -0.0123,
+   -0.0055
   ],
   "direction": "主胜",
-  "action": "观望",
+  "action": "辅助参考",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
+  "stake_note": "辅助参考，不构成投注建议",
   "big_fav": false,
-  "exp_goals": null,
-  "over25": null,
+  "exp_goals": [
+   1.42,
+   1.1
+  ],
+  "expected_total_goals": 2.52,
+  "over25": 0.4614,
+  "size_tendency": "小2.5（预期2.52球）",
+  "top_scores": [
+   "1-1",
+   "1-0",
+   "0-0"
+  ],
+  "assistant_recommendation": "主胜 + 小2.5",
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
@@ -209,11 +241,9 @@
    "text": "初盘 2.13/2.98/3.08 → 最新 2.13/2.98/3.08；变化未超过提示阈值"
   },
   "market_conf": "官方竞彩",
-  "cold_risk": "未取得",
+  "cold_risk": "低",
   "cold_risk_sources": [
-   "伤停未取得",
-   "环境未取得",
-   "盘口异常未取得"
+   "无明显冷门信号"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -225,18 +255,26 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+   "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
    "model_confidence": "低",
    "model_prob": [
-    0.4156,
-    0.297,
-    0.2874
+    0.4334,
+    0.2847,
+    0.2819
    ],
    "direction": "主胜",
-   "edge": 0.0,
-   "action": "观望",
+   "edge": 0.0178,
+   "action": "辅助参考",
    "stake_pct": 0.0,
-   "cold_risk": "未取得"
+   "cold_risk": "低",
+   "size_tendency": "小2.5（预期2.52球）",
+   "top_scores": [
+    "1-1",
+    "1-0",
+    "0-0"
+   ],
+   "assistant_recommendation": "主胜 + 小2.5"
   },
   "market_view": {
    "odds": [
@@ -302,11 +340,13 @@
   "kickoff_bjt": "2026-08-26T02:00+08:00",
   "home": "达曼协定",
   "away": "利雅得胜利",
-  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_note": "联赛均值+中性Elo修正",
   "model_prob": [
-   0.0908,
-   0.1394,
-   0.7698
+   0.4509,
+   0.2527,
+   0.2964
   ],
   "market_prob": [
    0.0908,
@@ -314,21 +354,32 @@
    0.7698
   ],
   "model_confidence": "低",
-  "model_prob_source": "market_fallback",
-  "edge": 0.0,
+  "model_prob_source": "independent_fast_model",
+  "edge": 0.3601,
   "edge_by_outcome": [
-   0.0,
-   0.0,
-   0.0
+   0.3601,
+   0.1133,
+   -0.4734
   ],
-  "direction": "客胜",
-  "action": "观望",
-  "stake": "0.0%",
-  "stake_pct": 0.0,
-  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
+  "direction": "主胜",
+  "action": "轻仓参考",
+  "stake": "3.0%",
+  "stake_pct": 3.0,
+  "stake_note": "辅助参考，不构成投注建议",
   "big_fav": true,
-  "exp_goals": null,
-  "over25": null,
+  "exp_goals": [
+   1.72,
+   1.36
+  ],
+  "expected_total_goals": 3.08,
+  "over25": 0.5939,
+  "size_tendency": "大2.5（预期3.08球）",
+  "top_scores": [
+   "1-1",
+   "2-1",
+   "1-2"
+  ],
+  "assistant_recommendation": "主胜 + 大2.5",
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
@@ -357,11 +408,9 @@
    "text": "初盘 9.75/6.35/1.15 → 最新 9.75/6.35/1.15；变化未超过提示阈值"
   },
   "market_conf": "官方竞彩",
-  "cold_risk": "未取得",
+  "cold_risk": "低",
   "cold_risk_sources": [
-   "伤停未取得",
-   "环境未取得",
-   "盘口异常未取得"
+   "无明显冷门信号"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -373,18 +422,26 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+   "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
    "model_confidence": "低",
    "model_prob": [
-    0.0908,
-    0.1394,
-    0.7698
+    0.4509,
+    0.2527,
+    0.2964
    ],
-   "direction": "客胜",
-   "edge": 0.0,
-   "action": "观望",
-   "stake_pct": 0.0,
-   "cold_risk": "未取得"
+   "direction": "主胜",
+   "edge": 0.3601,
+   "action": "轻仓参考",
+   "stake_pct": 3.0,
+   "cold_risk": "低",
+   "size_tendency": "大2.5（预期3.08球）",
+   "top_scores": [
+    "1-1",
+    "2-1",
+    "1-2"
+   ],
+   "assistant_recommendation": "主胜 + 大2.5"
   },
   "market_view": {
    "odds": [
@@ -450,11 +507,13 @@
   "kickoff_bjt": "2026-08-26T02:45+08:00",
   "home": "斯托克城",
   "away": "赫尔城",
-  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_note": "联赛均值+中性Elo修正",
   "model_prob": [
-   0.328,
-   0.2952,
-   0.3768
+   0.4413,
+   0.2711,
+   0.2876
   ],
   "market_prob": [
    0.328,
@@ -462,21 +521,32 @@
    0.3768
   ],
   "model_confidence": "低",
-  "model_prob_source": "market_fallback",
-  "edge": 0.0,
+  "model_prob_source": "independent_fast_model",
+  "edge": 0.1133,
   "edge_by_outcome": [
-   0.0,
-   0.0,
-   0.0
+   0.1133,
+   -0.0241,
+   -0.0892
   ],
-  "direction": "客胜",
-  "action": "观望",
-  "stake": "0.0%",
-  "stake_pct": 0.0,
-  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
+  "direction": "主胜",
+  "action": "轻仓参考",
+  "stake": "3.0%",
+  "stake_pct": 3.0,
+  "stake_note": "辅助参考，不构成投注建议",
   "big_fav": false,
-  "exp_goals": null,
-  "over25": null,
+  "exp_goals": [
+   1.54,
+   1.2
+  ],
+  "expected_total_goals": 2.74,
+  "over25": 0.5154,
+  "size_tendency": "小2.5（预期2.74球）",
+  "top_scores": [
+   "1-1",
+   "2-1",
+   "1-0"
+  ],
+  "assistant_recommendation": "主胜 + 小2.5",
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
@@ -505,11 +575,9 @@
    "text": "初盘 2.70/3.00/2.35 → 最新 2.70/3.00/2.35；变化未超过提示阈值"
   },
   "market_conf": "官方竞彩",
-  "cold_risk": "未取得",
+  "cold_risk": "低",
   "cold_risk_sources": [
-   "伤停未取得",
-   "环境未取得",
-   "盘口异常未取得"
+   "无明显冷门信号"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -521,18 +589,26 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+   "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
    "model_confidence": "低",
    "model_prob": [
-    0.328,
-    0.2952,
-    0.3768
+    0.4413,
+    0.2711,
+    0.2876
    ],
-   "direction": "客胜",
-   "edge": 0.0,
-   "action": "观望",
-   "stake_pct": 0.0,
-   "cold_risk": "未取得"
+   "direction": "主胜",
+   "edge": 0.1133,
+   "action": "轻仓参考",
+   "stake_pct": 3.0,
+   "cold_risk": "低",
+   "size_tendency": "小2.5（预期2.74球）",
+   "top_scores": [
+    "1-1",
+    "2-1",
+    "1-0"
+   ],
+   "assistant_recommendation": "主胜 + 小2.5"
   },
   "market_view": {
    "odds": [
@@ -598,36 +674,46 @@
   "kickoff_bjt": "2026-08-26T03:00+08:00",
   "home": "LASK林茨",
   "away": "凯尔特人",
-  "model_status": "欧冠混合模型（欧冠历史+本土联赛）",
+  "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_note": "联赛均值+中性Elo修正",
   "model_prob": [
-   0.508,
-   0.2472,
-   0.2448
+   0.4502,
+   0.2661,
+   0.2836
   ],
   "market_prob": [
    0.5063,
    0.2331,
    0.2606
   ],
-  "model_confidence": "高",
-  "model_prob_source": "trained_model",
-  "edge": 0.0017,
+  "model_confidence": "低",
+  "model_prob_source": "independent_fast_model",
+  "edge": -0.0561,
   "edge_by_outcome": [
-   0.0017,
-   0.0141,
-   -0.0158
+   -0.0561,
+   0.033,
+   0.023
   ],
   "direction": "主胜",
-  "action": "观望",
+  "action": "辅助参考",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "理论仓位，实际不建议介入",
+  "stake_note": "辅助参考，不构成投注建议",
   "big_fav": false,
   "exp_goals": [
-   1.63,
-   1.05
+   1.59,
+   1.22
   ],
-  "over25": 0.5001,
+  "expected_total_goals": 2.81,
+  "over25": 0.5329,
+  "size_tendency": "大2.5（预期2.81球）",
+  "top_scores": [
+   "1-1",
+   "2-1",
+   "1-0"
+  ],
+  "assistant_recommendation": "主胜 + 大2.5",
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
@@ -670,20 +756,26 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠混合模型（欧冠历史+本土联赛）",
-   "model_confidence": "高",
+   "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+   "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
+   "model_confidence": "低",
    "model_prob": [
-    0.508,
-    0.2472,
-    0.2448
+    0.4502,
+    0.2661,
+    0.2836
    ],
    "direction": "主胜",
-   "edge": 0.0017,
-   "action": "观望",
+   "edge": -0.0561,
+   "action": "辅助参考",
    "stake_pct": 0.0,
    "cold_risk": "低",
-   "coverage_home": 302,
-   "coverage_away": 216
+   "size_tendency": "大2.5（预期2.81球）",
+   "top_scores": [
+    "1-1",
+    "2-1",
+    "1-0"
+   ],
+   "assistant_recommendation": "主胜 + 大2.5"
   },
   "market_view": {
    "odds": [
@@ -740,16 +832,6 @@
     "stage": "official"
    }
   },
-  "model_coverage": {
-   "home": 302,
-   "away": 216,
-   "total": 216,
-   "minimum_for_intervention": 10
-  },
-  "model_sources": [
-   "UEFA历史赛果",
-   "本土联赛赛果支持"
-  ],
   "data_mode": "竞彩官方在售比赛池"
  },
  {
@@ -759,36 +841,46 @@
   "kickoff_bjt": "2026-08-26T03:00+08:00",
   "home": "博德闪耀",
   "away": "奈梅亨",
-  "model_status": "欧冠混合模型（欧冠历史+本土联赛）",
+  "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_note": "联赛均值+中性Elo修正",
   "model_prob": [
-   0.636,
-   0.1889,
-   0.1751
+   0.4502,
+   0.2661,
+   0.2836
   ],
   "market_prob": [
    0.6284,
    0.1926,
    0.179
   ],
-  "model_confidence": "高",
-  "model_prob_source": "trained_model",
-  "edge": 0.0076,
+  "model_confidence": "低",
+  "model_prob_source": "independent_fast_model",
+  "edge": -0.1782,
   "edge_by_outcome": [
-   0.0076,
-   -0.0037,
-   -0.0039
+   -0.1782,
+   0.0735,
+   0.1046
   ],
   "direction": "主胜",
-  "action": "观望",
+  "action": "辅助参考",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "理论仓位，实际不建议介入",
+  "stake_note": "辅助参考，不构成投注建议",
   "big_fav": false,
   "exp_goals": [
-   2.32,
-   1.15
+   1.59,
+   1.22
   ],
-  "over25": 0.6728,
+  "expected_total_goals": 2.81,
+  "over25": 0.5329,
+  "size_tendency": "大2.5（预期2.81球）",
+  "top_scores": [
+   "1-1",
+   "2-1",
+   "1-0"
+  ],
+  "assistant_recommendation": "主胜 + 大2.5",
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
@@ -831,20 +923,26 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠混合模型（欧冠历史+本土联赛）",
-   "model_confidence": "高",
+   "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+   "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
+   "model_confidence": "低",
    "model_prob": [
-    0.636,
-    0.1889,
-    0.1751
+    0.4502,
+    0.2661,
+    0.2836
    ],
    "direction": "主胜",
-   "edge": 0.0076,
-   "action": "观望",
+   "edge": -0.1782,
+   "action": "辅助参考",
    "stake_pct": 0.0,
    "cold_risk": "低",
-   "coverage_home": 347,
-   "coverage_away": 67
+   "size_tendency": "大2.5（预期2.81球）",
+   "top_scores": [
+    "1-1",
+    "2-1",
+    "1-0"
+   ],
+   "assistant_recommendation": "主胜 + 大2.5"
   },
   "market_view": {
    "odds": [
@@ -901,16 +999,6 @@
     "stage": "official"
    }
   },
-  "model_coverage": {
-   "home": 347,
-   "away": 67,
-   "total": 67,
-   "minimum_for_intervention": 10
-  },
-  "model_sources": [
-   "UEFA历史赛果",
-   "本土联赛赛果支持"
-  ],
   "data_mode": "竞彩官方在售比赛池"
  },
  {
@@ -920,11 +1008,13 @@
   "kickoff_bjt": "2026-08-26T03:00+08:00",
   "home": "诺丁汉森林",
   "away": "利兹联",
-  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_note": "联赛均值+中性Elo修正",
   "model_prob": [
-   0.4297,
-   0.281,
-   0.2893
+   0.4413,
+   0.2711,
+   0.2876
   ],
   "market_prob": [
    0.4297,
@@ -932,21 +1022,32 @@
    0.2893
   ],
   "model_confidence": "低",
-  "model_prob_source": "market_fallback",
-  "edge": 0.0,
+  "model_prob_source": "independent_fast_model",
+  "edge": 0.0116,
   "edge_by_outcome": [
-   0.0,
-   0.0,
-   0.0
+   0.0116,
+   -0.0099,
+   -0.0017
   ],
   "direction": "主胜",
-  "action": "观望",
+  "action": "辅助参考",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
+  "stake_note": "辅助参考，不构成投注建议",
   "big_fav": false,
-  "exp_goals": null,
-  "over25": null,
+  "exp_goals": [
+   1.54,
+   1.2
+  ],
+  "expected_total_goals": 2.74,
+  "over25": 0.5154,
+  "size_tendency": "小2.5（预期2.74球）",
+  "top_scores": [
+   "1-1",
+   "2-1",
+   "1-0"
+  ],
+  "assistant_recommendation": "主胜 + 小2.5",
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
@@ -975,11 +1076,9 @@
    "text": "初盘 2.06/3.15/3.06 → 最新 2.06/3.15/3.06；变化未超过提示阈值"
   },
   "market_conf": "官方竞彩",
-  "cold_risk": "未取得",
+  "cold_risk": "低",
   "cold_risk_sources": [
-   "伤停未取得",
-   "环境未取得",
-   "盘口异常未取得"
+   "无明显冷门信号"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -991,18 +1090,26 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+   "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
    "model_confidence": "低",
    "model_prob": [
-    0.4297,
-    0.281,
-    0.2893
+    0.4413,
+    0.2711,
+    0.2876
    ],
    "direction": "主胜",
-   "edge": 0.0,
-   "action": "观望",
+   "edge": 0.0116,
+   "action": "辅助参考",
    "stake_pct": 0.0,
-   "cold_risk": "未取得"
+   "cold_risk": "低",
+   "size_tendency": "小2.5（预期2.74球）",
+   "top_scores": [
+    "1-1",
+    "2-1",
+    "1-0"
+   ],
+   "assistant_recommendation": "主胜 + 小2.5"
   },
   "market_view": {
    "odds": [
@@ -1068,11 +1175,13 @@
   "kickoff_bjt": "2026-08-26T03:00+08:00",
   "home": "伯明翰",
   "away": "布伦特福德",
-  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_note": "联赛均值+中性Elo修正",
   "model_prob": [
-   0.2241,
-   0.2459,
-   0.53
+   0.4413,
+   0.2711,
+   0.2876
   ],
   "market_prob": [
    0.2241,
@@ -1080,21 +1189,32 @@
    0.53
   ],
   "model_confidence": "低",
-  "model_prob_source": "market_fallback",
-  "edge": 0.0,
+  "model_prob_source": "independent_fast_model",
+  "edge": 0.2172,
   "edge_by_outcome": [
-   0.0,
-   0.0,
-   0.0
+   0.2172,
+   0.0252,
+   -0.2424
   ],
-  "direction": "客胜",
-  "action": "观望",
-  "stake": "0.0%",
-  "stake_pct": 0.0,
-  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
+  "direction": "主胜",
+  "action": "轻仓参考",
+  "stake": "3.0%",
+  "stake_pct": 3.0,
+  "stake_note": "辅助参考，不构成投注建议",
   "big_fav": false,
-  "exp_goals": null,
-  "over25": null,
+  "exp_goals": [
+   1.54,
+   1.2
+  ],
+  "expected_total_goals": 2.74,
+  "over25": 0.5154,
+  "size_tendency": "小2.5（预期2.74球）",
+  "top_scores": [
+   "1-1",
+   "2-1",
+   "1-0"
+  ],
+  "assistant_recommendation": "主胜 + 小2.5",
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
@@ -1123,11 +1243,9 @@
    "text": "初盘 3.95/3.60/1.67 → 最新 3.95/3.60/1.67；变化未超过提示阈值"
   },
   "market_conf": "官方竞彩",
-  "cold_risk": "未取得",
+  "cold_risk": "低",
   "cold_risk_sources": [
-   "伤停未取得",
-   "环境未取得",
-   "盘口异常未取得"
+   "无明显冷门信号"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -1139,18 +1257,26 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+   "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
    "model_confidence": "低",
    "model_prob": [
-    0.2241,
-    0.2459,
-    0.53
+    0.4413,
+    0.2711,
+    0.2876
    ],
-   "direction": "客胜",
-   "edge": 0.0,
-   "action": "观望",
-   "stake_pct": 0.0,
-   "cold_risk": "未取得"
+   "direction": "主胜",
+   "edge": 0.2172,
+   "action": "轻仓参考",
+   "stake_pct": 3.0,
+   "cold_risk": "低",
+   "size_tendency": "小2.5（预期2.74球）",
+   "top_scores": [
+    "1-1",
+    "2-1",
+    "1-0"
+   ],
+   "assistant_recommendation": "主胜 + 小2.5"
   },
   "market_view": {
    "odds": [
@@ -1216,11 +1342,13 @@
   "kickoff_bjt": "2026-08-26T03:00+08:00",
   "home": "巴伦西亚",
   "away": "皇家贝蒂斯",
-  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_note": "联赛均值+中性Elo修正",
   "model_prob": [
-   0.3476,
-   0.2906,
-   0.3618
+   0.4594,
+   0.2733,
+   0.2673
   ],
   "market_prob": [
    0.3476,
@@ -1228,21 +1356,32 @@
    0.3618
   ],
   "model_confidence": "低",
-  "model_prob_source": "market_fallback",
-  "edge": 0.0,
+  "model_prob_source": "independent_fast_model",
+  "edge": 0.1118,
   "edge_by_outcome": [
-   0.0,
-   0.0,
-   0.0
+   0.1118,
+   -0.0173,
+   -0.0945
   ],
-  "direction": "客胜",
-  "action": "观望",
-  "stake": "0.0%",
-  "stake_pct": 0.0,
-  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
+  "direction": "主胜",
+  "action": "轻仓参考",
+  "stake": "3.0%",
+  "stake_pct": 3.0,
+  "stake_note": "辅助参考，不构成投注建议",
   "big_fav": false,
-  "exp_goals": null,
-  "over25": null,
+  "exp_goals": [
+   1.54,
+   1.12
+  ],
+  "expected_total_goals": 2.66,
+  "over25": 0.4958,
+  "size_tendency": "小2.5（预期2.66球）",
+  "top_scores": [
+   "1-1",
+   "1-0",
+   "2-1"
+  ],
+  "assistant_recommendation": "主胜 + 小2.5",
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
@@ -1271,11 +1410,9 @@
    "text": "初盘 2.55/3.05/2.45 → 最新 2.55/3.05/2.45；变化未超过提示阈值"
   },
   "market_conf": "官方竞彩",
-  "cold_risk": "未取得",
+  "cold_risk": "低",
   "cold_risk_sources": [
-   "伤停未取得",
-   "环境未取得",
-   "盘口异常未取得"
+   "无明显冷门信号"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -1287,18 +1424,26 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+   "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
    "model_confidence": "低",
    "model_prob": [
-    0.3476,
-    0.2906,
-    0.3618
+    0.4594,
+    0.2733,
+    0.2673
    ],
-   "direction": "客胜",
-   "edge": 0.0,
-   "action": "观望",
-   "stake_pct": 0.0,
-   "cold_risk": "未取得"
+   "direction": "主胜",
+   "edge": 0.1118,
+   "action": "轻仓参考",
+   "stake_pct": 3.0,
+   "cold_risk": "低",
+   "size_tendency": "小2.5（预期2.66球）",
+   "top_scores": [
+    "1-1",
+    "1-0",
+    "2-1"
+   ],
+   "assistant_recommendation": "主胜 + 小2.5"
   },
   "market_view": {
    "odds": [
@@ -1364,11 +1509,13 @@
   "kickoff_bjt": "2026-08-26T18:30+08:00",
   "home": "大田市民",
   "away": "蔚山现代",
-  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_note": "联赛均值+中性Elo修正",
   "model_prob": [
-   0.4239,
-   0.2685,
-   0.3076
+   0.4334,
+   0.2847,
+   0.2819
   ],
   "market_prob": [
    0.4239,
@@ -1376,21 +1523,32 @@
    0.3076
   ],
   "model_confidence": "低",
-  "model_prob_source": "market_fallback",
-  "edge": 0.0,
+  "model_prob_source": "independent_fast_model",
+  "edge": 0.0095,
   "edge_by_outcome": [
-   0.0,
-   0.0,
-   0.0
+   0.0095,
+   0.0162,
+   -0.0257
   ],
   "direction": "主胜",
-  "action": "观望",
+  "action": "辅助参考",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
+  "stake_note": "辅助参考，不构成投注建议",
   "big_fav": false,
-  "exp_goals": null,
-  "over25": null,
+  "exp_goals": [
+   1.42,
+   1.1
+  ],
+  "expected_total_goals": 2.52,
+  "over25": 0.4614,
+  "size_tendency": "小2.5（预期2.52球）",
+  "top_scores": [
+   "1-1",
+   "1-0",
+   "0-0"
+  ],
+  "assistant_recommendation": "主胜 + 小2.5",
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
@@ -1419,11 +1577,9 @@
    "text": "初盘 2.09/3.30/2.88 → 最新 2.09/3.30/2.88；变化未超过提示阈值"
   },
   "market_conf": "官方竞彩",
-  "cold_risk": "未取得",
+  "cold_risk": "低",
   "cold_risk_sources": [
-   "伤停未取得",
-   "环境未取得",
-   "盘口异常未取得"
+   "无明显冷门信号"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -1435,18 +1591,26 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+   "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
    "model_confidence": "低",
    "model_prob": [
-    0.4239,
-    0.2685,
-    0.3076
+    0.4334,
+    0.2847,
+    0.2819
    ],
    "direction": "主胜",
-   "edge": 0.0,
-   "action": "观望",
+   "edge": 0.0095,
+   "action": "辅助参考",
    "stake_pct": 0.0,
-   "cold_risk": "未取得"
+   "cold_risk": "低",
+   "size_tendency": "小2.5（预期2.52球）",
+   "top_scores": [
+    "1-1",
+    "1-0",
+    "0-0"
+   ],
+   "assistant_recommendation": "主胜 + 小2.5"
   },
   "market_view": {
    "odds": [
@@ -1512,11 +1676,13 @@
   "kickoff_bjt": "2026-08-26T18:30+08:00",
   "home": "安养FC",
   "away": "仁川联",
-  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_note": "联赛均值+中性Elo修正",
   "model_prob": [
-   0.2951,
-   0.2951,
-   0.4098
+   0.4334,
+   0.2847,
+   0.2819
   ],
   "market_prob": [
    0.2951,
@@ -1524,21 +1690,32 @@
    0.4098
   ],
   "model_confidence": "低",
-  "model_prob_source": "market_fallback",
-  "edge": 0.0,
+  "model_prob_source": "independent_fast_model",
+  "edge": 0.1383,
   "edge_by_outcome": [
-   0.0,
-   0.0,
-   0.0
+   0.1383,
+   -0.0104,
+   -0.1279
   ],
-  "direction": "客胜",
-  "action": "观望",
-  "stake": "0.0%",
-  "stake_pct": 0.0,
-  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
+  "direction": "主胜",
+  "action": "轻仓参考",
+  "stake": "3.0%",
+  "stake_pct": 3.0,
+  "stake_note": "辅助参考，不构成投注建议",
   "big_fav": false,
-  "exp_goals": null,
-  "over25": null,
+  "exp_goals": [
+   1.42,
+   1.1
+  ],
+  "expected_total_goals": 2.52,
+  "over25": 0.4614,
+  "size_tendency": "小2.5（预期2.52球）",
+  "top_scores": [
+   "1-1",
+   "1-0",
+   "0-0"
+  ],
+  "assistant_recommendation": "主胜 + 小2.5",
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
@@ -1567,11 +1744,9 @@
    "text": "初盘 3.00/3.00/2.16 → 最新 3.00/3.00/2.16；变化未超过提示阈值"
   },
   "market_conf": "官方竞彩",
-  "cold_risk": "未取得",
+  "cold_risk": "低",
   "cold_risk_sources": [
-   "伤停未取得",
-   "环境未取得",
-   "盘口异常未取得"
+   "无明显冷门信号"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -1583,18 +1758,26 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+   "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
    "model_confidence": "低",
    "model_prob": [
-    0.2951,
-    0.2951,
-    0.4098
+    0.4334,
+    0.2847,
+    0.2819
    ],
-   "direction": "客胜",
-   "edge": 0.0,
-   "action": "观望",
-   "stake_pct": 0.0,
-   "cold_risk": "未取得"
+   "direction": "主胜",
+   "edge": 0.1383,
+   "action": "轻仓参考",
+   "stake_pct": 3.0,
+   "cold_risk": "低",
+   "size_tendency": "小2.5（预期2.52球）",
+   "top_scores": [
+    "1-1",
+    "1-0",
+    "0-0"
+   ],
+   "assistant_recommendation": "主胜 + 小2.5"
   },
   "market_view": {
    "odds": [
@@ -1660,11 +1843,13 @@
   "kickoff_bjt": "2026-08-27T03:00+08:00",
   "home": "雅典AEK",
   "away": "索菲亚列夫斯基",
-  "model_status": "欧冠样本不足，暂用市场概率",
+  "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_note": "联赛均值+中性Elo修正",
   "model_prob": [
-   0.6247,
-   0.2334,
-   0.1419
+   0.4502,
+   0.2661,
+   0.2836
   ],
   "market_prob": [
    0.6247,
@@ -1672,21 +1857,32 @@
    0.1419
   ],
   "model_confidence": "低",
-  "model_prob_source": "market_fallback",
-  "edge": 0.0,
+  "model_prob_source": "independent_fast_model",
+  "edge": -0.1745,
   "edge_by_outcome": [
-   0.0,
-   0.0,
-   0.0
+   -0.1745,
+   0.0327,
+   0.1417
   ],
   "direction": "主胜",
-  "action": "观望",
+  "action": "辅助参考",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "历史样本不足，暂用市场概率；实际不建议介入",
+  "stake_note": "辅助参考，不构成投注建议",
   "big_fav": false,
-  "exp_goals": null,
-  "over25": null,
+  "exp_goals": [
+   1.59,
+   1.22
+  ],
+  "expected_total_goals": 2.81,
+  "over25": 0.5329,
+  "size_tendency": "大2.5（预期2.81球）",
+  "top_scores": [
+   "1-1",
+   "2-1",
+   "1-0"
+  ],
+  "assistant_recommendation": "主胜 + 大2.5",
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
@@ -1715,11 +1911,9 @@
    "text": "初盘 1.42/3.80/6.25 → 最新 1.42/3.80/6.25；变化未超过提示阈值"
   },
   "market_conf": "官方竞彩",
-  "cold_risk": "未取得",
+  "cold_risk": "低",
   "cold_risk_sources": [
-   "伤停未取得",
-   "环境未取得",
-   "盘口异常未取得"
+   "无明显冷门信号"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -1731,18 +1925,26 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠样本不足，暂用市场概率",
+   "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+   "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
    "model_confidence": "低",
    "model_prob": [
-    0.6247,
-    0.2334,
-    0.1419
+    0.4502,
+    0.2661,
+    0.2836
    ],
    "direction": "主胜",
-   "edge": 0.0,
-   "action": "观望",
+   "edge": -0.1745,
+   "action": "辅助参考",
    "stake_pct": 0.0,
-   "cold_risk": "未取得"
+   "cold_risk": "低",
+   "size_tendency": "大2.5（预期2.81球）",
+   "top_scores": [
+    "1-1",
+    "2-1",
+    "1-0"
+   ],
+   "assistant_recommendation": "主胜 + 大2.5"
   },
   "market_view": {
    "odds": [
@@ -1799,16 +2001,6 @@
     "stage": "official"
    }
   },
-  "model_coverage": {
-   "home": 0,
-   "away": 0,
-   "total": 0,
-   "minimum_for_intervention": 10
-  },
-  "model_sources": [
-   "UEFA历史赛果",
-   "本土联赛赛果支持"
-  ],
   "data_mode": "竞彩官方在售比赛池"
  },
  {
@@ -1818,11 +2010,13 @@
   "kickoff_bjt": "2026-08-27T03:00+08:00",
   "home": "采列",
   "away": "布拉迪斯拉发",
-  "model_status": "欧冠样本不足，暂用市场概率",
+  "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_note": "联赛均值+中性Elo修正",
   "model_prob": [
-   0.4029,
-   0.277,
-   0.32
+   0.4502,
+   0.2661,
+   0.2836
   ],
   "market_prob": [
    0.4029,
@@ -1830,21 +2024,32 @@
    0.32
   ],
   "model_confidence": "低",
-  "model_prob_source": "market_fallback",
-  "edge": 0.0,
+  "model_prob_source": "independent_fast_model",
+  "edge": 0.0473,
   "edge_by_outcome": [
-   0.0,
-   0.0,
-   0.0
+   0.0473,
+   -0.0109,
+   -0.0364
   ],
   "direction": "主胜",
-  "action": "观望",
+  "action": "辅助参考",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "历史样本不足，暂用市场概率；实际不建议介入",
+  "stake_note": "辅助参考，不构成投注建议",
   "big_fav": false,
-  "exp_goals": null,
-  "over25": null,
+  "exp_goals": [
+   1.59,
+   1.22
+  ],
+  "expected_total_goals": 2.81,
+  "over25": 0.5329,
+  "size_tendency": "大2.5（预期2.81球）",
+  "top_scores": [
+   "1-1",
+   "2-1",
+   "1-0"
+  ],
+  "assistant_recommendation": "主胜 + 大2.5",
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
@@ -1873,11 +2078,9 @@
    "text": "初盘 2.20/3.20/2.77 → 最新 2.20/3.20/2.77；变化未超过提示阈值"
   },
   "market_conf": "官方竞彩",
-  "cold_risk": "未取得",
+  "cold_risk": "低",
   "cold_risk_sources": [
-   "伤停未取得",
-   "环境未取得",
-   "盘口异常未取得"
+   "无明显冷门信号"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -1889,18 +2092,26 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠样本不足，暂用市场概率",
+   "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+   "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
    "model_confidence": "低",
    "model_prob": [
-    0.4029,
-    0.277,
-    0.32
+    0.4502,
+    0.2661,
+    0.2836
    ],
    "direction": "主胜",
-   "edge": 0.0,
-   "action": "观望",
+   "edge": 0.0473,
+   "action": "辅助参考",
    "stake_pct": 0.0,
-   "cold_risk": "未取得"
+   "cold_risk": "低",
+   "size_tendency": "大2.5（预期2.81球）",
+   "top_scores": [
+    "1-1",
+    "2-1",
+    "1-0"
+   ],
+   "assistant_recommendation": "主胜 + 大2.5"
   },
   "market_view": {
    "odds": [
@@ -1957,16 +2168,6 @@
     "stage": "official"
    }
   },
-  "model_coverage": {
-   "home": 0,
-   "away": 0,
-   "total": 0,
-   "minimum_for_intervention": 10
-  },
-  "model_sources": [
-   "UEFA历史赛果",
-   "本土联赛赛果支持"
-  ],
   "data_mode": "竞彩官方在售比赛池"
  },
  {
@@ -1976,11 +2177,13 @@
   "kickoff_bjt": "2026-08-27T03:00+08:00",
   "home": "维京",
   "away": "萨格勒布迪纳摩",
-  "model_status": "欧冠样本不足，暂用市场概率",
+  "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_note": "联赛均值+中性Elo修正",
   "model_prob": [
-   0.3853,
-   0.2645,
-   0.3502
+   0.4502,
+   0.2661,
+   0.2836
   ],
   "market_prob": [
    0.3853,
@@ -1988,21 +2191,32 @@
    0.3502
   ],
   "model_confidence": "低",
-  "model_prob_source": "market_fallback",
-  "edge": 0.0,
+  "model_prob_source": "independent_fast_model",
+  "edge": 0.0649,
   "edge_by_outcome": [
-   0.0,
-   0.0,
-   0.0
+   0.0649,
+   0.0016,
+   -0.0666
   ],
   "direction": "主胜",
-  "action": "观望",
-  "stake": "0.0%",
-  "stake_pct": 0.0,
-  "stake_note": "历史样本不足，暂用市场概率；实际不建议介入",
+  "action": "轻仓参考",
+  "stake": "1.0%",
+  "stake_pct": 1.0,
+  "stake_note": "辅助参考，不构成投注建议",
   "big_fav": false,
-  "exp_goals": null,
-  "over25": null,
+  "exp_goals": [
+   1.59,
+   1.22
+  ],
+  "expected_total_goals": 2.81,
+  "over25": 0.5329,
+  "size_tendency": "大2.5（预期2.81球）",
+  "top_scores": [
+   "1-1",
+   "2-1",
+   "1-0"
+  ],
+  "assistant_recommendation": "主胜 + 大2.5",
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
@@ -2031,11 +2245,9 @@
    "text": "初盘 2.30/3.35/2.53 → 最新 2.30/3.35/2.53；变化未超过提示阈值"
   },
   "market_conf": "官方竞彩",
-  "cold_risk": "未取得",
+  "cold_risk": "低",
   "cold_risk_sources": [
-   "伤停未取得",
-   "环境未取得",
-   "盘口异常未取得"
+   "无明显冷门信号"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -2047,18 +2259,26 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠样本不足，暂用市场概率",
+   "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+   "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
    "model_confidence": "低",
    "model_prob": [
-    0.3853,
-    0.2645,
-    0.3502
+    0.4502,
+    0.2661,
+    0.2836
    ],
    "direction": "主胜",
-   "edge": 0.0,
-   "action": "观望",
-   "stake_pct": 0.0,
-   "cold_risk": "未取得"
+   "edge": 0.0649,
+   "action": "轻仓参考",
+   "stake_pct": 1.0,
+   "cold_risk": "低",
+   "size_tendency": "大2.5（预期2.81球）",
+   "top_scores": [
+    "1-1",
+    "2-1",
+    "1-0"
+   ],
+   "assistant_recommendation": "主胜 + 大2.5"
   },
   "market_view": {
    "odds": [
@@ -2115,16 +2335,6 @@
     "stage": "official"
    }
   },
-  "model_coverage": {
-   "home": 0,
-   "away": 0,
-   "total": 0,
-   "minimum_for_intervention": 10
-  },
-  "model_sources": [
-   "UEFA历史赛果",
-   "本土联赛赛果支持"
-  ],
   "data_mode": "竞彩官方在售比赛池"
  },
  {
@@ -2134,11 +2344,13 @@
   "kickoff_bjt": "2026-08-27T03:00+08:00",
   "home": "里昂",
   "away": "费内巴切",
-  "model_status": "欧冠样本不足，暂用市场概率",
+  "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_note": "联赛均值+中性Elo修正",
   "model_prob": [
-   0.4743,
-   0.2648,
-   0.2609
+   0.4502,
+   0.2661,
+   0.2836
   ],
   "market_prob": [
    0.4743,
@@ -2146,21 +2358,32 @@
    0.2609
   ],
   "model_confidence": "低",
-  "model_prob_source": "market_fallback",
-  "edge": 0.0,
+  "model_prob_source": "independent_fast_model",
+  "edge": -0.0241,
   "edge_by_outcome": [
-   0.0,
-   0.0,
-   0.0
+   -0.0241,
+   0.0013,
+   0.0227
   ],
   "direction": "主胜",
-  "action": "观望",
+  "action": "辅助参考",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "历史样本不足，暂用市场概率；实际不建议介入",
+  "stake_note": "辅助参考，不构成投注建议",
   "big_fav": false,
-  "exp_goals": null,
-  "over25": null,
+  "exp_goals": [
+   1.59,
+   1.22
+  ],
+  "expected_total_goals": 2.81,
+  "over25": 0.5329,
+  "size_tendency": "大2.5（预期2.81球）",
+  "top_scores": [
+   "1-1",
+   "2-1",
+   "1-0"
+  ],
+  "assistant_recommendation": "主胜 + 大2.5",
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
@@ -2189,11 +2412,9 @@
    "text": "初盘 1.87/3.35/3.40 → 最新 1.87/3.35/3.40；变化未超过提示阈值"
   },
   "market_conf": "官方竞彩",
-  "cold_risk": "未取得",
+  "cold_risk": "低",
   "cold_risk_sources": [
-   "伤停未取得",
-   "环境未取得",
-   "盘口异常未取得"
+   "无明显冷门信号"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -2205,18 +2426,26 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "欧冠样本不足，暂用市场概率",
+   "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+   "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
    "model_confidence": "低",
    "model_prob": [
-    0.4743,
-    0.2648,
-    0.2609
+    0.4502,
+    0.2661,
+    0.2836
    ],
    "direction": "主胜",
-   "edge": 0.0,
-   "action": "观望",
+   "edge": -0.0241,
+   "action": "辅助参考",
    "stake_pct": 0.0,
-   "cold_risk": "未取得"
+   "cold_risk": "低",
+   "size_tendency": "大2.5（预期2.81球）",
+   "top_scores": [
+    "1-1",
+    "2-1",
+    "1-0"
+   ],
+   "assistant_recommendation": "主胜 + 大2.5"
   },
   "market_view": {
    "odds": [
@@ -2273,16 +2502,6 @@
     "stage": "official"
    }
   },
-  "model_coverage": {
-   "home": 0,
-   "away": 0,
-   "total": 0,
-   "minimum_for_intervention": 10
-  },
-  "model_sources": [
-   "UEFA历史赛果",
-   "本土联赛赛果支持"
-  ],
   "data_mode": "竞彩官方在售比赛池"
  },
  {
@@ -2292,11 +2511,13 @@
   "kickoff_bjt": "2026-08-27T03:00+08:00",
   "home": "皇家马德里",
   "away": "皇家社会",
-  "model_status": "模型待训练/样本不足，暂用市场概率",
+  "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
+  "model_note": "联赛均值+中性Elo修正",
   "model_prob": [
-   0.7265,
-   0.1641,
-   0.1094
+   0.4594,
+   0.2733,
+   0.2673
   ],
   "market_prob": [
    0.7265,
@@ -2304,21 +2525,32 @@
    0.1094
   ],
   "model_confidence": "低",
-  "model_prob_source": "market_fallback",
-  "edge": 0.0,
+  "model_prob_source": "independent_fast_model",
+  "edge": -0.2671,
   "edge_by_outcome": [
-   0.0,
-   0.0,
-   0.0
+   -0.2671,
+   0.1092,
+   0.1579
   ],
   "direction": "主胜",
-  "action": "观望",
+  "action": "辅助参考",
   "stake": "0.0%",
   "stake_pct": 0.0,
-  "stake_note": "模型待训练/样本不足，暂用市场概率；实际不建议介入",
+  "stake_note": "辅助参考，不构成投注建议",
   "big_fav": true,
-  "exp_goals": null,
-  "over25": null,
+  "exp_goals": [
+   1.54,
+   1.12
+  ],
+  "expected_total_goals": 2.66,
+  "over25": 0.4958,
+  "size_tendency": "小2.5（预期2.66球）",
+  "top_scores": [
+   "1-1",
+   "1-0",
+   "2-1"
+  ],
+  "assistant_recommendation": "主胜 + 小2.5",
   "home_rank": null,
   "injury": "未取得",
   "injury_score": null,
@@ -2347,11 +2579,9 @@
    "text": "初盘 1.22/5.40/8.10 → 最新 1.22/5.40/8.10；变化未超过提示阈值"
   },
   "market_conf": "官方竞彩",
-  "cold_risk": "未取得",
+  "cold_risk": "低",
   "cold_risk_sources": [
-   "伤停未取得",
-   "环境未取得",
-   "盘口异常未取得"
+   "无明显冷门信号"
   ],
   "weather": "未取得",
   "referee": "未取得",
@@ -2363,18 +2593,26 @@
   "actual": null,
   "score": null,
   "prediction_view": {
-   "model_status": "模型待训练/样本不足，暂用市场概率",
+   "model_status": "快速模型（简化Dixon-Coles泊松+Elo）",
+   "model_type": "快速模型（简化Dixon-Coles泊松+Elo）",
    "model_confidence": "低",
    "model_prob": [
-    0.7265,
-    0.1641,
-    0.1094
+    0.4594,
+    0.2733,
+    0.2673
    ],
    "direction": "主胜",
-   "edge": 0.0,
-   "action": "观望",
+   "edge": -0.2671,
+   "action": "辅助参考",
    "stake_pct": 0.0,
-   "cold_risk": "未取得"
+   "cold_risk": "低",
+   "size_tendency": "小2.5（预期2.66球）",
+   "top_scores": [
+    "1-1",
+    "1-0",
+    "2-1"
+   ],
+   "assistant_recommendation": "主胜 + 小2.5"
   },
   "market_view": {
    "odds": [
