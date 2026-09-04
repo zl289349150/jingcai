@@ -91,133 +91,43 @@
  },
  {
   "league": "西甲",
-  "date": "2026-08-31",
-  "home": "Osasuna",
-  "away": "Getafe",
+  "date": "2026-09-03",
+  "home": "Sociedad",
+  "away": "Celta",
   "model_status": "历史训练模型",
   "model_confidence": "高",
   "model_prob_source": "trained_model",
   "model_prob": [
-   0.658,
-   0.158,
-   0.184
+   0.34,
+   0.521,
+   0.139
   ],
   "market_prob": [
-   0.431,
-   0.316,
-   0.253
+   0.487,
+   0.264,
+   0.25
   ],
-  "direction": "主胜",
-  "edge": 0.2268,
+  "direction": "平局",
+  "edge": 0.2577,
   "action": "可介入",
   "edge_by_outcome": [
-   0.2268,
-   -0.1578,
-   -0.0689
+   -0.1469,
+   0.2577,
+   -0.1108
   ],
   "stake": "3.0%",
   "stake_pct": 3.0,
   "stake_note": "按风险规则计算的参考仓位",
   "big_fav": false,
   "exp_goals": [
-   1.63,
-   0.82
+   1.76,
+   1.13
   ],
-  "over25": 0.444,
-  "home_rank": 4,
+  "over25": 0.553,
+  "home_rank": 8,
   "injury": "伤停数据未取得（未配置 API_FOOTBALL_KEY）",
   "injury_score": 0.0,
-  "odds_move": "盘口变化幅度小，无明显信号",
-  "market_conf": "中性",
-  "cold_risk": "低",
-  "cold_risk_sources": [
-   "无明显冷门信号"
-  ],
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（争冠/欧战）",
-  "intl_break": "无",
-  "streak": "近5场净胜-2场",
-  "env_score": 6.0,
-  "actual": "主胜",
-  "score": "1-0",
-  "prediction_view": {
-   "model_status": "历史训练模型",
-   "model_confidence": "高",
-   "model_prob": [
-    0.658,
-    0.158,
-    0.184
-   ],
-   "edge": 0.2268,
-   "direction": "主胜",
-   "action": "可介入",
-   "stake_pct": 3.0,
-   "cold_risk": "低",
-   "env_score": 6.0
-  },
-  "market_view": {
-   "odds": [
-    2.2,
-    3.0,
-    3.75
-   ],
-   "market_prob": [
-    0.431,
-    0.316,
-    0.253
-   ],
-   "odds_source": "Bet365/历史快照",
-   "odds_stage": "historical",
-   "odds_move": {
-    "text": "盘口变化幅度小，无明显信号",
-    "signal": "中性",
-    "cold_alert": false
-   },
-   "handicap": null
-  },
-  "data_mode": "历史验证回退（竞彩当前池未取得）"
- },
- {
-  "league": "西甲",
-  "date": "2026-08-31",
-  "home": "Barcelona",
-  "away": "Vallecano",
-  "model_status": "历史训练模型",
-  "model_confidence": "高",
-  "model_prob_source": "trained_model",
-  "model_prob": [
-   0.92,
-   0.006,
-   0.075
-  ],
-  "market_prob": [
-   0.809,
-   0.118,
-   0.073
-  ],
-  "direction": "主胜",
-  "edge": 0.1108,
-  "action": "可介入",
-  "edge_by_outcome": [
-   0.1108,
-   -0.1126,
-   0.0018
-  ],
-  "stake": "3.0%",
-  "stake_pct": 3.0,
-  "stake_note": "按风险规则计算的参考仓位",
-  "big_fav": true,
-  "exp_goals": [
-   2.65,
-   1.06
-  ],
-  "over25": 0.715,
-  "home_rank": 2,
-  "injury": "伤停数据未取得（未配置 API_FOOTBALL_KEY）",
-  "injury_score": 0.0,
-  "odds_move": "热门方赔率下降6.0% → 市场信心增强，方向可信度上调",
+  "odds_move": "热门方赔率下降9.7% → 市场信心增强，方向可信度上调",
   "market_conf": "强",
   "cold_risk": "低",
   "cold_risk_sources": [
@@ -226,42 +136,42 @@
   "weather": "天气：未取得",
   "referee": "未取得（需 API-Football key）",
   "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（争冠/欧战）",
-  "intl_break": "无",
-  "streak": "近5场净胜1场",
-  "env_score": 6.0,
-  "actual": "主胜",
-  "score": "5-2",
+  "motivation": "中（中游）",
+  "intl_break": "国脚疲劳风险（国家队比赛日后3天内）",
+  "streak": "近5场净胜-2场",
+  "env_score": 5.0,
+  "actual": "平局",
+  "score": "0-0",
   "prediction_view": {
    "model_status": "历史训练模型",
    "model_confidence": "高",
    "model_prob": [
-    0.92,
-    0.006,
-    0.075
+    0.34,
+    0.521,
+    0.139
    ],
-   "edge": 0.1108,
-   "direction": "主胜",
+   "edge": 0.2577,
+   "direction": "平局",
    "action": "可介入",
    "stake_pct": 3.0,
    "cold_risk": "低",
-   "env_score": 6.0
+   "env_score": 5.0
   },
   "market_view": {
    "odds": [
-    1.17,
-    8.0,
-    13.0
+    1.95,
+    3.6,
+    3.8
    ],
    "market_prob": [
-    0.809,
-    0.118,
-    0.073
+    0.487,
+    0.264,
+    0.25
    ],
    "odds_source": "Bet365/历史快照",
    "odds_stage": "historical",
    "odds_move": {
-    "text": "热门方赔率下降6.0% → 市场信心增强，方向可信度上调",
+    "text": "热门方赔率下降9.7% → 市场信心增强，方向可信度上调",
     "signal": "强",
     "cold_alert": false
    },
@@ -541,133 +451,43 @@
  },
  {
   "league": "法甲",
-  "date": "2026-08-30",
-  "home": "Monaco",
-  "away": "Marseille",
+  "date": "2026-09-03",
+  "home": "Toulouse",
+  "away": "Lille",
   "model_status": "历史训练模型",
   "model_confidence": "高",
   "model_prob_source": "trained_model",
   "model_prob": [
-   0.742,
-   0.107,
-   0.152
+   0.339,
+   0.38,
+   0.281
   ],
   "market_prob": [
-   0.397,
-   0.257,
-   0.346
-  ],
-  "direction": "主胜",
-  "edge": 0.3449,
-  "action": "可介入",
-  "edge_by_outcome": [
-   0.3449,
-   -0.1506,
-   -0.1943
-  ],
-  "stake": "3.0%",
-  "stake_pct": 3.0,
-  "stake_note": "按风险规则计算的参考仓位",
-  "big_fav": false,
-  "exp_goals": [
-   1.43,
-   1.84
-  ],
-  "over25": 0.634,
-  "home_rank": 1,
-  "injury": "伤停数据未取得（未配置 API_FOOTBALL_KEY）",
-  "injury_score": 0.0,
-  "odds_move": "热门方赔率下降8.3% → 市场信心增强，方向可信度上调",
-  "market_conf": "强",
-  "cold_risk": "低",
-  "cold_risk_sources": [
-   "无明显冷门信号"
-  ],
-  "weather": "天气：未取得",
-  "referee": "未取得（需 API-Football key）",
-  "tactics": "未取得（无风格标签数据源）",
-  "motivation": "高（争冠/欧战）",
-  "intl_break": "无",
-  "streak": "近5场净胜0场",
-  "env_score": 6.0,
-  "actual": "主胜",
-  "score": "2-0",
-  "prediction_view": {
-   "model_status": "历史训练模型",
-   "model_confidence": "高",
-   "model_prob": [
-    0.742,
-    0.107,
-    0.152
-   ],
-   "edge": 0.3449,
-   "direction": "主胜",
-   "action": "可介入",
-   "stake_pct": 3.0,
-   "cold_risk": "低",
-   "env_score": 6.0
-  },
-  "market_view": {
-   "odds": [
-    2.4,
-    3.7,
-    2.75
-   ],
-   "market_prob": [
-    0.397,
-    0.257,
-    0.346
-   ],
-   "odds_source": "Bet365/历史快照",
-   "odds_stage": "historical",
-   "odds_move": {
-    "text": "热门方赔率下降8.3% → 市场信心增强，方向可信度上调",
-    "signal": "强",
-    "cold_alert": false
-   },
-   "handicap": null
-  },
-  "data_mode": "历史验证回退（竞彩当前池未取得）"
- },
- {
-  "league": "法甲",
-  "date": "2026-08-30",
-  "home": "Paris FC",
-  "away": "Nice",
-  "model_status": "历史训练模型",
-  "model_confidence": "高",
-  "model_prob_source": "trained_model",
-  "model_prob": [
-   0.305,
-   0.397,
-   0.297
-  ],
-  "market_prob": [
-   0.463,
-   0.288,
-   0.25
+   0.285,
+   0.285,
+   0.43
   ],
   "direction": "平局",
-  "edge": 0.1098,
+  "edge": 0.0952,
   "action": "轻仓观察",
   "edge_by_outcome": [
-   -0.1574,
-   0.1098,
-   0.0476
+   0.0543,
+   0.0952,
+   -0.1495
   ],
-  "stake": "1.5%",
-  "stake_pct": 1.5,
+  "stake": "1.0%",
+  "stake_pct": 1.0,
   "stake_note": "按风险规则计算的参考仓位",
   "big_fav": false,
   "exp_goals": [
-   1.29,
-   1.48
+   1.86,
+   0.74
   ],
-  "over25": 0.524,
-  "home_rank": 8,
+  "over25": 0.482,
+  "home_rank": 12,
   "injury": "伤停数据未取得（未配置 API_FOOTBALL_KEY）",
   "injury_score": 0.0,
-  "odds_move": "热门方赔率下降5.4% → 市场信心增强，方向可信度上调",
+  "odds_move": "热门方赔率下降6.5% → 市场信心增强，方向可信度上调",
   "market_conf": "强",
   "cold_risk": "中",
   "cold_risk_sources": [
@@ -677,41 +497,41 @@
   "referee": "未取得（需 API-Football key）",
   "tactics": "未取得（无风格标签数据源）",
   "motivation": "中（中游）",
-  "intl_break": "无",
+  "intl_break": "国脚疲劳风险（国家队比赛日后3天内）",
   "streak": "近5场净胜1场",
   "env_score": 4.0,
-  "actual": "主胜",
-  "score": "3-0",
+  "actual": "客胜",
+  "score": "0-1",
   "prediction_view": {
    "model_status": "历史训练模型",
    "model_confidence": "高",
    "model_prob": [
-    0.305,
-    0.397,
-    0.297
+    0.339,
+    0.38,
+    0.281
    ],
-   "edge": 0.1098,
+   "edge": 0.0952,
    "direction": "平局",
    "action": "轻仓观察",
-   "stake_pct": 1.5,
+   "stake_pct": 1.0,
    "cold_risk": "中",
    "env_score": 4.0
   },
   "market_view": {
    "odds": [
-    2.05,
-    3.3,
-    3.8
+    3.25,
+    3.25,
+    2.15
    ],
    "market_prob": [
-    0.463,
-    0.288,
-    0.25
+    0.285,
+    0.285,
+    0.43
    ],
    "odds_source": "Bet365/历史快照",
    "odds_stage": "historical",
    "odds_move": {
-    "text": "热门方赔率下降5.4% → 市场信心增强，方向可信度上调",
+    "text": "热门方赔率下降6.5% → 市场信心增强，方向可信度上调",
     "signal": "强",
     "cold_alert": false
    },
